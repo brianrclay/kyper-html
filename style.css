@@ -292,7 +292,7 @@ button.w-100 {
   line-height: 16px;
 }
 
-.input-wrapper input[type="text"], .input-wrapper textarea {
+.input-wrapper input, .input-wrapper textarea {
   border-radius: 4px;
   padding: 16px 12px 12px;
   border: 1px solid #6A7381;
@@ -306,31 +306,31 @@ button.w-100 {
   max-width: none;
 }
 
-.input-wrapper input[type="text"]:hover, .input-wrapper textarea:hover {
+.input-wrapper input:hover, .input-wrapper textarea:hover {
   -webkit-box-shadow: 0px 0px 0px 1px #6A7381;
           box-shadow: 0px 0px 0px 1px #6A7381;
 }
 
-.input-wrapper input[type="text"]:focus, .input-wrapper textarea:focus {
+.input-wrapper input:focus, .input-wrapper textarea:focus {
   -webkit-box-shadow: 0px 0px 0px 2px #2F73DA;
           box-shadow: 0px 0px 0px 2px #2F73DA;
   outline: none;
   border-color: #2F73DA;
 }
 
-.input-wrapper input[type="text"]::-webkit-input-placeholder, .input-wrapper textarea::-webkit-input-placeholder {
+.input-wrapper input::-webkit-input-placeholder, .input-wrapper textarea::-webkit-input-placeholder {
   color: #6A7381;
 }
 
-.input-wrapper input[type="text"]:-ms-input-placeholder, .input-wrapper textarea:-ms-input-placeholder {
+.input-wrapper input:-ms-input-placeholder, .input-wrapper textarea:-ms-input-placeholder {
   color: #6A7381;
 }
 
-.input-wrapper input[type="text"]::-ms-input-placeholder, .input-wrapper textarea::-ms-input-placeholder {
+.input-wrapper input::-ms-input-placeholder, .input-wrapper textarea::-ms-input-placeholder {
   color: #6A7381;
 }
 
-.input-wrapper input[type="text"]::placeholder, .input-wrapper textarea::placeholder {
+.input-wrapper input::placeholder, .input-wrapper textarea::placeholder {
   color: #6A7381;
 }
 
@@ -354,13 +354,13 @@ button.w-100 {
   line-height: 16px;
 }
 
-.input-wrapper.error input[type="text"], .input-wrapper.error textarea {
+.input-wrapper.error input, .input-wrapper.error textarea {
   -webkit-box-shadow: 0px 0px 0px 1px #DF320C;
           box-shadow: 0px 0px 0px 1px #DF320C;
   border-color: #DF320C;
 }
 
-.input-wrapper.error input[type="text"]:focus, .input-wrapper.error textarea:focus {
+.input-wrapper.error input:focus, .input-wrapper.error textarea:focus {
   -webkit-box-shadow: 0px 0px 0px 2px #2F73DA;
           box-shadow: 0px 0px 0px 2px #2F73DA;
   outline: none;
@@ -883,13 +883,13 @@ form .input-wrapper:last-child {
   line-height: 16px;
 }
 
-.dropdown.error input[type="text"] {
+.dropdown.error input {
   -webkit-box-shadow: 0px 0px 0px 1px #DF320C;
           box-shadow: 0px 0px 0px 1px #DF320C;
   border-color: #DF320C;
 }
 
-.dropdown.error input[type="text"]:focus {
+.dropdown.error input:focus {
   -webkit-box-shadow: 0px 0px 0px 2px #2F73DA;
           box-shadow: 0px 0px 0px 2px #2F73DA;
   outline: none;
@@ -923,7 +923,7 @@ form .input-wrapper:last-child {
     top: unset !important;
     padding: 16px 8px;
     z-index: 2;
-    max-height: 40%;
+    max-height: 330px;
     overflow: auto;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
