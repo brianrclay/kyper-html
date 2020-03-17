@@ -43,7 +43,7 @@ a,
 input,
 textarea,
 label,
-button {
+button, ol, ul {
   font-family: 'Proxima Nova';
   font-weight: 400;
   font-size: 16px;
@@ -109,6 +109,10 @@ button {
           box-sizing: border-box;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .spacer {
   width: 100%;
   height: 16px;
@@ -126,6 +130,23 @@ a,
 a:hover,
 .link:hover {
   color: #165ECC;
+  background-color: #EAF1FB;
+  text-decoration: underline;
+}
+
+ol, ul {
+  list-style-position: inside;
+}
+
+li {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 12px;
+  padding-left: 24px;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 button {
@@ -872,5 +893,87 @@ form .input-wrapper:last-child {
 
 .dropdown.help .help-text {
   display: block;
+}
+
+.message-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #2F73DA;
+  border-left: 4px solid #2F73DA;
+  background-color: #ffffff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 10px 20px rgba(87, 102, 117, 0.16);
+          box-shadow: 0px 10px 20px rgba(87, 102, 117, 0.16);
+  padding: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.message-box.error {
+  border-color: #DF320C;
+}
+
+.message-box.error .icon {
+  background-image: url("/icons/message-box-icons/Close-Filled.svg");
+}
+
+.message-box.error .action-wrapper .action {
+  color: #49505A;
+}
+
+.message-box.success {
+  border-color: #09A57F;
+}
+
+.message-box.success .icon {
+  background-image: url("/icons/message-box-icons/Check-Circle-Filled.svg");
+}
+
+.message-box .close {
+  border: none;
+  background-color: transparent;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #121417;
+}
+
+.message-box .icon {
+  width: 16px;
+  margin-right: 8px;
+  background-image: url("/icons/message-box-icons/info.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin-top: 2px;
+}
+
+.message-box .message-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.message-box .message-wrapper .message-text {
+  line-height: 20px;
+  margin: 4px 0 12px;
+}
+
+.message-box .message-wrapper .action-wrapper .action {
+  font-size: 14px;
+}
+
+.message-box .message-wrapper .action-wrapper .action:last-child {
+  margin-left: 32px;
 }
 /*# sourceMappingURL=style.css.map */

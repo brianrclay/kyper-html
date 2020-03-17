@@ -25,21 +25,21 @@ $('.dropdown .menu .item').click(function () {
                     selections.splice(i, 1);
                 }
             }
-            chipAddRemove()
+            updateChips()
             console.log(selections)
-        } else {
+        } else { // Add Chip
             $(this).find('input').prop('checked', true)
             selections.push(
                 chipText
             );
-            chipAddRemove()
+            updateChips()
             console.log(selections)
 
         }
     }
 });
 
-function chipAddRemove() {
+function updateChips() {
     $('.chip-wrapper .chip').remove();
     for (var i = 0; i < selections.length; i++) {
         $('.chip-wrapper').append(
@@ -62,6 +62,21 @@ $('.dropdown .menu .item').click(function () {
         }
     }
 });
+
+$('.chip-wrapper').on('click', '.chip', function(){
+    $(this).remove();
+    var chipText = $(this).children('span').text();
+    for (var i = 0; i < selections.length; i++) {
+        if (selections[i] === chipText) {
+            selections.splice(i, 1);
+        }
+    }
+    if (!selections.length) {
+        // $(this).parents('.dropdown').removeClass('selection-made');
+    }
+})
+    
+
 
 // Close multi select dropdown on outside click
 $(window).click(function () {

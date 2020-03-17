@@ -111,7 +111,7 @@ a,
 input,
 textarea,
 label,
-button {
+button, ol, ul {
     font-family: 'Proxima Nova';
     font-weight: 400;
     font-size: 16px;
@@ -176,6 +176,10 @@ button {
     box-sizing: border-box;
 }
 
+.bold{
+    font-weight: 700;
+}
+
 .spacer {
     width: 100%;
     height: $spacing-16px;
@@ -192,6 +196,25 @@ a,
 
     &:hover {
         color: $primary-400;
+        background-color: $primary-100;
+        text-decoration: underline;
+    }
+}
+
+// Lists
+
+ol, ul{
+    list-style-position: inside;
+}
+
+li{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    padding-left: 24px;
+
+    &:last-child{
+        margin-bottom: 0;
     }
 }
 
@@ -917,6 +940,80 @@ form {
     &.help {
         .help-text {
             display: block;
+        }
+    }
+}
+
+// Message Box
+
+.message-box{
+    display: flex;
+    border: 1px solid $primary-300;
+    border-left: 4px solid $primary-300;
+    background-color: $neutral-white;
+    border-radius: $border-radius-med;
+    box-shadow: $shadow-high;
+    padding: 12px;
+    box-sizing: border-box;
+    position: relative;
+
+    &.error{
+        border-color: $error-300;
+        .icon{
+            background-image: url('/icons/message-box-icons/Close-Filled.svg');
+        }
+
+        .action-wrapper{
+            .action{
+                color: $neutral-700;
+            }
+        }
+    }
+    
+    &.success{
+        border-color: $success-300;
+        .icon{
+            background-image: url('/icons/message-box-icons/Check-Circle-Filled.svg');
+        }
+    }
+
+    .close{
+        border: none;
+        background-color: transparent;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $neutral-900;
+    }
+
+    .icon{
+        width: 16px;
+        margin-right: 8px;
+        background-image: url('/icons/message-box-icons/info.svg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        margin-top: 2px;
+    }
+
+    .message-wrapper{
+        flex: 1;
+
+        .message-text{
+            line-height: 20px;
+            margin: 4px 0 12px;
+        }
+
+        .action-wrapper{
+            .action{
+                font-size: 14px;
+
+                &:last-child{
+                    margin-left: 32px;
+                }
+            }
         }
     }
 }
