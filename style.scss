@@ -82,6 +82,10 @@ $spacing-96px: 96px;
 
 body {
     padding: $spacing-48px;
+
+    @media(max-width: 500px){
+        padding: 24px;
+    }
 }
 
 //Color
@@ -350,7 +354,7 @@ button {
         line-height: 16px;
     }
 
-    input[type="text"] {
+    input[type="text"], textarea {
         border-radius: $border-radius-med;
         padding: 16px 12px 12px;
         border: 1px solid $neutral-600;
@@ -376,6 +380,10 @@ button {
         }
     }
 
+    textarea{
+        min-height: 100px;
+    }
+
     .help-text {
         margin-top: 4px;
         padding-left: 12px;
@@ -393,7 +401,7 @@ button {
     }
 
     &.error {
-        input[type="text"] {
+        input[type="text"], textarea {
             box-shadow: 0px 0px 0px 1px $error-300;
             border-color: $error-300;
 
@@ -854,17 +862,6 @@ form {
         }
     }
 
-    > label {
-        padding: 0 4px;
-        position: absolute;
-        font-size: 14px;
-        color: $neutral-600;
-        left: 8px;
-        background-color: $neutral-white;
-        top: -8px;
-        line-height: 16px;
-    }
-
     .toggle {
         border-radius: $border-radius-med;
         padding: 16px 12px 12px;
@@ -881,6 +878,7 @@ form {
         font-size: 16px;
         font-weight: 400;
         color: $neutral-600;
+        position: relative;
 
         > svg{
             transform: translateY(-2px);
@@ -898,6 +896,17 @@ form {
 
         &::placeholder {
             color: $neutral-600;
+        }
+
+        > label {
+            padding: 0 4px;
+            position: absolute;
+            font-size: 14px;
+            color: $neutral-600;
+            left: 8px;
+            background-color: $neutral-white;
+            top: -8px;
+            line-height: 16px;
         }
     }
 
@@ -940,6 +949,56 @@ form {
     &.help {
         .help-text {
             display: block;
+        }
+    }
+
+    @media(max-width: 500px){
+
+        &.open{
+            .menu{
+                bottom: 0;
+
+                &:after{
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                }
+            }
+        }
+
+        .menu{
+            position: fixed;
+            width: 100%;
+            bottom: -100%;
+            left: 0;
+            top: unset !important;
+            padding: 16px 8px;
+            z-index: 2;
+            max-height: 40%;
+            overflow: auto;
+        }
+    }
+}
+
+.dropdown-overlay{
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background-color: rgba($color: #000000, $alpha: .25);
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+    @media(max-width: 500px){
+        &.open{
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
         }
     }
 }

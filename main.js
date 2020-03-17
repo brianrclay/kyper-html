@@ -1,7 +1,12 @@
 // Open and Close Dropdown
-$('.dropdown .toggle').click(function () {
-    $(this).parents('.dropdown').toggleClass('open')
-});
+$('.dropdown').on('click', '.toggle', function(){
+    $(this).parents('.dropdown').toggleClass('open');
+    $('.dropdown-overlay').addClass('open');
+})
+
+$('body').on('click', '.dropdown-overlay', function(){
+    $('.dropdown-overlay').removeClass('open');
+})
 
 // Select Dropdown item
 var selections = [];
@@ -13,6 +18,7 @@ $('.dropdown .menu .item').click(function () {
         $(this).addClass('active');
         $(this).parents('.dropdown').find('.toggle-label').text(itemText);
         $(this).parents('.dropdown').removeClass('open').addClass('selection-made');
+        $('.dropdown-overlay').removeClass('open');
     } else { //Multi Select
         $(this).toggleClass('active');
         $(this).parents('.dropdown').addClass('selection-made');
@@ -76,7 +82,9 @@ $('.chip-wrapper').on('click', '.chip', function(){
     }
 })
     
-
+$(document).ready(function(){
+    $('body').append('<div class="dropdown-overlay"></div>')
+});
 
 // Close multi select dropdown on outside click
 $(window).click(function () {
