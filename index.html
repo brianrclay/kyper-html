@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sandbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./reset.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <!-- <link href="./style-dark.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <button>Neutral</button>
+    <button class="disabled">Disabled Neutral</button>
+    <button class="tertiary">Neutral Tertiary</button>
+    <button class="primary">Primary</button>
+    <button class="primary disabled">Disabled Primary</button>
+    <button class="transparent">Transparent</button>
+    <button class="transparent tertiary">Transparent Tertiary</button>
+    <button class="transparent disabled">Transparent disabled</button>
+    <button class="destructive">Destructive</button>
+    <button class="destructive disabled">Destructive disabled</button>
+
+    <div class="spacer large"></div>
+
+    <div style="width:300px;">
+        <button class="primary w-100">centered button</button>
+    </div>
+
+    <div class="spacer large"></div>
+
+    <form>
+        <div class="input-wrapper">
+            <label>Label</label>
+            <input type="text" placeholder="MM / DD" />
+            <div class="help-text">
+                <span>Help text</span>
+            </div>
+        </div>
+
+        <div class="input-wrapper error">
+            <label>Label</label>
+            <input type="text" placeholder="MM / DD" />
+            <div class="help-text">
+                <span>Error text</span>
+            </div>
+        </div>
+
+        <div class="input-wrapper help">
+            <label>Label</label>
+            <input type="text" placeholder="MM / DD" />
+            <div class="help-text">
+                <span>Help text</span>
+            </div>
+        </div>
+    </form>
+
+    <div class="spacer large"></div>
+
+    <label class="checkbox">Checkbox
+        <input type="checkbox" checked>
+        <span class="checkmark"></span>
+    </label>
+    <label class="checkbox">Checkbox
+        <input type="checkbox">
+        <span class="checkmark"></span>
+    </label>
+
+    <div class="spacer large"></div>
+
+    <label class="radio">Radio
+        <input type="radio" name="example" checked>
+        <span class="dot"></span>
+    </label>
+    <label class="radio">Radio
+        <input type="radio" name="example">
+        <span class="dot"></span>
+    </label>
+
+    <div class="spacer large"></div>
+
+    <label class="switch">Switch
+        <input type="checkbox" checked>
+        <span class="switch-handle"></span>
+    </label>
+
+    <div class="spacer small"></div>
+
+    <label class="switch small">Switch Small
+        <input type="checkbox">
+        <span class="switch-handle"></span>
+    </label>
+
+    <div class="spacer large"></div>
+
+    <div class="dropdown">
+        <label>Single Select</label>
+        <button class="toggle">
+            <span class="toggle-label">Select</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path fill="#19212C" fill-rule="evenodd"
+                    d="M12.146 6.133a.536.536 0 01.708 0 .426.426 0 010 .643l-4.5 4.09a.536.536 0 01-.708 0l-4.5-4.09a.426.426 0 010-.643.536.536 0 01.708 0L8 9.903l4.146-3.77z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+        <div class="help-text">
+            <span>Help text</span>
+        </div>
+        <div class="menu">
+            <div class="item">
+                <div class="item-inner">
+                    <span class="item-label">1</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <span class="item-label">2</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <span class="item-label">3</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <span class="item-label">4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer large"></div>
+
+    <div class="dropdown help multi">
+        <label>Multi Select</label>
+        <button class="toggle">
+            <span class="toggle-label">Select</span>
+            <div class="chip-wrapper">
+                <!-- <div class="chip">
+                    <span>Chip text</span>
+                    <div class="remove-chip">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M11.86 4.14a.48.48 0 010 .68L8.678 8l3.18 3.18a.48.48 0 11-.678.68L8 8.678l-3.18 3.18a.48.48 0 11-.68-.678L7.322 8l-3.18-3.18a.48.48 0 01.678-.68L8 7.322l3.18-3.18a.48.48 0 01.68 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div> -->
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path fill="#19212C" fill-rule="evenodd"
+                    d="M12.146 6.133a.536.536 0 01.708 0 .426.426 0 010 .643l-4.5 4.09a.536.536 0 01-.708 0l-4.5-4.09a.426.426 0 010-.643.536.536 0 01.708 0L8 9.903l4.146-3.77z"
+                    clip-rule="evenodd" />
+            </svg>
+            
+        </button>
+        <div class="help-text">
+            <span>Help text</span>
+        </div>
+        <div class="menu">
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 1</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 2</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 3</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 4</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 5</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 6</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer large"></div>
+
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
