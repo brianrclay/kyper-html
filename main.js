@@ -2,10 +2,12 @@
 $('.dropdown').on('click', '.toggle', function(){
     $(this).parents('.dropdown').toggleClass('open');
     $('.dropdown-overlay').addClass('open');
+    $('body').toggleClass('dropdownOpen');
 })
 
 $('body').on('click', '.dropdown-overlay', function(){
     $('.dropdown-overlay').removeClass('open');
+    $('body').removeClass('dropdownOpen');
 })
 
 // Select Dropdown item
@@ -19,6 +21,7 @@ $('.dropdown .menu .item').click(function () {
         $(this).parents('.dropdown').find('.toggle-label').text(itemText);
         $(this).parents('.dropdown').removeClass('open').addClass('selection-made');
         $('.dropdown-overlay').removeClass('open');
+        $('body').toggleClass('dropdownOpen');
     } else { //Multi Select
         $(this).toggleClass('active');
         $(this).parents('.dropdown').addClass('selection-made');

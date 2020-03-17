@@ -85,6 +85,9 @@ body {
 
     @media(max-width: 500px){
         padding: 24px;
+        &.dropdownOpen{
+            overflow: hidden;
+        }
     }
 }
 
