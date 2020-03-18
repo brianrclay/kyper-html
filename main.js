@@ -2,12 +2,12 @@
 $('.dropdown').on('click', '.toggle', function(){
     $(this).parents('.dropdown').toggleClass('open');
     $('.dropdown-overlay').addClass('open');
-    $('body').toggleClass('dropdownOpen');
+    $('body').toggleClass('overlayOpen');
 })
 
 $('body').on('click', '.dropdown-overlay', function(){
     $('.dropdown-overlay').removeClass('open');
-    $('body').removeClass('dropdownOpen');
+    $('body').removeClass('overlayOpen');
 })
 
 // Select Dropdown item
@@ -21,7 +21,7 @@ $('.dropdown .menu .item').click(function () {
         $(this).parents('.dropdown').find('.toggle-label').text(itemText);
         $(this).parents('.dropdown').removeClass('open').addClass('selection-made');
         $('.dropdown-overlay').removeClass('open');
-        $('body').toggleClass('dropdownOpen');
+        $('body').toggleClass('overlayOpen');
     } else { //Multi Select
         $(this).toggleClass('active');
         $(this).parents('.dropdown').addClass('selection-made');
@@ -96,4 +96,27 @@ $(window).click(function () {
 
 $('.dropdown').click(function (event) {
     event.stopPropagation();
+});
+
+
+// Modals
+
+$('body').on('click', '.modal-trigger', function(){
+    var showModal = $(this).attr('data-modal');
+    $('#'+ showModal).addClass('open');
+    $('body').addClass('overlayOpen');
+});
+
+$('body').on('click', '.modal-close, .modal-scrim', function(){
+    $('.modal.open').removeClass('open');
+    $('body').removeClass('overlayOpen');
+});
+
+$(document).ready(function(){
+    $('.modal').each(function(){
+        var modalBody = $(this).find('.modal-body');
+        if(modalBody.height() > 280){
+            $(this).addClass('scrolling');
+        }
+    })
 });
