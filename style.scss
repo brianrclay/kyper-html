@@ -1,6 +1,6 @@
 // Colors
 $primary-100: #EAF1FB;
-$primary-200: #E1EDFF;
+$primary-200: #6FA1EC;
 $primary-300: #2F73DA;
 $primary-400: #165ECC;
 $primary-500: #034AB3;
@@ -48,7 +48,7 @@ $easing: cubic-bezier(.475, .425, 0, .995);
 $shadow-low: 0px 1px 3px rgba(87, 102, 117, 0.2);
 $shadow-med: 0px 3px 8px rgba(87, 102, 117, 0.15);
 $shadow-high: 0px 10px 20px rgba(87, 102, 117, 0.16);
-$focus-ring: 0px 0px 0px 2px $primary-300;
+$focus-ring: 0px 0px 0px 2px $primary-200;
 
 //Spacing
 $spacing-4px: 4px;
@@ -1570,6 +1570,12 @@ form {
             &.selected{
                 .cell{
                     background-color: $primary-100;
+                }
+            }
+
+            &:last-child{
+                .cell{
+                    border: none;
                 }
             }
 

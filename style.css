@@ -189,8 +189,8 @@ button:hover {
 
 button:focus {
   outline: none;
-  -webkit-box-shadow: 0px 0px 0px 2px #2F73DA;
-          box-shadow: 0px 0px 0px 2px #2F73DA;
+  -webkit-box-shadow: 0px 0px 0px 2px #6FA1EC;
+          box-shadow: 0px 0px 0px 2px #6FA1EC;
 }
 
 button.disabled {
@@ -321,8 +321,8 @@ button.w-100 {
 
 .input-wrapper input:focus,
 .input-wrapper textarea:focus {
-  -webkit-box-shadow: 0px 0px 0px 2px #2F73DA;
-          box-shadow: 0px 0px 0px 2px #2F73DA;
+  -webkit-box-shadow: 0px 0px 0px 2px #6FA1EC;
+          box-shadow: 0px 0px 0px 2px #6FA1EC;
   outline: none;
   border-color: #2F73DA;
 }
@@ -492,8 +492,8 @@ form .input-wrapper:last-child {
 }
 
 .checkbox input:focus ~ .checkmark {
-  -webkit-box-shadow: 0px 0px 0px 2px #2F73DA;
-          box-shadow: 0px 0px 0px 2px #2F73DA;
+  -webkit-box-shadow: 0px 0px 0px 2px #6FA1EC;
+          box-shadow: 0px 0px 0px 2px #6FA1EC;
 }
 
 .checkbox input:checked ~ .checkmark {
@@ -571,8 +571,8 @@ form .input-wrapper:last-child {
 }
 
 .radio input:focus ~ .dot {
-  -webkit-box-shadow: 0px 0px 0px 2px #2F73DA;
-          box-shadow: 0px 0px 0px 2px #2F73DA;
+  -webkit-box-shadow: 0px 0px 0px 2px #6FA1EC;
+          box-shadow: 0px 0px 0px 2px #6FA1EC;
 }
 
 .radio input:checked ~ .dot {
@@ -657,8 +657,8 @@ form .input-wrapper:last-child {
 }
 
 .switch input:focus ~ .switch-handle {
-  -webkit-box-shadow: 0px 0px 0px 2px #2F73DA;
-          box-shadow: 0px 0px 0px 2px #2F73DA;
+  -webkit-box-shadow: 0px 0px 0px 2px #6FA1EC;
+          box-shadow: 0px 0px 0px 2px #6FA1EC;
 }
 
 .switch input:checked ~ .switch-handle {
@@ -848,8 +848,8 @@ form .input-wrapper:last-child {
 }
 
 .dropdown .toggle:focus {
-  -webkit-box-shadow: 0px 0px 0px 2px #2F73DA;
-          box-shadow: 0px 0px 0px 2px #2F73DA;
+  -webkit-box-shadow: 0px 0px 0px 2px #6FA1EC;
+          box-shadow: 0px 0px 0px 2px #6FA1EC;
   outline: none;
   border-color: #2F73DA;
 }
@@ -905,8 +905,8 @@ form .input-wrapper:last-child {
 }
 
 .dropdown.error input:focus {
-  -webkit-box-shadow: 0px 0px 0px 2px #2F73DA;
-          box-shadow: 0px 0px 0px 2px #2F73DA;
+  -webkit-box-shadow: 0px 0px 0px 2px #6FA1EC;
+          box-shadow: 0px 0px 0px 2px #6FA1EC;
   outline: none;
   border-color: #DF320C;
 }
@@ -1555,6 +1555,10 @@ form .input-wrapper:last-child {
 
 .table .table-body .table-row.selected .cell {
   background-color: #EAF1FB;
+}
+
+.table .table-body .table-row:last-child .cell {
+  border: none;
 }
 
 .table .table-body .table-row .cell {
