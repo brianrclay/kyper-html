@@ -113,10 +113,48 @@ $('body').on('click', '.modal-close, .modal-scrim', function(){
 });
 
 $(document).ready(function(){
+    tippy('[data-tippy-content]', {
+        animation: 'shift-away'
+    });
     $('.modal').each(function(){
         var modalBody = $(this).find('.modal-body');
         if(modalBody.height() > 280){
             $(this).addClass('scrolling');
         }
+    })
+});
+
+
+// Tabs
+
+$('.tab').click(function(){
+    var showTab = $(this).attr('data-tab');
+    var tabGroup = $(this).parents('.tab-wrapper').attr('data-tab-pane-group');
+    if(tabGroup){
+        $('.tab-pane-wrapper').each(function(){
+            var groupName = $(this).attr('data-tab-pane-group');
+            if(groupName === tabGroup){
+                $(this).children('.tab-pane').removeClass('open');
+                $(this).children(showTab).addClass('open');
+            }
+        })
+    }
+    $(this).siblings('.tab').removeClass('active');
+    $(this).addClass('active');
+});
+
+// Table
+
+// Select single row
+$('body').on('click', '.select-row .checkmark', function(){
+    $(this).parents('.table-row').toggleClass('selected')
+});
+
+// Select all rows
+$('body').on('click', '.select-all .checkmark', function(){
+    $(this).parents('.table-head').siblings('.table-body').children('.table-row').addClass('selected');
+    console.log($(this).parents('.table-head').siblings('.table-body').children('.table-row'))
+    $(this).parents('.table-head').siblings('.table-body').children('.table-row').each(function(){
+        $(this).find('.checkbox input').prop('checked', true);
     })
 });
