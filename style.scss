@@ -152,7 +152,7 @@ h2,
 h3,
 .h3 {
     font-size: 20px;
-    line-height: 24 px;
+    line-height: 24px;
 }
 
 .paragraph,
@@ -1253,6 +1253,8 @@ form {
         &.open {
             .modal-wrapper {
                 bottom: 0;
+                width: 100%;
+                max-width: none;
             }
         }
 
@@ -1330,6 +1332,78 @@ form {
             }
         }
     }
+
+    &.drawer{
+        opacity: 1;
+
+        &.open{
+
+            .modal-wrapper{
+                right: 0;
+                border-radius: 0;
+            }
+        }
+
+        .modal-wrapper{
+            height: 100vh;
+            right: -100%;
+            left: unset;
+            top: 0;
+            transform: none;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+
+            .modal-body{
+                flex: 1;
+                max-height: none;
+            }
+            
+            .modal-header{
+                padding: 24px;
+            }
+
+            .modal-footer {
+                padding: 0;
+                border-top: 1px solid $neutral-400;
+    
+                .action-wrapper {
+                    justify-content: center;
+    
+                    .action {
+                        width: 50%;
+                        border-radius: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 500px) {
+            .modal-wrapper{
+                border-radius: 0;
+                width: 100%;
+                max-width: none;
+
+                .modal-header{
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+                    align-items: flex-start;
+                    position: relative;
+
+                    .header-left{
+                        margin-left: 16px;
+
+                        svg{
+                            position: absolute;
+                            right: 24px;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Block
@@ -1337,6 +1411,14 @@ form {
 .block {
     border-radius: $border-radius-med;
     border: 1px solid $neutral-400;
+
+    &.hide-overflow{
+        overflow: hidden;
+    }
+    
+    &.scroll-overflow{
+        overflow: auto;
+    }
 
     .tab-pane {
         padding: 16px;
@@ -1372,6 +1454,11 @@ form {
 
         &:first-child {
             border-top-left-radius: $border-radius-med;
+        }
+
+        @media(max-width: 500px){
+            flex: 1;
+            padding: 12px;
         }
     }
 }

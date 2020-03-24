@@ -118,7 +118,7 @@ $(document).ready(function(){
     });
     $('.modal').each(function(){
         var modalBody = $(this).find('.modal-body');
-        if(modalBody.height() > 280){
+        if(modalBody.height() > 280 && !$(this).hasClass('drawer')){
             $(this).addClass('scrolling');
         }
     })
