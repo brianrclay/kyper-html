@@ -1,0 +1,813 @@
+// Colors
+$primary-100: #EAF1FB;
+$primary-200: #6FA1EC;
+$primary-300: #2F73DA;
+$primary-400: #165ECC;
+$primary-500: #034AB3;
+
+$neutral-white: #ffffff;
+$neutral-100: #F8F9FB;
+$neutral-200: #EEF1F6;
+$neutral-300: #E4E8EE;
+$neutral-400: #CDD3DD;
+$neutral-500: #A8B1BD;
+$neutral-600: #6A7381;
+$neutral-700: #49505A;
+$neutral-800: #1F2329;
+$neutral-900: #121417;
+
+$success-100: #DDFDED;
+$success-200: #0AC295;
+$success-300: #09A57F;
+$success-400: #078364;
+$success-500: #027357;
+
+$warning-100: #FEF7B9;
+$warning-200: #FFDA6C;
+$warning-300: #FFB400;
+$warning-400: #FA8902;
+$warning-500: #C33E01;
+
+$error-100: #FCD2CF;
+$error-200: #F45532;
+$error-300: #DF320C;
+$error-400: #C61A0B;
+$error-500: #AE0A0A;
+
+//Border Radius
+$border-radius-small: 2px;
+$border-radius-med: 4px;
+$border-radius-large: 16px;
+$border-radius-rounded: 50%;
+
+//Easing
+$transition: all 350ms cubic-bezier(.475, .425, 0, .995);
+$easing: cubic-bezier(.475, .425, 0, .995);
+
+// Shadows
+$shadow-low: 0px 1px 3px rgba(87, 102, 117, 0.2);
+$shadow-med: 0px 3px 8px rgba(87, 102, 117, 0.15);
+$shadow-high: 0px 10px 20px rgba(87, 102, 117, 0.16);
+$focus-ring: 0px 0px 0px 2px $primary-200;
+
+//Spacing
+$spacing-4px: 4px;
+$spacing-8px: 8px;
+$spacing-12px: 12px;
+$spacing-16px: 16px;
+$spacing-24px: 24px;
+$spacing-32px: 32px;
+$spacing-40px: 40px;
+$spacing-48px: 48px;
+$spacing-64px: 64px;
+$spacing-96px: 96px;
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    src: url(/fonts/ProximaNova-Reg.otf);
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    src: url(/fonts/ProximaNova-Sbold.otf);
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 900;
+    src: url(/fonts/ProximaNova-Bold.otf);
+}
+
+body {
+
+    &.dark-mode {
+        background-color: $neutral-800;
+
+        //Color
+
+        div,
+        p,
+        a,
+        input,
+        textarea,
+        label,
+        button,
+        h1,
+        h2,
+        h3, ol, ul {
+            color: $neutral-white;
+        }
+
+        .color-secondary {
+            color: $neutral-400;
+        }
+
+        // Links
+
+        a,
+        .link {
+            color: $primary-200;
+
+            &:hover {
+                color: $neutral-white;
+                background-color: $neutral-700;
+            }
+        }
+
+        //Buttons
+
+        button {
+            color: $neutral-white;
+            border: 1px solid $neutral-500;
+            background-color: transparent;
+
+            &.tertiary {
+                color: $neutral-400;
+            }
+
+            &:hover {
+                border-color: $neutral-500;
+                color: $neutral-white;
+                background-color: $neutral-600;
+            }
+            
+            &:focus {
+                box-shadow: $focus-ring;
+            }
+
+            &.disabled {
+                color: $neutral-500;
+                background-color: $neutral-700;
+                border-color: $neutral-600;
+
+                &:hover {
+                    border-color: $neutral-400;
+                    color: $neutral-500;
+                }
+            }
+
+            &.primary {
+                background: $primary-300;
+                color: $neutral-white;
+                border: none;
+
+                &:hover {
+                    background: $primary-400;
+                    border: none;
+                }
+
+                &.disabled {
+                    background: $neutral-700;
+                    color: $neutral-500;
+                }
+            }
+
+            &.transparent {
+                border: none;
+
+                &:hover {
+                    background-color: $neutral-600;
+                }
+
+                &.disabled {
+                    color: $neutral-500;
+                    background-color: transparent;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            &.destructive {
+                background-color: $error-300;
+                color: $neutral-white;
+                border: none;
+
+                &:hover {
+                    background-color: $error-400;
+                    border: none;
+                }
+
+                &.disabled {
+                    background: $neutral-200;
+                    color: $neutral-500;
+                    cursor: not-allowed;
+                    border: none;
+                }
+            }
+        }
+
+        // Inputs
+
+        .input-wrapper {
+
+            label {
+                color: $neutral-400;
+                background-color: $neutral-800;
+            }
+
+            input,
+            textarea {
+                border: 1px solid $neutral-500;
+                background-color: $neutral-800;
+
+                &:hover {
+                    box-shadow: 0px 0px 0px 1px $neutral-500;
+                }
+
+                &:focus {
+                    box-shadow: $focus-ring;
+                    border-color: $primary-200;
+                }
+
+                &::placeholder {
+                    color: $neutral-400;
+                }
+            }
+
+            .help-text {
+                color: $neutral-400;
+                display: none;
+                background-image: url('/assets/input-icons/help-dark.svg');
+
+                span {
+                    margin-left: 4px;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+
+            &.error {
+                display: block;
+
+                input,
+                textarea {
+                    box-shadow: 0px 0px 0px 1px $error-200;
+                    border-color: $error-200;
+
+                    &:focus {
+                        box-shadow: 0px 0px 0px 2px $primary-200;
+                        outline: none;
+                        border-color: $error-200;
+                    }
+                }
+
+                .help-text {
+                    display: block;
+                    color: $error-200;
+                    background-image: url('/assets/input-icons/error-dark.svg');
+                }
+            }
+
+            &.help {
+                .help-text {
+                    display: block;
+                }
+            }
+        }
+
+        // Checkbox
+
+        .checkbox {
+
+            // Custom checkbox style
+            .checkmark {
+                border: 1px solid $neutral-400;
+                background-color: transparent;
+
+                //Checkmark style
+                &:after {
+                    background-image: url('/assets/checkbox-icons/checked\ icon-dark.svg');
+                }
+            }
+
+            // Checkbox hover style
+            &:hover input~.checkmark {
+                background-color: transparent;
+                border-color: $neutral-white;
+            }
+
+            // Checkbox focus style
+            input {
+
+                &:focus~.checkmark {
+                    box-shadow: $focus-ring;
+                }
+
+                // When the checkbox is checked, add a blue background 
+                &:checked~.checkmark {
+                    background-color: transparent;
+                    border-color: $neutral-white;
+                }
+            }
+        }
+
+        // Radio
+
+        .radio {
+
+            /* Hide the browser's default radio */
+            input {
+
+                // Show dot
+                &:checked~.dot:after {
+                    background-color: $neutral-white !important;
+                }
+            }
+
+            // Custom radio style
+            .dot {
+                background-color: transparent;
+                border: 1px solid $neutral-600;
+
+                //dot style
+                &:after {
+                    background-color: $neutral-600;
+                }
+            }
+
+            // radio hover style
+            &:hover input~.dot:after {
+                background-color: $neutral-600;
+            }
+
+            &:hover input~.dot {
+                border-color: $neutral-400;
+            }
+
+            // radio focus style
+            input {
+
+                &:focus~.dot {
+                    box-shadow: $focus-ring;
+                }
+
+                // When the radio is checked, add a blue background 
+                &:checked~.dot {
+                    background-color: transparent;
+                    border-color: $neutral-white;
+                }
+            }
+        }
+
+        // Switch
+
+        .switch {
+
+            // Custom checkbox style
+            .switch-handle {
+                border: 1px solid $neutral-600;
+                background-color: $neutral-700;
+
+                //Handel style
+                &:after {
+                    background-color: $neutral-white;
+                    border: 1px solid $neutral-600;
+                }
+            }
+
+            // Checkbox hover style
+            &:hover input~.switch-handle {
+                background-color: $neutral-600;
+            }
+
+            // Checkbox focus style
+            input {
+
+                &:focus~.switch-handle {
+                    box-shadow: $focus-ring;
+                }
+
+                // When the checkbox is checked, add a blue background 
+                &:checked~.switch-handle {
+                    background-color: $success-300;
+                    border-color: $neutral-600;
+                }
+            }
+        } 
+
+
+        .dropdown {
+
+            &.selection-made {
+                .toggle-label {
+                    color: $neutral-white;
+                }
+            }
+
+            &.multi { 
+
+                .chip-wrapper {
+                    background-color: $neutral-800;
+
+                    .chip {
+                        background: $neutral-700;
+                        color: $neutral-white;
+                        
+                        &:hover {
+                            .remove-chip {
+                                background-color: $neutral-600;
+                                color: $neutral-white;
+                            }
+                        }
+
+                        .remove-chip {
+                            color: $neutral-white;
+                        }
+                    }
+                }
+
+                .menu {
+                    .item {
+                        &.active {
+                            .item-label {
+                                color: $neutral-white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .menu {
+                background: $neutral-700;
+
+                .item {
+                    color: $neutral-white;
+
+                    &:hover {
+                        .item-inner {
+                            background-color: $neutral-600;
+                        }
+                    }
+
+                    &.active {
+                        .item-inner {
+                            background: $neutral-600;
+                        }
+                    }
+                }
+            }
+
+            .toggle {
+                border: 1px solid $neutral-500;
+
+                &:hover {
+                    box-shadow: 0px 0px 0px 1px $neutral-500;
+                    background-color: $neutral-800;
+                    color: $neutral-400;
+                }
+
+                &:focus {
+                    box-shadow: $focus-ring;
+                    outline: none;
+                    border-color: $primary-200;
+                }
+
+                &::placeholder {
+                    color: $neutral-400;
+                }
+
+                >label {
+                    color: $neutral-400;
+                    background-color: $neutral-800;
+                }
+            }
+
+            .help-text {
+                color: $neutral-400;
+                background-image: url('/assets/input-icons/help-dark.svg');
+            }
+
+            &.error {
+                input {
+                    box-shadow: 0px 0px 0px 1px $error-200;
+                    border-color: $error-200;
+
+                    &:focus {
+                        box-shadow: $focus-ring;
+                        outline: none;
+                        border-color: $error-200;
+                    }
+                }
+
+                .help-text {
+                    color: $error-200;
+                    background-image: url('/assets/input-icons/error-dark.svg');
+                }
+            }
+
+            @media(max-width: 500px) {
+
+                &.open {
+                    .menu {
+
+                        &:after {
+                            background: linear-gradient(180deg, rgba(73, 80, 90, 0) 0%, rgba(73, 80, 90, 0.0086472) 6.67%, rgba(73, 80, 90, 0.03551) 13.33%, rgba(73, 80, 90, 0.0816599) 20%, rgba(73, 80, 90, 0.147411) 26.67%, rgba(73, 80, 90, 0.231775) 33.33%, rgba(73, 80, 90, 0.331884) 40%, rgba(73, 80, 90, 0.442691) 46.67%, rgba(73, 80, 90, 0.557309) 53.33%, rgba(73, 80, 90, 0.668116) 60%, rgba(73, 80, 90, 0.768225) 66.67%, rgba(73, 80, 90, 0.852589) 73.33%, rgba(73, 80, 90, 0.91834) 80%, rgba(73, 80, 90, 0.96449) 86.67%, rgba(73, 80, 90, 0.991353) 93.33%, #49505A 100%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .dropdown-overlay {
+            background-color: rgba($color: #000000, $alpha: .25);
+
+            @media(max-width: 500px) {
+                &.open {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                }
+            }
+        }
+
+        // Message Box
+
+        .message-box {
+            border: 1px solid $primary-200;
+            border-left: 4px solid $primary-200;
+            background-color: $neutral-700;
+            box-shadow: none;
+
+            &.error {
+                border-color: $error-200;
+
+                .icon {
+                    background-image: url('/assets/message-box-icons/Close-Filled-dark.svg');
+                }
+
+                .action-wrapper {
+                    .action {
+                        color: $neutral-white;
+                    }
+                }
+            }
+
+            &.success {
+                border-color: $success-200;
+
+                .icon {
+                    background-image: url('/assets/message-box-icons/Check-Circle-Filled-dark.svg');
+                }
+            }
+
+            .action-wrapper {
+                .action {
+                    color: $neutral-white;
+                }
+            }
+
+            .close {
+                color: $neutral-white;
+            }
+
+            .icon {
+                background-image: url('/assets/message-box-icons/info-dark.svg');
+            }
+        }
+
+
+        // Modal
+
+        .modal {
+
+            .modal-scrim {
+                background-color: rgba($color: #000000, $alpha: .75);
+            }
+
+            .modal-wrapper {
+                background-color: $neutral-800;
+                box-shadow: none;
+            }
+
+            .modal-header {
+                .header-left {
+                    svg {
+                        color: $error-200;
+                    }
+                }
+
+                .modal-close {
+                    border: none;
+                    color: $neutral-white;
+                    background-color: transparent;
+
+                    &:hover {
+                        svg {
+                            background-color: $neutral-600;
+                        }
+                    }
+
+                    svg {
+                        background-color: $neutral-700;
+                        color: $neutral-white;
+                    }
+                }
+            }
+
+            @media(max-width: 500px) {
+
+                .modal-footer {
+                    .action-wrapper {
+                        border-top: none;
+                    }
+                }
+            }
+
+            &.scrolling {
+                .modal-header {
+                    border-bottom: 1px solid $neutral-600;
+                }
+
+                .modal-footer {
+                    border-top: 1px solid $neutral-600;
+                }
+
+                @media(max-width: 500px) {
+                    .modal-header {
+                        border-bottom: 1px solid $neutral-600;
+                    }
+
+                    .modal-body {
+
+                        &:after {
+                            background: linear-gradient(180deg, rgba(26, 34, 46, 0) 0%, rgba(26, 34, 46, 0.0086472) 6.67%, rgba(26, 34, 46, 0.03551) 13.33%, rgba(26, 34, 46, 0.0816599) 20%, rgba(26, 34, 46, 0.147411) 26.67%, rgba(26, 34, 46, 0.231775) 33.33%, rgba(26, 34, 46, 0.331884) 40%, rgba(26, 34, 46, 0.442691) 46.67%, rgba(26, 34, 46, 0.557309) 53.33%, rgba(26, 34, 46, 0.668116) 60%, rgba(26, 34, 46, 0.768225) 66.67%, rgba(26, 34, 46, 0.852589) 73.33%, rgba(26, 34, 46, 0.91834) 80%, rgba(26, 34, 46, 0.96449) 86.67%, rgba(26, 34, 46, 0.991353) 93.33%, #1A222E 100%);
+                        }
+                    }
+                }
+            }
+
+            &.drawer {
+                .modal-wrapper {
+                    .modal-footer {
+                        border-top: 1px solid $neutral-600;
+                    }
+                }
+            }
+        }
+
+        // Block
+
+        .block {
+            border: 1px solid $neutral-600;
+        }
+
+        // Tabs
+
+        .tab-wrapper {
+            display: flex;
+            width: 100%;
+            border-bottom: 1px solid $neutral-600;
+
+            .tab {
+
+                &.active {
+                    border-color: $primary-200;
+                    color: $primary-200;
+                }
+
+                &:hover {
+                    background-color: $neutral-700;
+                }
+            }
+        }
+
+        // Status Dot
+
+        .status-dot {
+            border: none;
+            background-color: $neutral-300;
+
+            &.success {
+                background-color: $success-200;
+            }
+
+            &.warning {
+                background-color: $warning-200;
+            }
+
+            &.error {
+                background-color: $error-200;
+            }
+
+            &.pending {
+                background-color: $neutral-500;
+            }
+        }
+
+        // Avatar
+
+        .avatar {
+            background-color: $neutral-700;
+        }
+
+        // Table
+
+        .table {
+
+            &.striped {
+                .table-row {
+                    &:hover {
+                        .cell {
+                            background-color: $neutral-600 !important;
+                        }
+                    }
+
+                    &:nth-child(even) {
+
+                        .cell {
+                            background-color: $neutral-700;
+                        }
+                    }
+                }
+            }
+
+            .table-head {
+
+                .header {
+                    border-bottom: 1px solid $neutral-600;
+                }
+            }
+
+            .table-body {
+                .table-row {
+                    display: flex;
+                    align-items: flex-start;
+
+                    &:hover {
+                        .cell {
+                            background-color: $neutral-700;
+                        }
+                    }
+
+                    &.selected {
+                        .cell {
+                            background-color: $primary-100;
+                        }
+                    }
+
+                    .cell {
+                        border-bottom: $neutral-700 1px solid;
+
+                        .dropdown {
+
+                            .toggle {
+
+                                &:hover {
+                                    box-shadow: none;
+
+                                    svg {
+                                        color: $primary-200;
+                                    }
+
+                                    .toggle-label {
+                                        color: $primary-200;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.actions {
+                            .action {
+                                &:hover {
+                                    color: $neutral-white;
+                                    background-color: $neutral-600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Tooltip
+
+        .tippy-content {
+            color: $neutral-900;
+            font-size: 14px;
+        }
+
+        .tippy-box {
+            background-color: $neutral-white;
+        }
+
+        .tippy-box[data-placement^='top']>.tippy-arrow::before {
+            border-top-color: $neutral-white;
+        }
+
+        .tippy-box[data-placement^='bottom']>.tippy-arrow::before {
+            border-bottom-color: $neutral-white;
+        }
+
+        .tippy-box[data-placement^='left']>.tippy-arrow::before {
+            border-left-color: $neutral-white;
+        }
+
+        .tippy-box[data-placement^='right']>.tippy-arrow::before {
+            border-right-color: $neutral-white;
+        }
+    }
+}

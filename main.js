@@ -35,15 +35,12 @@ $('.dropdown .menu .item').click(function () {
                 }
             }
             updateChips()
-            console.log(selections)
         } else { // Add Chip
             $(this).find('input').prop('checked', true)
             selections.push(
                 chipText
             );
             updateChips()
-            console.log(selections)
-
         }
     }
 });
@@ -153,8 +150,18 @@ $('body').on('click', '.select-row .checkmark', function(){
 // Select all rows
 $('body').on('click', '.select-all .checkmark', function(){
     $(this).parents('.table-head').siblings('.table-body').children('.table-row').addClass('selected');
-    console.log($(this).parents('.table-head').siblings('.table-body').children('.table-row'))
+    
     $(this).parents('.table-head').siblings('.table-body').children('.table-row').each(function(){
         $(this).find('.checkbox input').prop('checked', true);
     })
 });
+
+// Switch themes
+
+$('.theme-toggle').click(function(){
+    $(this).addClass('open')
+    $('body').toggleClass('dark-mode')
+    setTimeout(function(){
+        $('.theme-toggle').removeClass('open');
+    }, 500)
+})

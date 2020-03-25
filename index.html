@@ -5,10 +5,10 @@
     <title>Sandbox</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="./reset.css" rel="stylesheet">
+    <link href="./css/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
-    <link href="./style.css" rel="stylesheet">
-    <!-- <link href="./style-dark.css" rel="stylesheet"> -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/style-dark.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,8 +17,7 @@
 
     <button>Neutral</button>
     <button class="disabled">Disabled Neutral</button>
-    <button class="tertiary">Neutral Tertiary</button>
-    
+
     <div class="spacer large"></div>
 
     <button class="primary">Primary</button>
@@ -31,7 +30,7 @@
     <button class="transparent disabled">Transparent disabled</button>
 
     <div class="spacer large"></div>
-    
+
     <button class="destructive">Destructive</button>
     <button class="destructive disabled">Destructive disabled</button>
 
@@ -341,7 +340,7 @@
             </svg>
         </button>
     </div>
-    
+
     <div class="spacer large"></div>
     <div class="spacer large"></div>
     <h2>Lists</h2>
@@ -383,10 +382,10 @@
     <button data-tippy-content="I'm a tooltip" data-tippy-placement="right">Right Tooltip</button>
     <button data-tippy-content="I'm a tooltip" data-tippy-placement="bottom">Bottom Tooltip</button>
     <button data-tippy-content="I'm a tooltip" data-tippy-placement="left">Left Tooltip</button>
-    
+
     <div class="spacer large"></div>
     <div class="spacer large"></div>
-    
+
 
     <div class="modal" id="example1">
         <div class="modal-scrim"></div>
@@ -521,7 +520,8 @@
                     dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat eget
                     velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra. Nulla
                     ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit. Mi mus
-                    ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla.
+                    ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla.
                     Turpis dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat
                     eget velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra.
                     Nulla ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit.
@@ -530,7 +530,8 @@
                     dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat eget
                     velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra. Nulla
                     ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit. Mi mus
-                    ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla.
+                    ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla.
                     Turpis dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat
                     eget velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra.
                     Nulla ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit.
@@ -607,14 +608,14 @@
     <div class="avatar male med"></div>
     <div class="avatar female large"></div>
     <div class="avatar bank x-large"></div>
-    
+
     <div class="spacer large"></div>
     <div class="spacer large"></div>
 
     <h2>Table</h2>
     <div class="spacer small"></div>
 
-    <div class="table block striped scroll-overflow">
+    <div class="table block scroll-overflow">
         <div class="table-head">
             <div class="header select-all center">
                 <label class="checkbox">
@@ -944,6 +945,15 @@
     <div class="spacer large"></div>
     <div class="spacer large"></div>
     <div class="spacer large"></div>
+
+    <div class="theme-toggle" data-tippy-content="Spin that $***" data-tippy-placement="left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <path fill="#fff"
+                d="M7.03 40.97c9.372 9.373 24.568 9.373 33.94 0 9.373-9.372 9.373-24.568 0-33.94L7.03 40.97z" />
+            <path fill="#49505A"
+                d="M7.03 40.97L40.97 7.03c-9.372-9.373-24.568-9.373-33.94 0-9.373 9.372-9.373 24.568 0 33.94z" />
+        </svg>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>

@@ -83,12 +83,11 @@ $spacing-96px: 96px;
 body {
     padding: $spacing-48px;
 
+    &.overlayOpen {
+        overflow: hidden;
+    }
     @media(max-width: 500px) {
-        padding: 24px;
-
-        &.overlayOpen {
-            overflow: hidden;
-        }
+        padding: 24px;   
     }
 }
 
@@ -103,7 +102,7 @@ label,
 button,
 h1,
 h2,
-h3 {
+h3, ol, ul {
     color: $neutral-900;
 }
 
@@ -232,7 +231,7 @@ li {
 //Buttons
 
 button {
-    background-color: $neutral-white;
+    // background-color: $neutral-white;
     font-weight: 700;
     color: $primary-300;
     padding: 12px;
@@ -275,7 +274,7 @@ button {
         display: flex;
         align-items: center;
 
-        svg {
+        svg, img {
             margin-right: $spacing-8px;
         }
 
@@ -1811,4 +1810,30 @@ form {
 
 .tippy-box[data-placement^='right']>.tippy-arrow::before {
     border-right-color: $neutral-800;
+}
+
+.theme-toggle{
+    position: fixed;
+    right: 24px;
+    top: 24px;
+    cursor: pointer;
+    transition: $transition;
+    transform-origin: center center;
+    box-shadow: $shadow-med;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+
+    &.open{
+        animation: 500ms $easing forwards spin;
+    }
+    
+    @keyframes spin {
+        0%{
+            transform: rotate(0deg); 
+        }
+        100%{
+            transform: rotate(360deg); 
+        }
+    }
 }
