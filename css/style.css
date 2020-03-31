@@ -162,7 +162,7 @@ li:last-child {
   margin-bottom: 0;
 }
 
-button {
+.btn, button {
   font-weight: 700;
   color: #2F73DA;
   padding: 12px;
@@ -178,37 +178,37 @@ button {
   cursor: pointer;
 }
 
-button.tertiary {
+.btn.tertiary, button.tertiary {
   color: #6A7381;
 }
 
-button:hover {
+.btn:hover, button:hover {
   border-color: #165ECC;
   color: #165ECC;
 }
 
-button:focus {
+.btn:focus, button:focus {
   outline: none;
   -webkit-box-shadow: 0px 0px 0px 2px #6FA1EC;
           box-shadow: 0px 0px 0px 2px #6FA1EC;
 }
 
-button.disabled {
+.btn.disabled, button.disabled {
   color: #A8B1BD;
   cursor: not-allowed;
 }
 
-button.disabled:hover {
+.btn.disabled:hover, button.disabled:hover {
   border-color: #CDD3DD;
   color: #A8B1BD;
 }
 
-button.disabled:focus {
+.btn.disabled:focus, button.disabled:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-button.icon-btn {
+.btn.icon-btn, button.icon-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,68 +217,68 @@ button.icon-btn {
           align-items: center;
 }
 
-button.icon-btn svg, button.icon-btn img {
+.btn.icon-btn svg, .btn.icon-btn img, button.icon-btn svg, button.icon-btn img {
   margin-right: 8px;
 }
 
-button.icon-btn.right svg {
+.btn.icon-btn.right svg, button.icon-btn.right svg {
   margin: 0;
   margin-left: 8px;
 }
 
-button.primary {
+.btn.primary, button.primary {
   background: #2F73DA;
   color: #ffffff;
   border: none;
 }
 
-button.primary:hover {
+.btn.primary:hover, button.primary:hover {
   background: #165ECC;
   border: none;
 }
 
-button.primary.disabled {
+.btn.primary.disabled, button.primary.disabled {
   background: #EEF1F6;
   color: #A8B1BD;
   cursor: not-allowed;
 }
 
-button.transparent {
+.btn.transparent, button.transparent {
   border: none;
 }
 
-button.transparent:hover {
+.btn.transparent:hover, button.transparent:hover {
   background-color: #EAF1FB;
 }
 
-button.transparent.disabled {
+.btn.transparent.disabled, button.transparent.disabled {
   color: #A8B1BD;
   cursor: not-allowed;
 }
 
-button.transparent.disabled:hover {
+.btn.transparent.disabled:hover, button.transparent.disabled:hover {
   background-color: transparent;
 }
 
-button.destructive {
+.btn.destructive, button.destructive {
   background-color: #DF320C;
   color: #ffffff;
   border: none;
 }
 
-button.destructive:hover {
+.btn.destructive:hover, button.destructive:hover {
   background-color: #C61A0B;
   border: none;
 }
 
-button.destructive.disabled {
+.btn.destructive.disabled, button.destructive.disabled {
   background: #EEF1F6;
   color: #A8B1BD;
   cursor: not-allowed;
   border: none;
 }
 
-button.w-100 {
+.btn.w-100, button.w-100 {
   width: 100%;
   display: block;
 }
