@@ -783,6 +783,10 @@ body {
             }
         }
 
+        hr{
+            border-color: $neutral-700;
+        }
+
         // Tooltip
 
         .tippy-content {

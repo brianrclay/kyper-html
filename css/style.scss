@@ -121,7 +121,7 @@ label,
 button,
 ol,
 ul {
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -130,7 +130,7 @@ ul {
 h1,
 h2,
 h3 {
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova', sans-serif;
     font-weight: 900;
     margin: 0;
     padding: 0;
@@ -230,7 +230,7 @@ li {
 
 //Buttons
 
-button {
+.btn, button {
     // background-color: $neutral-white;
     font-weight: 700;
     color: $primary-300;
@@ -1810,6 +1810,10 @@ form {
 
 .tippy-box[data-placement^='right']>.tippy-arrow::before {
     border-right-color: $neutral-800;
+}
+
+hr{
+    border-color: $neutral-300;
 }
 
 .theme-toggle{
