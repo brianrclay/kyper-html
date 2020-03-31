@@ -616,6 +616,10 @@ body.dark-mode .table .table-body .table-row .cell.actions .action:hover {
   background-color: #6A7381;
 }
 
+body.dark-mode hr {
+  border-color: #49505A;
+}
+
 body.dark-mode .tippy-content {
   color: #121417;
   font-size: 14px;

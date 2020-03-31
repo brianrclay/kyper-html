@@ -1829,6 +1829,10 @@ form .input-wrapper:last-child {
   border-right-color: #1F2329;
 }
 
+hr {
+  border-color: #E4E8EE;
+}
+
 .theme-toggle {
   position: fixed;
   right: 24px;

@@ -209,4 +209,37 @@ body {
 .content-wrapper.landing-page .card-wrapper .card:hover {
   background-color: #49505A;
 }
+
+.content-wrapper footer {
+  padding: 0 0 40px 0;
+}
+
+.content-wrapper footer hr {
+  -webkit-margin-before: 40px;
+          margin-block-start: 40px;
+  -webkit-margin-after: 40px;
+          margin-block-end: 40px;
+}
+
+.content-wrapper footer .email-wrapper .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-wrapper footer .email-wrapper .input-group input {
+  width: 303px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.content-wrapper footer .email-wrapper .input-group button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 48px;
+  border-left: none;
+}
 /*# sourceMappingURL=page.css.map */
