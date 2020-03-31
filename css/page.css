@@ -180,14 +180,9 @@ body {
 }
 
 .content-wrapper.landing-page .content-inner {
-  width: 990px;
+  width: 100%;
+  max-width: 990px;
   padding: 32px;
-}
-
-@media (max-width: 1222px) {
-  .content-wrapper.landing-page .content-inner {
-    width: unset;
-  }
 }
 
 .content-wrapper.landing-page .card-wrapper {

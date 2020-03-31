@@ -2,180 +2,957 @@
 <html>
 
 <head>
-    <title>Home</title>
+    <title>Sandbox</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="./css/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/style-dark.css" rel="stylesheet">
-    <link href="./css/page.css" rel="stylesheet">
-    <link href="./css/helpers.css" rel="stylesheet">
 </head>
 
-<body class="dark-mode">
-    <div class="page-wrapper">
-        <div class="top-bar">
-            <div class="left">
-                <img src="/page-assets/top-bar/logo.svg">
+<body>
+    <h2>Buttons</h2>
+    <div class="spacer large"></div>
+
+    <button>Neutral</button>
+    <button class="disabled">Disabled Neutral</button>
+
+    <div class="spacer large"></div>
+
+    <button class="primary">Primary</button>
+    <button class="primary disabled">Disabled Primary</button>
+
+    <div class="spacer large"></div>
+
+    <button class="transparent">Transparent</button>
+    <button class="transparent tertiary">Transparent Tertiary</button>
+    <button class="transparent disabled">Transparent disabled</button>
+
+    <div class="spacer large"></div>
+
+    <button class="destructive">Destructive</button>
+    <button class="destructive disabled">Destructive disabled</button>
+
+    <div class="spacer large"></div>
+
+    <div style="width:300px;">
+        <button class="primary w-100">centered button</button>
+    </div>
+
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+    <h2>Inputs</h2>
+    <div class="spacer large"></div>
+
+    <form>
+        <div class="input-wrapper">
+            <label>Label</label>
+            <input type="text" placeholder="MM / DD" />
+            <div class="help-text">
+                <span>Help text</span>
             </div>
-            <div class="right">
-                <div class="search-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M6.933 0A6.933 6.933 0 0112.2 11.444l3.645 3.645a.533.533 0 11-.755.755l-3.645-3.645A6.933 6.933 0 116.934 0zm0 1.067a5.867 5.867 0 100 11.733 5.867 5.867 0 000-11.733z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <input type="text" placeholder="Search documentation...">
+        </div>
+
+        <div class="input-wrapper error">
+            <label>Label</label>
+            <input type="text" placeholder="MM / DD" />
+            <div class="help-text">
+                <span>Error text</span>
+            </div>
+        </div>
+
+        <div class="input-wrapper help">
+            <label>Label</label>
+            <input type="text" placeholder="MM / DD" />
+            <div class="help-text">
+                <span>Help text</span>
+            </div>
+        </div>
+    </form>
+
+    <div class="spacer large"></div>
+
+    <div class="input-wrapper">
+        <label>Text area</label>
+        <textarea></textarea>
+        <div class="help-text">
+            <span>Help text</span>
+        </div>
+    </div>
+
+    <div class="spacer large"></div>
+
+    <label class="checkbox">Checkbox
+        <input type="checkbox" checked>
+        <span class="checkmark"></span>
+    </label>
+    <label class="checkbox">Checkbox
+        <input type="checkbox">
+        <span class="checkmark"></span>
+    </label>
+
+    <div class="spacer large"></div>
+
+    <label class="radio">Radio
+        <input type="radio" name="example" checked>
+        <span class="dot"></span>
+    </label>
+    <label class="radio">Radio
+        <input type="radio" name="example">
+        <span class="dot"></span>
+    </label>
+
+    <div class="spacer large"></div>
+
+    <label class="switch">Switch
+        <input type="checkbox" checked>
+        <span class="switch-handle"></span>
+    </label>
+
+    <div class="spacer small"></div>
+
+    <label class="switch small">Switch Small
+        <input type="checkbox">
+        <span class="switch-handle"></span>
+    </label>
+
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+    <h2>Dropdown</h2>
+
+    <div class="spacer large"></div>
+
+    <div class="dropdown">
+        <button class="toggle">
+            <label>Single Select</label>
+            <span class="toggle-label">Select</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M12.146 6.133a.536.536 0 01.708 0 .426.426 0 010 .643l-4.5 4.09a.536.536 0 01-.708 0l-4.5-4.09a.426.426 0 010-.643.536.536 0 01.708 0L8 9.903l4.146-3.77z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+        <div class="help-text">
+            <span>Help text</span>
+        </div>
+        <div class="menu">
+            <div class="item">
+                <div class="item-inner">
+                    <span class="item-label">1</span>
                 </div>
-                <div class="info">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                        <g clip-path="url(#clip0)">
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <span class="item-label">2</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <span class="item-label">3</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <span class="item-label">4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer large"></div>
+
+    <div class="dropdown help multi">
+        <button class="toggle">
+            <label>Multi Select</label>
+            <span class="toggle-label">Select</span>
+            <div class="chip-wrapper">
+                <!-- <div class="chip">
+                    <span>Chip text</span>
+                    <div class="remove-chip">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
                             <path fill="currentColor" fill-rule="evenodd"
-                                d="M8 16A8 8 0 118 0a8 8 0 010 16zm0-1.067A6.933 6.933 0 108 1.067a6.933 6.933 0 000 13.866zM8 5a1 1 0 110-2 1 1 0 010 2zm-.02 8c-.398 0-.72-.364-.72-.813V7.314c0-.45.322-.813.72-.813.398 0 .72.364.72.813v4.875c0 .448-.322.812-.72.812z"
+                                d="M11.86 4.14a.48.48 0 010 .68L8.678 8l3.18 3.18a.48.48 0 11-.678.68L8 8.678l-3.18 3.18a.48.48 0 11-.68-.678L7.322 8l-3.18-3.18a.48.48 0 01.678-.68L8 7.322l3.18-3.18a.48.48 0 01.68 0z"
                                 clip-rule="evenodd" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0">
-                                <path fill="#fff" d="M0 0h16v16H0V0z" />
-                            </clipPath>
-                        </defs>
-                    </svg>
+                        </svg>
+                    </div>
+                </div> -->
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M12.146 6.133a.536.536 0 01.708 0 .426.426 0 010 .643l-4.5 4.09a.536.536 0 01-.708 0l-4.5-4.09a.426.426 0 010-.643.536.536 0 01.708 0L8 9.903l4.146-3.77z"
+                    clip-rule="evenodd" />
+            </svg>
+
+        </button>
+        <div class="help-text">
+            <span>Help text</span>
+        </div>
+        <div class="menu">
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 1</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
                 </div>
-                <div class="notifications">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 2</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 3</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 4</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 5</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 6</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 7</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 8</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <label class="checkbox">
+                        <span class="item-label">Item 9</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer large"></div>
+    <h2>Message Box</h2>
+    <div class="spacer large"></div>
+
+    <div class="message-box">
+        <div class="icon"></div>
+        <div class="message-wrapper">
+            <span class="bold">Headline</span>
+            <p class="message-text small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas id f a fddd
+                condiment.</p>
+            <div class="action-wrapper">
+                <a class="action" href="#">Action 1</a>
+                <a class="action" href="#">Action 2</a>
+            </div>
+        </div>
+        <button class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 16 16">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M11.86 4.14a.48.48 0 010 .68L8.678 8l3.18 3.18a.48.48 0 11-.678.68L8 8.678l-3.18 3.18a.48.48 0 11-.68-.678L7.322 8l-3.18-3.18a.48.48 0 01.678-.68L8 7.322l3.18-3.18a.48.48 0 01.68 0z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="spacer large"></div>
+
+    <div class="message-box error">
+        <div class="icon"></div>
+        <div class="message-wrapper">
+            <span class="bold">Headline</span>
+            <p class="message-text small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas id f a fddd
+                condiment.</p>
+            <div class="action-wrapper">
+                <a class="action" href="#">Action 1</a>
+                <a class="action" href="#">Action 2</a>
+            </div>
+        </div>
+        <button class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 16 16">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M11.86 4.14a.48.48 0 010 .68L8.678 8l3.18 3.18a.48.48 0 11-.678.68L8 8.678l-3.18 3.18a.48.48 0 11-.68-.678L7.322 8l-3.18-3.18a.48.48 0 01.678-.68L8 7.322l3.18-3.18a.48.48 0 01.68 0z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="spacer large"></div>
+
+    <div class="message-box success">
+        <div class="icon"></div>
+        <div class="message-wrapper">
+            <span class="bold">Headline</span>
+            <p class="message-text small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas id f a fddd
+                condiment.</p>
+            <div class="action-wrapper">
+                <a class="action" href="#">Action 1</a>
+                <a class="action" href="#">Action 2</a>
+            </div>
+        </div>
+        <button class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 16 16">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M11.86 4.14a.48.48 0 010 .68L8.678 8l3.18 3.18a.48.48 0 11-.678.68L8 8.678l-3.18 3.18a.48.48 0 11-.68-.678L7.322 8l-3.18-3.18a.48.48 0 01.678-.68L8 7.322l3.18-3.18a.48.48 0 01.68 0z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+    <h2>Lists</h2>
+
+    <div class="spacer large"></div>
+    <h3 class="color-secondary">This is a ordered list</h3>
+    <div class="spacer"></div>
+    <ol>
+        <li>I'm a list item</li>
+        <li>I'm a list item</li>
+        <li>I'm a list item</li>
+    </ol>
+
+    <div class="spacer large"></div>
+    <h3 class="color-secondary">This is a unordered list</h3>
+    <div class="spacer"></div>
+    <ul>
+        <li>I'm a list item</li>
+        <li>I'm a list item</li>
+        <li>I'm a list item</li>
+    </ul>
+
+    <div class="spacer large"></div>
+    <h2>Modals</h2>
+    <div class="spacer small"></div>
+    <button class="modal-trigger" data-modal="example1">Show modal</button>
+    <button class="modal-trigger" data-modal="scrolling-modal">Scrolling modal</button>
+    <button class="modal-trigger" data-modal="drawer">Show drawer</button>
+    <button class="modal-trigger" data-modal="scrolling-drawer">Show scrolling drawer</button>
+
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+
+    <h2>Tooltips</h2>
+    <div class="spacer small"></div>
+    <p>Tooltips are built using <a href="https://atomiks.github.io/tippyjs/" target="_blank">tippy.js</a></p>
+    <div class="spacer small"></div>
+    <button data-tippy-content="I'm a tooltip">Top Tooltip</button>
+    <button data-tippy-content="I'm a tooltip" data-tippy-placement="right">Right Tooltip</button>
+    <button data-tippy-content="I'm a tooltip" data-tippy-placement="bottom">Bottom Tooltip</button>
+    <button data-tippy-content="I'm a tooltip" data-tippy-placement="left">Left Tooltip</button>
+
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+
+
+    <div class="modal" id="example1">
+        <div class="modal-scrim"></div>
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <div class="header-left">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
                         <path fill="currentColor" fill-rule="evenodd"
-                            d="M10.492 13.542a.5.5 0 01.258.658 3 3 0 01-5.5.002.5.5 0 01.916-.402 2.002 2.002 0 003.668 0 .5.5 0 01.658-.258zM8 0a5 5 0 015 5v.296a3.48 3.48 0 001.74 3.02C15.538 8.774 16 9.337 16 10c0 1.806-3.583 3-8 3s-8-1.194-8-3c0-.663.463-1.226 1.26-1.684A3.481 3.481 0 003 5.296V5a5 5 0 015-5zm0 1a4 4 0 00-4 4v.296a4.481 4.481 0 01-2.243 3.888C1.238 9.48 1 9.772 1 10c0 .956 3.133 2 7 2s7-1.044 7-2c0-.228-.238-.519-.756-.816A4.48 4.48 0 0112 5.296V5a4 4 0 00-4-4z"
+                            d="M8 0c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8zm0 11a1 1 0 100 2 1 1 0 000-2zm.02-8c-.398 0-.72.364-.72.813v4.874c0 .45.322.813.72.813.398 0 .72-.364.72-.813V3.814c0-.45-.322-.813-.72-.813z"
+                            clip-rule="evenodd" />
+                    </svg> -->
+                    <h3>Modal Headline</h3>
+                </div>
+                <button class="modal-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M11.86 4.14a.48.48 0 010 .68L8.678 8l3.18 3.18a.48.48 0 11-.678.68L8 8.678l-3.18 3.18a.48.48 0 11-.68-.678L7.322 8l-3.18-3.18a.48.48 0 01.678-.68L8 7.322l3.18-3.18a.48.48 0 01.68 0z"
                             clip-rule="evenodd" />
                     </svg>
-                </div>
-                <div class="profile-dropdown">
-                    <div class="avatar large">B</div>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text</p>
+            </div>
+            <div class="modal-footer">
+                <div class="action-wrapper">
+                    <button class="transparent action modal-close">Cancel</button>
+                    <button class="primary action">Submit</button>
                 </div>
             </div>
         </div>
-        <!-- <div class="flex-wrapper"> -->
-        <div class="left-nav">
-            <a href="/" class="nav-item active">
-                <img src="/page-assets/left-nav/16/HomeActive.png">
-                <span>Home</span>
-            </a>
-            <a href="#" class="nav-item">
-                <img src="/page-assets/left-nav/16/RealTime.png">
-                <span>MDX Real Time</span>
-            </a>
-            <a href="#" class="nav-item">
-                <img src="/page-assets/left-nav/16/MoneyMap.png">
-                <span>MoneyMap</span>
-            </a>
-            <a href="#" class="nav-item">
-                <img src="/page-assets/left-nav/16/Nexus.png">
-                <span>Nexus</span>
-            </a>
-            <a href="#" class="nav-item">
-                <img src="/page-assets/left-nav/16/Reporting.png">
-                <span>Reporting</span>
-            </a>
-            <a href="#" class="nav-item">
-                <img src="/page-assets/left-nav/16/SSO.png">
-                <span>SSO V3</span>
-            </a>
-            <a href="#" class="nav-item">
-                <img src="/page-assets/left-nav/16/Sherlock.png">
-                <span>Sherlock</span>
-            </a>
-            <a href="#" class="nav-item">
-                <img src="/page-assets/left-nav/16/Target.png">
-                <span>Target</span>
-            </a>
-            <a href="#" class="nav-item">
-                <img src="/page-assets/left-nav/16/Webhook.png">
-                <span>Webhooks</span>
-            </a>
-        </div>
-        <div class="content-wrapper landing-page">
-            <div class="content-inner">
-                <h1 class="m-b-12">Documentation</h1>
-                <p class="m-b-40">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus interdum
-                    eleifend dolor.</p>
-                <h3 class="m-b-24">Start with your use case</h3>
-                <div class="card-wrapper m-b-40">
-                    <a class="card" href="#">
-                        <div class="icon-wrapper m-r-12">
-                            <img src="/page-assets/left-nav/24/MoneyMap.png">
-                        </div>
-                        <div class="text-wrapper">
-                            <p class="bold m-b-4">Add a widget</p>
-                            <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </a>
-                    <a class="card" href="#">
-                        <div class="icon-wrapper m-r-12">
-                            <img src="/page-assets/left-nav/24/Nexus.png">
-                        </div>
-                        <div class="text-wrapper">
-                            <p class="bold m-b-4">Aggregate transactions</p>
-                            <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </a>
-                    <a class="card" href="#">
-                        <div class="icon-wrapper m-r-12">
-                            <img src="/page-assets/left-nav/24/MoneyMap.png">
-                        </div>
-                        <div class="text-wrapper">
-                            <p class="bold m-b-4">Categorize transactions</p>
-                            <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </a>
-                    <a class="card" href="#">
-                        <div class="icon-wrapper m-r-12">
-                            <img src="/page-assets/left-nav/24/Target.png">
-                        </div>
-                        <div class="text-wrapper">
-                            <p class="bold m-b-4">Run targeted ads</p>
-                            <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </a>
-                    <a class="card" href="#">
-                        <div class="icon-wrapper m-r-12">
-                            <img src="/page-assets/left-nav/24/Nexus.png">
-                        </div>
-                        <div class="text-wrapper">
-                            <p class="bold m-b-4">Create a user</p>
-                            <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </a>
-                    <a class="card" href="#">
-                        <div class="icon-wrapper m-r-12">
-                            <img src="/page-assets/left-nav/24/Webhook.png">
-                        </div>
-                        <div class="text-wrapper">
-                            <p class="bold m-b-4">Subscribe to down events</p>
-                            <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </a>
-                </div>
-                <h3 class="m-b-12">Download example application</h3>
-                <p class="m-b-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus interdum
-                    eleifend dolor.</p>
-                <a href="#" class="btn icon-btn">
+    </div>
+    <div class="modal scrolling large" id="scrolling-modal">
+        <div class="modal-scrim"></div>
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <div class="header-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                        <g clip-path="url(#clip0)">
-                            <path fill="#121417" fill-rule="evenodd"
-                                d="M8 .2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V14c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z"
-                                clip-rule="evenodd" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0">
-                                <path fill="#fff" d="M0 0h16v16H0V0z" />
-                            </clipPath>
-                        </defs>
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M8 0c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8zm0 11a1 1 0 100 2 1 1 0 000-2zm.02-8c-.398 0-.72.364-.72.813v4.874c0 .45.322.813.72.813.398 0 .72-.364.72-.813V3.814c0-.45-.322-.813-.72-.813z"
+                            clip-rule="evenodd" />
                     </svg>
-                    <span>View on Github</span>
-                </a>
+                    <h3>Scrolling Headline</h3>
+                </div>
+                <button class="modal-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M11.86 4.14a.48.48 0 010 .68L8.678 8l3.18 3.18a.48.48 0 11-.678.68L8 8.678l-3.18 3.18a.48.48 0 11-.68-.678L7.322 8l-3.18-3.18a.48.48 0 01.678-.68L8 7.322l3.18-3.18a.48.48 0 01.68 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla.
+                    Turpis dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat
+                    eget velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra.
+                    Nulla ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit.
+                    Mi mus ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla. Turpis
+                    dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat eget
+                    velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra. Nulla
+                    ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit. Mi mus
+                    ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="action-wrapper">
+                    <button class="transparent action modal-close">Cancel</button>
+                    <button class="primary action">Submit</button>
+                </div>
             </div>
         </div>
-        <!-- </div> -->
+    </div>
+    <div class="modal large drawer" id="drawer">
+        <div class="modal-scrim"></div>
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <div class="header-left">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M8 0c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8zm0 11a1 1 0 100 2 1 1 0 000-2zm.02-8c-.398 0-.72.364-.72.813v4.874c0 .45.322.813.72.813.398 0 .72-.364.72-.813V3.814c0-.45-.322-.813-.72-.813z"
+                            clip-rule="evenodd" />
+                    </svg> -->
+                    <h3>Headline</h3>
+                </div>
+                <button class="modal-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M11.86 4.14a.48.48 0 010 .68L8.678 8l3.18 3.18a.48.48 0 11-.678.68L8 8.678l-3.18 3.18a.48.48 0 11-.68-.678L7.322 8l-3.18-3.18a.48.48 0 01.678-.68L8 7.322l3.18-3.18a.48.48 0 01.68 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla.
+                    Turpis dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="action-wrapper">
+                    <button class="transparent action modal-close">Cancel</button>
+                    <button class="primary action">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal scrolling drawer" id="scrolling-drawer">
+        <div class="modal-scrim"></div>
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <div class="header-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M8 0c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8zm0 11a1 1 0 100 2 1 1 0 000-2zm.02-8c-.398 0-.72.364-.72.813v4.874c0 .45.322.813.72.813.398 0 .72-.364.72-.813V3.814c0-.45-.322-.813-.72-.813z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h3>Scrolling Headline</h3>
+                </div>
+                <button class="modal-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M11.86 4.14a.48.48 0 010 .68L8.678 8l3.18 3.18a.48.48 0 11-.678.68L8 8.678l-3.18 3.18a.48.48 0 11-.68-.678L7.322 8l-3.18-3.18a.48.48 0 01.678-.68L8 7.322l3.18-3.18a.48.48 0 01.68 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla.
+                    Turpis dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat
+                    eget velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra.
+                    Nulla ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit.
+                    Mi mus ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla. Turpis
+                    dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat eget
+                    velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra. Nulla
+                    ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit. Mi mus
+                    ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla.
+                    Turpis dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat
+                    eget velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra.
+                    Nulla ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit.
+                    Mi mus ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla. Turpis
+                    dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat eget
+                    velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra. Nulla
+                    ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit. Mi mus
+                    ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla.
+                    Turpis dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat
+                    eget velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra.
+                    Nulla ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit.
+                    Mi mus ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Libero etiam non donec commodo fringilla. Turpis
+                    dolor imperdiet ipsum dui tristique aliquam, vel, proin auctor. Sit felis pharetra consequat eget
+                    velit. Eget risus euismod habitant leo volutpat gravida sit. Sit odio tristique fames viverra. Nulla
+                    ornare diam nec, interdum maecenas. Ultrices sit hendrerit donec vestibulum, diam orci velit. Mi mus
+                    ornare vivamus posuere viverra nibh sed urna. Eget pulvinar quis ut quis urna odio.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="action-wrapper">
+                    <button class="transparent action modal-close">Cancel</button>
+                    <button class="primary action">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Tabs</h2>
+    <div class="spacer small"></div>
+
+    <div class="block">
+        <div class="tab-wrapper" data-tab-pane-group="group1">
+            <div class="tab active" data-tab="#example1">
+                Open Pane 1
+            </div>
+            <div class="tab" data-tab="#example2">
+                Open Pane 2
+            </div>
+            <div class="tab" data-tab="#example3">
+                Open Pane 3
+            </div>
+        </div>
+        <div class="tab-pane-wrapper" data-tab-pane-group="group1">
+            <div class="tab-pane open" id="example1">
+                <p>Pane 1</p>
+            </div>
+            <div class="tab-pane" id="example2">
+                <p>Pane 2</p>
+            </div>
+            <div class="tab-pane" id="example3">
+                <p>Pane 3</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer large"></div>
+
+    <div class="block">
+        <div class="tab-wrapper" data-tab-pane-group="group2">
+            <div class="tab active" data-tab="#example4">
+                Open Pane 4
+            </div>
+            <div class="tab" data-tab="#example5">
+                Open Pane 5
+            </div>
+        </div>
+        <div class="tab-pane-wrapper" data-tab-pane-group="group2">
+            <div class="tab-pane open" id="example4">
+                <p>Pane 4</p>
+            </div>
+            <div class="tab-pane" id="example5">
+                <p>Pane 5</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer large"></div>
+    <h2>Avatars</h2>
+    <div class="spacer small"></div>
+
+    <div class="avatar small">B</div>
+    <div class="avatar male med"></div>
+    <div class="avatar female large"></div>
+    <div class="avatar bank x-large"></div>
+
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+
+    <h2>Table</h2>
+    <div class="spacer small"></div>
+
+    <div class="table block scroll-overflow">
+        <div class="table-head">
+            <div class="header select-all center">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="header left sort">
+                <span>Name</span>
+                <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"
+                    viewBox="0 0 12 12">
+                    <path fill="currentColor"
+                        d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                </svg>
+            </div>
+
+
+            <div class="header left">
+                <span>Email</span>
+                <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"
+                    viewBox="0 0 12 12">
+                    <path fill="currentColor"
+                        d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                </svg>
+            </div>
+
+
+            <div class="header left sort">
+                <span>Role</span>
+                <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"
+                    viewBox="0 0 12 12">
+                    <path fill="currentColor"
+                        d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                </svg>
+            </div>
+
+
+            <div class="header left sort">
+                <span>Status</span>
+                <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"
+                    viewBox="0 0 12 12">
+                    <path fill="currentColor"
+                        d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                </svg>
+            </div>
+
+
+            <div class="header actions two">
+                <span></span>
+                <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"
+                    viewBox="0 0 12 12">
+                    <path fill="currentColor"
+                        d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-body">
+            <div class="table-row">
+                <div class="cell select-row center">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="cell">
+                    <div class="avatar female"></div>
+                    <span class="cell-text">Brian Clay</span>
+                </div>
+                <div class="cell">
+                    <span class="cell-text">brianrclay@gmail.com</span>
+                </div>
+                <div class="cell">
+                    <div class="dropdown selection-made">
+                        <button class="toggle">
+                            <span class="toggle-label">Admin</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                viewBox="0 0 16 16">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M12.146 6.133a.536.536 0 01.708 0 .426.426 0 010 .643l-4.5 4.09a.536.536 0 01-.708 0l-4.5-4.09a.426.426 0 010-.643.536.536 0 01.708 0L8 9.903l4.146-3.77z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="menu">
+                            <div class="item active">
+                                <div class="item-inner">
+                                    <span class="item-label">Admin</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-inner">
+                                    <span class="item-label">User</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell status">
+                    <div class="status-dot success"></div>
+                    <span class="cell-text">Active</span>
+                </div>
+                <div class="cell actions right">
+                    <div class="action" data-tippy-content="Sync data">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M2.067 15.5a.5.5 0 01-1 0v-4a.5.5 0 01.5-.5h4.266a.5.5 0 010 1H2.067v3.5z"
+                                clip-rule="evenodd" />
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M14.933 8.5a.5.5 0 011 0c0 4.15-3.573 7.5-7.966 7.5-2.902 0-5.455-1.648-6.842-4.266a.5.5 0 11.883-.468C3.228 13.566 5.448 15 7.967 15c3.854 0 6.966-2.918 6.966-6.5zM13.867 4V.5a.5.5 0 011 0v4a.5.5 0 01-.5.5H10.1a.5.5 0 110-1h3.767z"
+                                clip-rule="evenodd" />
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M1 7.5a.5.5 0 01-1 0C0 3.35 3.574 0 7.967 0c2.901 0 5.454 1.648 6.842 4.266a.5.5 0 01-.884.468C12.705 2.434 10.485 1 7.967 1 4.112 1 1 3.918 1 7.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="action">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M8 6a2 2 0 110 4 2 2 0 010-4zM2 6a2 2 0 110 4 2 2 0 010-4zm12 0a2 2 0 110 4 2 2 0 010-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="cell select-row center">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="cell">
+                    <div class="avatar female"></div>
+                    <span class="cell-text">Brian Clay</span>
+                </div>
+                <div class="cell">
+                    <span class="cell-text">brianrclay@gmail.com</span>
+                </div>
+                <div class="cell">
+                    <div class="dropdown selection-made">
+                        <button class="toggle">
+                            <span class="toggle-label">Admin</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                viewBox="0 0 16 16">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M12.146 6.133a.536.536 0 01.708 0 .426.426 0 010 .643l-4.5 4.09a.536.536 0 01-.708 0l-4.5-4.09a.426.426 0 010-.643.536.536 0 01.708 0L8 9.903l4.146-3.77z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="menu">
+                            <div class="item active">
+                                <div class="item-inner">
+                                    <span class="item-label">Admin</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-inner">
+                                    <span class="item-label">User</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell status">
+                    <div class="status-dot success"></div>
+                    <span class="cell-text">Active</span>
+                </div>
+                <div class="cell actions right">
+                    <div class="action" data-tippy-content="Sync data">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M2.067 15.5a.5.5 0 01-1 0v-4a.5.5 0 01.5-.5h4.266a.5.5 0 010 1H2.067v3.5z"
+                                clip-rule="evenodd" />
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M14.933 8.5a.5.5 0 011 0c0 4.15-3.573 7.5-7.966 7.5-2.902 0-5.455-1.648-6.842-4.266a.5.5 0 11.883-.468C3.228 13.566 5.448 15 7.967 15c3.854 0 6.966-2.918 6.966-6.5zM13.867 4V.5a.5.5 0 011 0v4a.5.5 0 01-.5.5H10.1a.5.5 0 110-1h3.767z"
+                                clip-rule="evenodd" />
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M1 7.5a.5.5 0 01-1 0C0 3.35 3.574 0 7.967 0c2.901 0 5.454 1.648 6.842 4.266a.5.5 0 01-.884.468C12.705 2.434 10.485 1 7.967 1 4.112 1 1 3.918 1 7.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="action">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M8 6a2 2 0 110 4 2 2 0 010-4zM2 6a2 2 0 110 4 2 2 0 010-4zm12 0a2 2 0 110 4 2 2 0 010-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="cell select-row center">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="cell">
+                    <div class="avatar female"></div>
+                    <span class="cell-text">Brian Clay</span>
+                </div>
+                <div class="cell">
+                    <span class="cell-text">brianrclay@gmail.com</span>
+                </div>
+                <div class="cell">
+                    <div class="dropdown selection-made">
+                        <button class="toggle">
+                            <span class="toggle-label">Admin</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                viewBox="0 0 16 16">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M12.146 6.133a.536.536 0 01.708 0 .426.426 0 010 .643l-4.5 4.09a.536.536 0 01-.708 0l-4.5-4.09a.426.426 0 010-.643.536.536 0 01.708 0L8 9.903l4.146-3.77z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="menu">
+                            <div class="item active">
+                                <div class="item-inner">
+                                    <span class="item-label">Admin</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-inner">
+                                    <span class="item-label">User</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell status">
+                    <div class="status-dot success"></div>
+                    <span class="cell-text">Active</span>
+                </div>
+                <div class="cell actions right">
+                    <div class="action" data-tippy-content="Sync data">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M2.067 15.5a.5.5 0 01-1 0v-4a.5.5 0 01.5-.5h4.266a.5.5 0 010 1H2.067v3.5z"
+                                clip-rule="evenodd" />
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M14.933 8.5a.5.5 0 011 0c0 4.15-3.573 7.5-7.966 7.5-2.902 0-5.455-1.648-6.842-4.266a.5.5 0 11.883-.468C3.228 13.566 5.448 15 7.967 15c3.854 0 6.966-2.918 6.966-6.5zM13.867 4V.5a.5.5 0 011 0v4a.5.5 0 01-.5.5H10.1a.5.5 0 110-1h3.767z"
+                                clip-rule="evenodd" />
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M1 7.5a.5.5 0 01-1 0C0 3.35 3.574 0 7.967 0c2.901 0 5.454 1.648 6.842 4.266a.5.5 0 01-.884.468C12.705 2.434 10.485 1 7.967 1 4.112 1 1 3.918 1 7.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="action">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M8 6a2 2 0 110 4 2 2 0 010-4zM2 6a2 2 0 110 4 2 2 0 010-4zm12 0a2 2 0 110 4 2 2 0 010-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="cell select-row center">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="cell">
+                    <div class="avatar female"></div>
+                    <span class="cell-text">Brian Clay</span>
+                </div>
+                <div class="cell">
+                    <span class="cell-text">brianrclay@gmail.com</span>
+                </div>
+                <div class="cell">
+                    <div class="dropdown selection-made">
+                        <button class="toggle">
+                            <span class="toggle-label">Admin</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                viewBox="0 0 16 16">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M12.146 6.133a.536.536 0 01.708 0 .426.426 0 010 .643l-4.5 4.09a.536.536 0 01-.708 0l-4.5-4.09a.426.426 0 010-.643.536.536 0 01.708 0L8 9.903l4.146-3.77z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="menu">
+                            <div class="item active">
+                                <div class="item-inner">
+                                    <span class="item-label">Admin</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-inner">
+                                    <span class="item-label">User</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell status">
+                    <div class="status-dot success"></div>
+                    <span class="cell-text">Active</span>
+                </div>
+                <div class="cell actions right">
+                    <div class="action" data-tippy-content="Sync data">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M2.067 15.5a.5.5 0 01-1 0v-4a.5.5 0 01.5-.5h4.266a.5.5 0 010 1H2.067v3.5z"
+                                clip-rule="evenodd" />
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M14.933 8.5a.5.5 0 011 0c0 4.15-3.573 7.5-7.966 7.5-2.902 0-5.455-1.648-6.842-4.266a.5.5 0 11.883-.468C3.228 13.566 5.448 15 7.967 15c3.854 0 6.966-2.918 6.966-6.5zM13.867 4V.5a.5.5 0 011 0v4a.5.5 0 01-.5.5H10.1a.5.5 0 110-1h3.767z"
+                                clip-rule="evenodd" />
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M1 7.5a.5.5 0 01-1 0C0 3.35 3.574 0 7.967 0c2.901 0 5.454 1.648 6.842 4.266a.5.5 0 01-.884.468C12.705 2.434 10.485 1 7.967 1 4.112 1 1 3.918 1 7.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="action">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M8 6a2 2 0 110 4 2 2 0 010-4zM2 6a2 2 0 110 4 2 2 0 010-4zm12 0a2 2 0 110 4 2 2 0 010-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+    <div class="spacer large"></div>
+
+    <div class="theme-toggle" data-tippy-content="Spin that $***" data-tippy-placement="left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <path fill="#fff"
+                d="M7.03 40.97c9.372 9.373 24.568 9.373 33.94 0 9.373-9.372 9.373-24.568 0-33.94L7.03 40.97z" />
+            <path fill="#49505A"
+                d="M7.03 40.97L40.97 7.03c-9.372-9.373-24.568-9.373-33.94 0-9.373 9.372-9.373 24.568 0 33.94z" />
+        </svg>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -184,7 +961,6 @@
     <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 
     <script src="./main.js"></script>
-    <script src="./page.js"></script>
 </body>
 
 </html>
