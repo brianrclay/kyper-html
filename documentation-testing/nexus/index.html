@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Idetification Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../../css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
+    <link rel="stylesheet" href="../../code-mirror/lib/codemirror.css" />
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/style-dark.css" rel="stylesheet">
+    <link href="../../css/page.css" rel="stylesheet">
+    <link href="../../css/helpers.css" rel="stylesheet">
+</head>
+
+<body class="dark-mode">
+    <div class="page-wrapper">
+        <div class="top-bar">
+            <div class="left">
+                <img src="../../page-assets/top-bar/logo.svg">
+            </div>
+            <div class="right">
+                <div class="search-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M6.933 0A6.933 6.933 0 0112.2 11.444l3.645 3.645a.533.533 0 11-.755.755l-3.645-3.645A6.933 6.933 0 116.934 0zm0 1.067a5.867 5.867 0 100 11.733 5.867 5.867 0 000-11.733z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <input type="text" placeholder="Search documentation...">
+                </div>
+                <div class="info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <g clip-path="url(#clip0)">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M8 16A8 8 0 118 0a8 8 0 010 16zm0-1.067A6.933 6.933 0 108 1.067a6.933 6.933 0 000 13.866zM8 5a1 1 0 110-2 1 1 0 010 2zm-.02 8c-.398 0-.72-.364-.72-.813V7.314c0-.45.322-.813.72-.813.398 0 .72.364.72.813v4.875c0 .448-.322.812-.72.812z"
+                                clip-rule="evenodd" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <path fill="#fff" d="M0 0h16v16H0V0z" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="notifications">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M10.492 13.542a.5.5 0 01.258.658 3 3 0 01-5.5.002.5.5 0 01.916-.402 2.002 2.002 0 003.668 0 .5.5 0 01.658-.258zM8 0a5 5 0 015 5v.296a3.48 3.48 0 001.74 3.02C15.538 8.774 16 9.337 16 10c0 1.806-3.583 3-8 3s-8-1.194-8-3c0-.663.463-1.226 1.26-1.684A3.481 3.481 0 003 5.296V5a5 5 0 015-5zm0 1a4 4 0 00-4 4v.296a4.481 4.481 0 01-2.243 3.888C1.238 9.48 1 9.772 1 10c0 .956 3.133 2 7 2s7-1.044 7-2c0-.228-.238-.519-.756-.816A4.48 4.48 0 0112 5.296V5a4 4 0 00-4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="avatar large">B</div>
+                </div>
+            </div>
+        </div>
+        <div class="left-nav guide">
+            <a href="/documentation-testing" class="back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M5.854 3.133a.426.426 0 010 .643L1.757 7.5h13.774c.26 0 .469.224.469.5s-.21.5-.469.5H1.757l4.097 3.724a.426.426 0 010 .643.536.536 0 01-.708 0l-5-4.546a.426.426 0 010-.642l5-4.546a.536.536 0 01.708 0z"
+                        clip-rule="evenodd" />
+                </svg>
+                <span>Home</span>
+            </a>
+            <div class="nav-header">
+                <img src="../../page-assets/left-nav/24/Nexus.png">
+                <span>Nexus Guides</span>
+            </div>
+            <a href="/" class="nav-item">
+                <span>Overview</span>
+            </a>
+            <a href="/" class="nav-item">
+                <span>Verification</span>
+            </a>
+            <a href="/" class="nav-item active">
+                <span>Identification</span>
+            </a>
+        </div>
+        <div class="content-wrapper guide-page">
+            <div class="content-inner">
+                <div class="bread-crumbs">
+                    <a href="/documentation-testing">Home</a>
+                    <span>/</span>
+                    <a href="/documentation-testing">Nexus guides</a>
+                    <span>/</span>
+                    <span>Identification</span>
+                </div>
+                <h1 class="m-b-16">Identification</h1>
+                <p class="m-b-16">
+                    MX's platform is made up of dozens of distributed services, each contributing part of our solution
+                    to
+                    the complex problem of aggregating, enhancing, and delivering financial data to both end users and
+                    partner organizations.
+                    <br /><br />
+                    The platform includes many purely internal tools and services, as well as many products made for
+                    partners such as RESTful web APIs, embeddable browser-based digital money management tools,
+                    cross-platform mobile money management apps, powerful customer analytics and marketing software, and
+                    much more.
+                </p>
+                <ol class="m-b-16">
+                    <li>Creating a user (this is technically done using the MDX Real Time API);</li>
+                    <li>Getting an API token for that user (this is technically done using the MX SSO API);</li>
+                    <li>Getting a session token for that user;</li>
+                    <li>Creating a member using the correct institution code and credentials required by that
+                        institution;</li>
+                    <li>Polling the member's connection_status and answering MFA if necessary (a member aggregates
+                        automatically when it is created);</li>
+                    <li>Reading the member's account_owners to check whether standard aggregation returned this
+                        information (you may begin with this step for members that already exist);</li>
+                    <li>Calling the identify endpoint if needed;</li>
+                    <li>Repeating steps 5 and 6.</li>
+                </ol>
+                <p>
+                    One reason for this workflow is that account ownership information is sometimes available through
+                    normal aggregation; in these cases, there would be no need to incur the cost of calling the identify
+                    endpoint.
+                    <br /><br />
+                    For important information on errors, standards and conventions, and resource structure, please see
+                    the <a href="#">main documentation for the Nexus API.</a>
+                </p>
+                <hr class="m-b-40 m-t-40">
+                <h2 class="m-b-16">1. Create a user</h2>
+                <p class="m-b-32">
+                    Use the MDX Real Time API to create a user object on MX systems.
+                    <br /><br />
+                    <a href="#">Further details.</a>
+                </p>
+                <div class="code-editor m-b-32">
+                    <div class="code-header">
+                        <div class="file-name">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                viewBox="0 0 16 16">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Example request:</span>
+                        </div>
+                        <div class="right">
+                            <div class="action copy">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Copy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-body">
+                        <ol>
+                            <li class="comment">
+                                //Real time base URL: https://int-live.moneydesktop.com/:client_id
+                            </li>
+                            <li class="comment">
+                                // Endpoint: POST /users
+                            </li>
+                            <li>
+                                curl -i -X POST https://int-live.moneydesktop.com/:client_id/users.json <span class="purple">\</span>
+                            </li>
+                            <li class="indent one">
+                                -H <span class="yellow">"Content-Type: application/vnd.moneydesktop.mdx.v5+json"</span> <span class="purple">\</span>
+                            </li>
+                            <li class="indent one">
+                                -H <span class="yellow">"Accept: application/vnd.moneydesktop.mdx.v5+json"</span> <span class="purple">\</span>
+                            </li>
+                            <li class="indent one">
+                                -H <span class="yellow">"MD-API-KEY: :api_key"</span> <span class="purple">\</span>
+                            </li>
+                            <li class="indent one">
+                                -d <span class="yellow">'{</span>
+                            </li>
+                            <li class="indent two yellow">
+                                "user": {
+                            </li>
+                            <li class="indent three yellow">
+                                "birthdate": "1959-07-17",
+                            </li>
+                            <li class="indent three yellow">
+                                "credit_score": "718",
+                            </li>
+                            <li class="indent three yellow">
+                                "email": "walterwhite@example.com",
+                            </li>
+                            <li class="indent three yellow">
+                                "first_name": "Walter",
+                            </li>
+                            <li class="indent three yellow">
+                                "gender": "MALE",
+                            </li>
+                            <li class="indent three yellow">
+                                "id": "U-39XBF7",
+                            </li>
+                            <li class="indent three yellow">
+                                "last_name": "White",
+                            </li>
+                            <li class="indent three yellow">
+                                "metadata": "Additional Information",
+                            </li>
+                            <li class="indent three yellow">
+                                "phone": "5055551234",
+                            </li>
+                            <li class="indent three yellow">
+                                "zip_code": "87101"
+                            </li>
+                            <li class="indent two yellow">
+                                }
+                            </li>
+                            <li class="indent one yellow">
+                                }'
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="code-editor m-b-32">
+                    <div class="code-header">
+                        <div class="file-name">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                viewBox="0 0 16 16">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Example response:</span>
+                        </div>
+                        <div class="right">
+                            <div class="action copy">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Copy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-body">
+                        <ol>
+                            <li>
+                                {
+                            </li>
+                            <li class="indent one">
+                               <span class="yellow">"user"</span> {
+                            </li>
+                            <li class="indent two yellow">
+                                "id": "U-39XBF7",
+                            </li>
+                            <li class="indent two yellow">
+                                "birthdate": "1959-07-17",
+                            </li>
+                            <li class="indent two yellow">
+                                "gender": "MALE",
+                            </li>
+                            <li class="indent two yellow">
+                                "first_name": "Walter",
+                            </li>
+                            <li class="indent two yellow">
+                                "guid": "USR-c4321d57a-9ae4-1fe3-6c4e-96a84fb92b50",
+                            </li>
+                            <li class="indent two yellow">
+                                "last_name": "White",
+                            </li>
+                            <li class="indent two yellow">
+                                "metadata": "Additional Information",
+                            </li>
+                            <li class="indent two yellow">
+                                "credit_score": <span class="purple">718</span>,
+                            </li>
+                            <li class="indent two yellow">
+                                "email": "walterwhite@example.com",
+                            </li>
+                            <li class="indent two yellow">
+                                "phone": "(505) 555-1234",
+                            </li>
+                            <li class="indent two yellow">
+                                "zip_code": "87101",
+                            </li>
+                            <li class="indent two yellow">
+                                "is_disabled": <span class="light-blue">false</span>,
+                            </li>
+                            <li class="indent two yellow">
+                                "logged_in_at": <span class="light-blue">null</span>
+                            </li>
+                            <li class="indent one">
+                               }
+                            </li>
+                            <li>
+                               }
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <hr class="m-b-40 m-t-40">
+                <h2 class="m-b-16">2. Get an API token</h2>
+                <p class="m-b-32">
+                    Next, you'll use the SSO API to the an api_token. This token will be used to open a Nexus session in step 3.
+                    <br /><br />
+                    Remember that the user_id passed in this request must match the id specified when creating a the user in the previous step.
+                    <br /><br />
+                    Each api_token is one-time use and expires in ten minutes. A fresh api_token must be requested each time a Nexus session is opened.
+                    <br /><br />
+                    <a href="#">Further details.</a>
+                </p>
+                <div class="code-editor m-b-32">
+                    <div class="code-header">
+                        <div class="file-name">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                viewBox="0 0 16 16">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Example request:</span>
+                        </div>
+                        <div class="right">
+                            <div class="action copy">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Copy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-body">
+                        <ol>
+                            <li class="comment">
+                                SSO base URL: https://int-sso.moneydesktop.com/:client_id
+                            </li>
+                            <li class="comment">
+                                Endpoint: GET /users/:id/api_token
+                            </li>
+                            <li>
+                                curl -i https://int-sso.moneydesktop.com/:client_id/users/:user_id/api_token.xml <span class="purple">\</span>
+                            </li>
+                            <li class="indent one yellow">
+                                -H "Accept: application/vnd.moneydesktop.sso.v3+xml" <span class="purple">\</span>
+                            </li>
+                            <li class="indent one yellow">
+                                -H "MD-API-KEY: :api_key"<span class="purple">\</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="code-editor m-b-32">
+                    <div class="code-header">
+                        <div class="file-name">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                viewBox="0 0 16 16">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Example response:</span>
+                        </div>
+                        <div class="right">
+                            <div class="action copy">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Copy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-body">
+                        <ol>
+                            <li>
+                                {
+                            </li>
+                            <li class="indent one yellow">
+                                "api_token": {
+                            </li>
+                            <li class="indent two yellow">
+                                "token": "XXXXX"
+                            </li>
+                            <li class="indent one yellow">
+                                }
+                            </li>
+                            <li>
+                                }
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <footer>
+                    <hr>
+                    <div class="flex ai-center">
+                        <h3 class="m-r-24">Was this page helpful?</h3>
+                        <div class="button-wrapper flex ai-center">
+                            <button class="icon-btn right">
+                                <span>Yes</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <g clip-path="url(#clip0)">
+                                        <path fill="currentColor" fill-rule="evenodd"
+                                            d="M10 2.5V6h3.506a2.5 2.5 0 012.445 3.042l-1.11 5A2.5 2.5 0 0112.4 16H5.5a.5.5 0 010-1h6.9a1.5 1.5 0 001.464-1.175l1.11-5A1.5 1.5 0 0013.508 7H9.5a.5.5 0 01-.5-.5v-4a1.5 1.5 0 00-1.153-1.46L5.974 6.658a.5.5 0 11-.948-.316l2-6A.5.5 0 017.5 0 2.5 2.5 0 0110 2.5zM.5 7a.5.5 0 00-.5.5v8a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-8a.5.5 0 00-.5-.5h-3zm.5 8V8h2v7H1z"
+                                            clip-rule="evenodd" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <path fill="#fff" d="M0 0h16v16H0V0z" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                            <button class="icon-btn right m-l-12">
+                                <span>No</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <g clip-path="url(#clip0)">
+                                        <path fill="currentColor" fill-rule="evenodd"
+                                            d="M.5 0a.5.5 0 00-.5.5v8a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-8a.5.5 0 00-.5-.5h-3zM1 8V1h2v7H1zm4.342 1.026a.5.5 0 01.632.316l1.873 5.618.13-.037A1.5 1.5 0 009 13.5v-4a.5.5 0 01.5-.5h4.008a1.5 1.5 0 001.467-1.826l-1.111-5A1.5 1.5 0 0012.4 1H5.5a.5.5 0 010-1h6.9a2.5 2.5 0 012.44 1.958l1.111 5A2.5 2.5 0 0113.507 10H10v3.5A2.5 2.5 0 017.5 16a.5.5 0 01-.474-.342l-2-6a.5.5 0 01.316-.632z"
+                                            clip-rule="evenodd" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <path fill="#fff" d="M0 0h16v16H0V0z" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="email-wrapper">
+                        <h3 class="m-b-16">Get updates from MX</h3>
+                        <div class="input-wrapper input-group">
+                            <input type="text" placeholder="Your email">
+                            <button>Sign up</button>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script src="../../code-mirror/src/codemirror.js"></script>
+    <script src="../../code-mirror/mode/javascript/javascript.js"></script>
+
+    <script src="../../main.js"></script>
+    <script src="../../page.js"></script>
+
+    <script>
+        require([
+            "../../code-mirror/lib/codemirror", "../../code-mirror/mode/htmlmixed/htmlmixed"
+        ], function (CodeMirror) {
+            CodeMirror.fromTextArea(document.getElementById("code"), {
+                lineNumbers: true,
+                mode: "htmlmixed"
+            });
+        });
+        var myCodeMirror = CodeMirror(function (elt) {
+            codeEditor.parentNode.replaceChild(elt, codeEditor);
+        }, { value: codeEditor.value });
+    </script>
+</body>
+
+</html>

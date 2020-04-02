@@ -155,10 +155,52 @@ body {
   height: 4px;
   background-color: #6FA1EC;
   position: absolute;
+  border-radius: 50%;
 }
 
 .left-nav .nav-item img {
   margin-right: 12px;
+}
+
+.left-nav.guide .back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 24px;
+  color: #CDD3DD;
+}
+
+.left-nav.guide .back:hover {
+  background-color: transparent;
+  color: #6FA1EC;
+}
+
+.left-nav.guide .back svg {
+  margin-right: 8px;
+}
+
+.left-nav.guide .nav-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 24px;
+  margin: 32px 0 16px;
+  font-weight: 700;
+}
+
+.left-nav.guide .nav-header img {
+  margin-right: 12px;
+}
+
+.left-nav.guide .nav-item {
+  padding: 8px 24px;
+  font-size: 14px;
 }
 
 .content-wrapper {
@@ -179,10 +221,26 @@ body {
   overflow: auto;
 }
 
-.content-wrapper.landing-page .content-inner {
+.content-wrapper .content-inner {
   width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content-wrapper .bread-crumbs {
+  margin-bottom: 32px;
+}
+
+.content-wrapper .bread-crumbs span {
+  margin: 0 12px;
+}
+
+.content-wrapper.landing-page {
+  padding: 72px 32px 32px;
+}
+
+.content-wrapper.landing-page .content-inner {
   max-width: 990px;
-  padding: 32px;
 }
 
 .content-wrapper.landing-page .card-wrapper {
@@ -208,6 +266,14 @@ body {
 
 .content-wrapper.landing-page .card-wrapper .card:hover {
   background-color: #49505A;
+}
+
+.content-wrapper.guide-page {
+  padding: 24px 32px 32px;
+}
+
+.content-wrapper.guide-page .content-inner {
+  max-width: 682px;
 }
 
 .content-wrapper footer {
@@ -241,5 +307,147 @@ body {
   border-bottom-left-radius: 0;
   height: 48px;
   border-left: none;
+}
+
+.code-editor {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #6A7381;
+}
+
+.code-editor .code-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #49505A;
+  border-bottom: 1px solid #6A7381;
+}
+
+.code-editor .code-header .file-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.code-editor .code-header .file-name svg {
+  margin-right: 8px;
+}
+
+.code-editor .code-header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.code-editor .code-header .right .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 16px;
+  -webkit-transition: all 350ms cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: all 350ms cubic-bezier(0.475, 0.425, 0, 0.995);
+  cursor: pointer;
+}
+
+.code-editor .code-header .right .action:hover {
+  color: #6FA1EC;
+}
+
+.code-editor .code-header .right .action span {
+  margin-left: 8px;
+}
+
+.code-editor .code-body {
+  padding: 16px 24px;
+  background-color: #121417;
+}
+
+.code-editor .code-body ol {
+  list-style: none;
+  counter-reset: li;
+  margin: 0;
+}
+
+.code-editor .code-body ol li {
+  font-family: Menlo, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  counter-increment: li;
+  margin-bottom: 0;
+  position: relative;
+  padding-left: 32px;
+}
+
+.code-editor .code-body ol li::before {
+  content: counter(li);
+  color: #A8B1BD;
+  position: absolute;
+  left: 0;
+  text-align: right;
+  width: 1em;
+}
+
+.code-editor .code-body ol li.indent.one {
+  padding-left: 48px;
+}
+
+.code-editor .code-body ol li.indent.two {
+  padding-left: 64px;
+}
+
+.code-editor .code-body ol li.indent.three {
+  padding-left: 80px;
+}
+
+.code-editor .code-body ol li.indent.four {
+  padding-left: 96px;
+}
+
+.code-editor .code-body ol .comment {
+  color: #689754;
+}
+
+.code-editor .code-body ol .light-blue {
+  color: #94D0F0;
+}
+
+.code-editor .code-body ol .dark-blue {
+  color: #578EBC;
+}
+
+.code-editor .code-body ol .tan {
+  color: #C18971;
+}
+
+.code-editor .code-body ol .yellow {
+  color: #CDCD9F;
+}
+
+.code-editor .code-body ol .teal {
+  color: #4EC8AF;
+}
+
+.code-editor .code-body ol .purple {
+  color: #A97AA5;
 }
 /*# sourceMappingURL=page.css.map */

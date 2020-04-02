@@ -81,11 +81,11 @@ $spacing-96px: 96px;
 }
 
 
-body{
+body {
     padding: 0;
 }
 
-.top-bar{
+.top-bar {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -94,17 +94,17 @@ body{
     align-items: center;
     position: fixed;
 
-    .left{
+    .left {
         padding: 0 0 0 24px;
         display: flex;
         align-items: center;
     }
 
-    .right{
+    .right {
         display: flex;
         align-items: flex-start;
 
-        > div{
+        >div {
             border-right: 1px solid $neutral-700;
             height: 48px;
             display: flex;
@@ -114,28 +114,28 @@ body{
             cursor: pointer;
             transition: $transition;
 
-            &:hover{
+            &:hover {
                 background-color: $neutral-600;
             }
 
-            &.profile-dropdown{
+            &.profile-dropdown {
                 padding: 8px 24px;
                 border: none;
             }
 
-            &.search-wrapper{
+            &.search-wrapper {
                 padding: 0;
                 position: relative;
-                color: $neutral-600 ;
+                color: $neutral-600;
 
-                svg{
+                svg {
                     position: absolute;
                     left: 12px;
                     top: 50%;
                     transform: translateY(-50%);
                 }
 
-                input{
+                input {
                     height: 47px;
                     background-color: $neutral-800;
                     border: none;
@@ -149,11 +149,11 @@ body{
     }
 }
 
-.flex-wrapper{
+.flex-wrapper {
     display: flex;
 }
 
-.left-nav{
+.left-nav {
     height: calc(100vh - 48px);
     display: flex;
     flex-direction: column;
@@ -163,7 +163,7 @@ body{
     position: fixed;
     bottom: 0;
 
-    .nav-item{
+    .nav-item {
         display: flex;
         align-items: center;
         padding: 16px 24px;
@@ -171,10 +171,10 @@ body{
         text-decoration: none;
         position: relative;
 
-        &.active{
+        &.active {
             color: $primary-200;
 
-            &:after{
+            &:after {
                 content: "";
                 top: 50%;
                 right: 16px;
@@ -183,16 +183,52 @@ body{
                 height: 4px;
                 background-color: $primary-200;
                 position: absolute;
+                border-radius: 50%;
             }
         }
 
-        img{
+        img {
             margin-right: 12px;
+        }
+    }
+
+    &.guide {
+        .back {
+            display: flex;
+            align-items: center;
+            padding-left: 24px;
+            color: $neutral-400;
+
+            &:hover {
+                background-color: transparent;
+                color: $primary-200;
+            }
+
+            svg {
+                margin-right: 8px;
+            }
+        }
+
+        .nav-header {
+            display: flex;
+            align-items: center;
+            padding-left: 24px;
+            margin: 32px 0 16px;
+            font-weight: 700;
+
+            img {
+                margin-right: 12px;
+            }
+        }
+
+        .nav-item {
+            padding: 8px 24px;
+            font-size: 14px;
         }
     }
 }
 
-.content-wrapper{
+.content-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -203,19 +239,33 @@ body{
     top: 48px;
     overflow: auto;
 
-    &.landing-page{
-        .content-inner{
-            width: 100%;
+    .content-inner {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bread-crumbs {
+        margin-bottom: 32px;
+
+        span {
+            margin: 0 12px;
+        }
+    }
+
+    &.landing-page {
+        padding: 72px 32px 32px;
+
+        .content-inner {
             max-width: 990px;
-            padding: 32px;
+
         }
 
-        .card-wrapper{
+        .card-wrapper {
             display: grid;
-            grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             grid-gap: 16px;
 
-            .card{
+            .card {
                 background-color: $neutral-600;
                 display: flex;
                 padding: 16px;
@@ -224,38 +274,167 @@ body{
                 cursor: pointer;
                 transition: $transition;
 
-                &:hover{
+                &:hover {
                     background-color: $neutral-700;
                 }
             }
         }
     }
 
-    footer{
+    &.guide-page {
+        padding: 24px 32px 32px;
+
+        .content-inner {
+            max-width: 682px;
+            // padding: 24px 32px 32px;
+        }
+    }
+
+    footer {
         padding: 0 0 40px 0;
 
-        hr{
+        hr {
             margin-block-start: 40px;
             margin-block-end: 40px;
         }
 
-        .email-wrapper{
-            .input-group{
+        .email-wrapper {
+            .input-group {
                 display: flex;
-                align-items: center;`
+                align-items: center;
 
-                input{
+                input {
                     width: 303px;
                     border-top-right-radius: 0;
                     border-bottom-right-radius: 0;
                 }
 
-                button{
+                button {
                     border-top-left-radius: 0;
                     border-bottom-left-radius: 0;
                     height: 48px;
                     border-left: none;
                 }
+            }
+        }
+    }
+}
+
+.code-editor {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid $neutral-600;
+
+    .code-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        background-color: $neutral-700;
+        border-bottom: 1px solid $neutral-600;
+        
+
+        .file-name {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            line-height: 16px;
+
+            svg {
+                margin-right: 8px;
+            }
+        }
+
+        .right{
+            display: flex;
+            align-items: center;
+
+            .action{
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                line-height: 16px;
+                transition: $transition;
+                cursor: pointer;
+
+                &:hover{
+                    color: $primary-200;
+                }
+
+                span{
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+
+    .code-body {
+        padding: 16px 24px;
+        background-color: $neutral-900;
+        ol {
+            list-style: none; 
+            counter-reset: li;
+            margin: 0;
+
+            li {
+                font-family: Menlo, Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                line-height: 20px;
+                counter-increment: li;
+                margin-bottom: 0;
+                position: relative;
+                padding-left: 32px;
+
+                &::before{
+                    content: counter(li); 
+                    color: $neutral-500;
+                    position: absolute;
+                    left: 0;
+                    text-align: right;
+                    width: 1em;
+                }
+
+                &.indent{
+                    &.one{
+                        padding-left: 48px;
+                    }
+
+                    &.two{
+                        padding-left: 64px;
+                    }
+
+                    &.three{
+                        padding-left: 80px;
+                    }
+
+                    &.four{
+                        padding-left: 96px;
+                    }
+                }
+            }
+
+            .comment{
+                color: #689754;
+            }
+
+            .light-blue{
+                color: #94D0F0;
+            }
+            .dark-blue{
+                color: #578EBC;
+            }
+            .tan{
+                color: #C18971;
+            }
+            .yellow{
+                color: #CDCD9F;
+            }
+            .teal{
+                color: #4EC8AF;
+            }
+            .purple{
+                color: #A97AA5;
             }
         }
     }
