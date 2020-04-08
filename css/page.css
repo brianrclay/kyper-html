@@ -364,6 +364,19 @@ body {
   bottom: -4px;
 }
 
+.content-wrapper.api-page .content-inner span.code {
+  background-color: rgba(73, 80, 90, 0.7);
+  font-family: Menlo, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 1px 4px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.content-wrapper.api-page .content-inner .message-box {
+  background-color: transparent;
+}
+
 .content-wrapper.api-page .content-inner hr.new-section {
   border: none;
   height: 4px;

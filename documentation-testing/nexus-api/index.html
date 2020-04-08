@@ -143,9 +143,9 @@
                         <div class="message-box no-headline no-actions">
                             <div class="icon"></div>
                             <div class="message-wrapper">
-                                <p class="message-text small">Partners must have this premium feature enabled by MX. If this feature is not enabled, a 403 Forbidden error will be returned.
+                                <p class="message-text small">Partners must have this premium feature enabled by MX. If this feature is not enabled, a <span class="code">403 Forbidden</span> error will be returned.
                                     <br /><br />
-                                    If an institution does not support identification, a 400 Bad Request error will be returned with the message, Member's institution does not support instant account identification.
+                                    If an <span class="code">institution</span> does not support identification, a <span class="code">400 Bad Request</span> error will be returned with the message, <span class="code">Member's institution does not support instant account identification</span>.
                                     <br /><br />
                                     Each successful identification will incur a charge. To test your identification setup, MX has provided <a class="small" href="#">test endpoints</a>.
                                 </p>
@@ -470,16 +470,16 @@
                 </div>
                 <div class="left">
                     <h2 class="m-b-16">Identify</h2>
-                    <p class="m-b-32">The identification workflow is similar to standard aggregation: Start the identification, poll the member, answer MFA if necessary by using the list member MFA challenges endpoint and the update member endpoint, poll the status again, then read the member's account_owners.
+                    <p class="m-b-32">The identification workflow is similar to standard aggregation: Start the identification, poll the member, answer MFA if necessary by using the list member MFA challenges endpoint and the update member endpoint, poll the status again, then read the member's <span class="code">account_owners</span>.
                         <br /><br />
-                        Before making a request to this endpoint, partners must make sure identification is enabled for the member's institution. Specifically, the institution's supports_account_identification field must be true.
+                        Before making a request to this endpoint, partners must make sure identification is enabled for the member's <span class="code">institution</span>. Specifically, the institution's <span class="code">supports_account_identification</span> field must be <span class="code">true</span>.
                         <br /><br />
-                        If the institution does not support identification, a 400 Bad Request error will be returned with the message, Member's institution does not support instant account identification.
+                        If the <span class="code">institution</span> does not support identification, a <span class="code">400 Bad Request</span> error will be returned with the message, <span class="code">Member's institution does not support instant account identification</span>.
                     </p>
                     <div class="message-box no-headline no-actions">
                         <div class="icon"></div>
                         <div class="message-wrapper">
-                            <p class="message-text small">If a request to this endpoint fails with a status of 403 Forbidden but the member's institution nevertheless shows that identification is enabled, please contact support.</p>
+                            <p class="message-text small">If a request to this endpoint fails with a status of <span class="code">403 Forbidden</span> but the member's <span class="code">institution</span> nevertheless shows that identification is enabled, please contact support.</p>
                         </div>
                     </div>
                 </div>

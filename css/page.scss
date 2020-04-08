@@ -360,6 +360,19 @@ body {
                 }
             }
 
+            span.code{
+                background-color: rgba($color: $neutral-700, $alpha: .7);
+                font-family: Menlo, Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                padding: 1px 4px;
+                border-radius: 4px;
+                color: #fff;
+            }
+
+            .message-box{
+                background-color: transparent;
+            }
+
             hr.new-section{
                 border: none;
                 height: 4px;
