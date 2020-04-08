@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nexus API Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../../css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
+    <link rel="stylesheet" href="../../code-mirror/lib/codemirror.css" />
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/style-dark.css" rel="stylesheet">
+    <link href="../../css/page.css" rel="stylesheet">
+    <link href="../../css/helpers.css" rel="stylesheet">
+</head>
+
+<body class="dark-mode">
+    <div class="page-wrapper">
+        <div class="top-bar">
+            <div class="left">
+                <img src="../../page-assets/top-bar/logo.svg">
+            </div>
+            <div class="right">
+                <div class="search-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M6.933 0A6.933 6.933 0 0112.2 11.444l3.645 3.645a.533.533 0 11-.755.755l-3.645-3.645A6.933 6.933 0 116.934 0zm0 1.067a5.867 5.867 0 100 11.733 5.867 5.867 0 000-11.733z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <input type="text" placeholder="Search documentation...">
+                </div>
+                <div class="info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <g clip-path="url(#clip0)">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M8 16A8 8 0 118 0a8 8 0 010 16zm0-1.067A6.933 6.933 0 108 1.067a6.933 6.933 0 000 13.866zM8 5a1 1 0 110-2 1 1 0 010 2zm-.02 8c-.398 0-.72-.364-.72-.813V7.314c0-.45.322-.813.72-.813.398 0 .72.364.72.813v4.875c0 .448-.322.812-.72.812z"
+                                clip-rule="evenodd" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <path fill="#fff" d="M0 0h16v16H0V0z" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="notifications">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M10.492 13.542a.5.5 0 01.258.658 3 3 0 01-5.5.002.5.5 0 01.916-.402 2.002 2.002 0 003.668 0 .5.5 0 01.658-.258zM8 0a5 5 0 015 5v.296a3.48 3.48 0 001.74 3.02C15.538 8.774 16 9.337 16 10c0 1.806-3.583 3-8 3s-8-1.194-8-3c0-.663.463-1.226 1.26-1.684A3.481 3.481 0 003 5.296V5a5 5 0 015-5zm0 1a4 4 0 00-4 4v.296a4.481 4.481 0 01-2.243 3.888C1.238 9.48 1 9.772 1 10c0 .956 3.133 2 7 2s7-1.044 7-2c0-.228-.238-.519-.756-.816A4.48 4.48 0 0112 5.296V5a4 4 0 00-4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="avatar large">B</div>
+                </div>
+            </div>
+        </div>
+        <div class="left-nav api guide">
+            <div class="top">
+                <a href="/documentation-testing" class="back">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M5.854 3.133a.426.426 0 010 .643L1.757 7.5h13.774c.26 0 .469.224.469.5s-.21.5-.469.5H1.757l4.097 3.724a.426.426 0 010 .643.536.536 0 01-.708 0l-5-4.546a.426.426 0 010-.642l5-4.546a.536.536 0 01.708 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <div class="nav-header">
+                    <img src="../../page-assets/left-nav/24/Nexus.png">
+                    <span>Nexus API Reference</span>
+                </div>
+                <a href="#" class="nav-item">
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Accounts</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Budgets</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Categories</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Goals</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Holdings</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <span>Identity</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Institutions</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Jobs</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Member credentials</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Members</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Merchants</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Monthly cash flow</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Notifications</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Scheduled payments</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Taggings</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Tags</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Transactions</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Users</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Verification</span>
+                </a>
+            </div>
+        </div>
+        <div class="content-wrapper api-page">
+            <div class="content-inner">
+                <div class="row">
+                    <div class="left">
+                        <h1 class="m-b-32">Identity</h1>
+                        <p class="m-b-32">Identity/account ownership information may be returned through normal aggregation. You may check
+                            whether this information is already available by calling the account owners endpoint. When such
+                            information is not returned, the identify end point may be used to gather this information on
+                            certain institutions, and then accessed with another call to the account owners endpoint.</p>
+                        <div class="message-box no-headline no-actions">
+                            <div class="icon"></div>
+                            <div class="message-wrapper">
+                                <p class="message-text small">Partners must have this premium feature enabled by MX. If this feature is not enabled, a 403 Forbidden error will be returned.
+                                    <br /><br />
+                                    If an institution does not support identification, a 400 Bad Request error will be returned with the message, Member's institution does not support instant account identification.
+                                    <br /><br />
+                                    Each successful identification will incur a charge. To test your identification setup, MX has provided <a class="small" href="#">test endpoints</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <h3 class="m-b-16 m-t-56">Account owner fields</h3>
+                        <div class="table block ">
+                            <div class="table-head">
+    
+                                <div class="header left" style="max-width: 200px">
+                                    <span>Field name</span>
+                                    <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="none" viewBox="0 0 12 12">
+                                        <path fill="currentColor"
+                                            d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                                    </svg>
+                                </div>
+    
+    
+                                <div class="header left" style="flex: unset; width: 109px">
+                                    <span>Data Type</span>
+                                    <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="none" viewBox="0 0 12 12">
+                                        <path fill="currentColor"
+                                            d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                                    </svg>
+                                </div>
+    
+    
+                                <div class="header left">
+                                    <span>Description</span>
+                                    <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="none" viewBox="0 0 12 12">
+                                        <path fill="currentColor"
+                                            d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="table-body">
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">account_guid</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The unique
+                                            identifier for the account associated with the account owner. Defined by
+                                            MX.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">address</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The account
+                                            owner's street address.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">city</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The account
+                                            owner's city.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">county</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The account
+                                            owner's county.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">email</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The account
+                                            owner's email address.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">member_guid</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The unique
+                                            identifier for the member associated with the account owner. Defined by
+                                            MX.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">owner_name</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The account
+                                            owner's name.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">phone</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The account
+                                            owner's phone number.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">postal_code</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The the account
+                                            owner's postal code.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">state</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The account
+                                            owner's state.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">user_guid</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">string</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The unique
+                                            identifier for the user associated with the account owner. Defined by MX.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="full">
+                    <hr class="m-t-40 m-b-40">
+                </div>
+                <div class="full">
+                    <hr class="m-t-40 m-b-40">
+                </div>
+                <div class="row">
+                    <div class="left">
+                        <h2 class="m-b-16">Read account owners</h2>
+                        <p>Use this endpoint to read any identity/account ownership data available for a specific member.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <div class="code-editor m-b-32">
+                            <div class="code-header">
+                                <div class="file-name">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                        viewBox="0 0 16 16">
+                                        <path fill="currentColor" fill-rule="evenodd"
+                                            d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Example request:</span>
+                                </div>
+                                <div class="right">
+                                    <div class="action copy">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <path fill="currentColor" fill-rule="evenodd"
+                                                d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Copy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="code-body">
+                                <ol>
+                                    <li class="comment">
+                                        // Endpoint: GET /members/:member_guid/account_owners
+                                    </li>
+                                    <li>
+                                        curl -i https://int-data.moneydesktop.com/members/MBR-c6536f4c-61dc-a047-5c45-ee38b8ba812a/account_owners <span
+                                            class="purple">\</span>
+                                    </li>
+                                    <li class="indent one">
+                                        -H <span class="yellow">'MD-SESSION-TOKEN: :session_token'</span> <span class="purple">\</span>
+                                    </li>
+                                    <li class="indent one">
+                                        -H <span class="yellow">'Content-Type: application/vnd.mx.nexus.v1+json'</span>
+                                        <span class="purple">\</span>
+                                    </li>
+                                    <li class="indent one">
+                                        -H <span class="yellow">'Accept: application/vnd.mx.nexus.v1+json'</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="code-editor">
+                            <div class="code-header">
+                                <div class="file-name">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                        viewBox="0 0 16 16">
+                                        <path fill="currentColor" fill-rule="evenodd"
+                                            d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Example response:</span>
+                                </div>
+                                <div class="right">
+                                    <div class="action copy">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <path fill="currentColor" fill-rule="evenodd"
+                                                d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Copy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="code-body">
+                                <ol>
+                                    <li>
+                                        {
+                                    </li>
+                                    <li class="indent one">
+                                        <span class="yellow">"account_owners"</span>: [
+                                    </li>
+                                    <li class="indent two">
+                                        {
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "guid": "ACO-123",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "user_guid": "USR-123",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "member_guid": "MBR-123",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "account_guid": "ACT-123",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "owner_name": "Donnie Darko",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "address": "123 This Way",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "city": "Middlesex",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "state": "VA",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "postal_code": "00000-0000",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "country": "US",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "email": "donnie@darko.co",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "phone": "555-555-5555"
+                                    </li>
+                                    <li class="indent two">
+                                        }
+                                    </li>
+                                    <li class="indent one">
+                                        ]
+                                    </li>
+                                    <li>
+                                        }
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="full">
+                    <hr class="m-t-40 m-b-40">
+                </div>
+                <div class="left">
+                    <h2 class="m-b-16">Identify</h2>
+                    <p class="m-b-32">The identification workflow is similar to standard aggregation: Start the identification, poll the member, answer MFA if necessary by using the list member MFA challenges endpoint and the update member endpoint, poll the status again, then read the member's account_owners.
+                        <br /><br />
+                        Before making a request to this endpoint, partners must make sure identification is enabled for the member's institution. Specifically, the institution's supports_account_identification field must be true.
+                        <br /><br />
+                        If the institution does not support identification, a 400 Bad Request error will be returned with the message, Member's institution does not support instant account identification.
+                    </p>
+                    <div class="message-box no-headline no-actions">
+                        <div class="icon"></div>
+                        <div class="message-wrapper">
+                            <p class="message-text small">If a request to this endpoint fails with a status of 403 Forbidden but the member's institution nevertheless shows that identification is enabled, please contact support.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="code-editor" style="position: sticky; top: 48px;">
+                        <div class="code-header">
+                            <div class="file-name">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Example request:</span>
+                            </div>
+                            <div class="right">
+                                <div class="action copy">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                        viewBox="0 0 16 16">
+                                        <path fill="currentColor" fill-rule="evenodd"
+                                            d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Copy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-body">
+                            <ol>
+                                <li class="comment">
+                                    //Real time base URL: https://int-live.moneydesktop.com/:client_id
+                                </li>
+                                <li class="comment">
+                                    // Endpoint: POST /users
+                                </li>
+                                <li>
+                                    curl -i -X POST https://int-live.moneydesktop.com/:client_id/users.json <span
+                                        class="purple">\</span>
+                                </li>
+                                <li class="indent one">
+                                    -H <span class="yellow">"Content-Type:
+                                        application/vnd.moneydesktop.mdx.v5+json"</span> <span class="purple">\</span>
+                                </li>
+                                <li class="indent one">
+                                    -H <span class="yellow">"Accept: application/vnd.moneydesktop.mdx.v5+json"</span>
+                                    <span class="purple">\</span>
+                                </li>
+                                <li class="indent one">
+                                    -H <span class="yellow">"MD-API-KEY: :api_key"</span> <span class="purple">\</span>
+                                </li>
+                                <li class="indent one">
+                                    -d <span class="yellow">'{</span>
+                                </li>
+                                <li class="indent two yellow">
+                                    "user": {
+                                </li>
+                                <li class="indent three yellow">
+                                    "birthdate": "1959-07-17",
+                                </li>
+                                <li class="indent three yellow">
+                                    "credit_score": "718",
+                                </li>
+                                <li class="indent three yellow">
+                                    "email": "walterwhite@example.com",
+                                </li>
+                                <li class="indent three yellow">
+                                    "first_name": "Walter",
+                                </li>
+                                <li class="indent three yellow">
+                                    "gender": "MALE",
+                                </li>
+                                <li class="indent three yellow">
+                                    "id": "U-39XBF7",
+                                </li>
+                                <li class="indent three yellow">
+                                    "last_name": "White",
+                                </li>
+                                <li class="indent three yellow">
+                                    "metadata": "Additional Information",
+                                </li>
+                                <li class="indent three yellow">
+                                    "phone": "5055551234",
+                                </li>
+                                <li class="indent three yellow">
+                                    "zip_code": "87101"
+                                </li>
+                                <li class="indent two yellow">
+                                    }
+                                </li>
+                                <li class="indent one yellow">
+                                    }'
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="full">
+                    <hr class="new-section">
+                </div>
+
+                <div class="row">
+                    <div class="left">
+                        <h1 class="m-b-32">Institutions</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus interdum eleifend dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus interdum eleifend dolor.</p>
+                    </div>
+                    <div class="right">
+                        <h3 class="m-b-16">Institution fields</h3>
+                        <div class="table block ">
+                            <div class="table-head">
+    
+                                <div class="header left" style="max-width: 200px">
+                                    <span>Field name</span>
+                                    <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="none" viewBox="0 0 12 12">
+                                        <path fill="currentColor"
+                                            d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                                    </svg>
+                                </div>
+    
+    
+                                <div class="header left" style="flex: unset; width: 109px">
+                                    <span>Data Type</span>
+                                    <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="none" viewBox="0 0 12 12">
+                                        <path fill="currentColor"
+                                            d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                                    </svg>
+                                </div>
+    
+    
+                                <div class="header left">
+                                    <span>Description</span>
+                                    <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="none" viewBox="0 0 12 12">
+                                        <path fill="currentColor"
+                                            d="M2.36 3.65a.402.402 0 00.53 0L6 .823 9.11 3.65a.402.402 0 00.53 0 .32.32 0 000-.482L6.265.1a.402.402 0 00-.53 0L2.36 3.168a.32.32 0 000 .482zM9.64 8.35a.402.402 0 00-.53 0L6 11.177 2.89 8.35a.402.402 0 00-.53 0 .32.32 0 000 .482L5.735 11.9a.402.402 0 00.53 0L9.64 8.832a.32.32 0 000-.482z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="table-body">
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">created_at</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">Date and time the institution was created, represented in ISO 8601 format with timestamp (e.g. 2015-04-13T12:01:23-06:00).</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">guid</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">Unique identifier for the institution. Defined by MX.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">has_checking_accounts</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">If the institution has checking accounts, this field will be true. Otherwise, this field will be false.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">has_credit_card_accounts</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">If the institution has credit card accounts, this field will be true. Otherwise, this field will be false.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">has_investment_accounts</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">If the institution has investment accounts, this field will be true. Otherwise, this field will be false.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">has_line_of_credit_accounts</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">If the institution has line of credit accounts, this field will be true. Otherwise, this field will be false.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">has_loan_accounts</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">If the institution has loan accounts, this field will be true. Otherwise, this field will be false.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">has_mortgage_accounts</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">If the institution has mortgage accounts, this field will be true. Otherwise, this field will be false.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">has_savings_accounts</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">If the institution has savings accounts, this field will be true. Otherwise, this field will be false.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">is_hidden</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">If the institution is available for creating new member connections, this field will be true. Otherwise, this field will be false.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">medium_logo_url</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The institution's logo (medium size). This may be a generic logo if MX does not have a specific logo for the institution.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">name</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The name of the institution that is visible to the user.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">popularity</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The number of member connections to the institution.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">small_logo_url</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The institution's logo (small size). This may be a generic logo if MX does not have a specific logo for the institution.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">supports_account_identification</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">Indicates whether account identification is available for this institution.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">supports_account_verification</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">Indicates whether account verification is available for this institution.</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">updated_at</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">	Date and time the institution was updated, represented in ISO 8601 format with timestamp (e.g. 2015-04-13T12:01:23-06:00).</span>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="cell" style="max-width: 200px">
+                                        <span class="cell-text">url</span>
+                                    </div>
+                                    <div class="cell" style="flex: unset; width: 109px">
+                                        <span class="cell-text">boolean</span>
+                                    </div>
+                                    <div class="cell">
+                                        <span class="cell-text" style="word-wrap: break-word; width: 100%;">The url of the institution.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="full">
+                    <hr class="m-t-40 m-b-40">
+                </div>
+                
+                
+                <div class="full">
+                    <footer>
+                        <hr>
+                        <div class="flex ai-center">
+                            <h3 class="m-r-24">Was this page helpful?</h3>
+                            <div class="button-wrapper flex ai-center">
+                                <button class="icon-btn right">
+                                    <span>Yes</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                        viewBox="0 0 16 16">
+                                        <g clip-path="url(#clip0)">
+                                            <path fill="currentColor" fill-rule="evenodd"
+                                                d="M10 2.5V6h3.506a2.5 2.5 0 012.445 3.042l-1.11 5A2.5 2.5 0 0112.4 16H5.5a.5.5 0 010-1h6.9a1.5 1.5 0 001.464-1.175l1.11-5A1.5 1.5 0 0013.508 7H9.5a.5.5 0 01-.5-.5v-4a1.5 1.5 0 00-1.153-1.46L5.974 6.658a.5.5 0 11-.948-.316l2-6A.5.5 0 017.5 0 2.5 2.5 0 0110 2.5zM.5 7a.5.5 0 00-.5.5v8a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-8a.5.5 0 00-.5-.5h-3zm.5 8V8h2v7H1z"
+                                                clip-rule="evenodd" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <path fill="#fff" d="M0 0h16v16H0V0z" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                                <button class="icon-btn right m-l-12">
+                                    <span>No</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                        viewBox="0 0 16 16">
+                                        <g clip-path="url(#clip0)">
+                                            <path fill="currentColor" fill-rule="evenodd"
+                                                d="M.5 0a.5.5 0 00-.5.5v8a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-8a.5.5 0 00-.5-.5h-3zM1 8V1h2v7H1zm4.342 1.026a.5.5 0 01.632.316l1.873 5.618.13-.037A1.5 1.5 0 009 13.5v-4a.5.5 0 01.5-.5h4.008a1.5 1.5 0 001.467-1.826l-1.111-5A1.5 1.5 0 0012.4 1H5.5a.5.5 0 010-1h6.9a2.5 2.5 0 012.44 1.958l1.111 5A2.5 2.5 0 0113.507 10H10v3.5A2.5 2.5 0 017.5 16a.5.5 0 01-.474-.342l-2-6a.5.5 0 01.316-.632z"
+                                                clip-rule="evenodd" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <path fill="#fff" d="M0 0h16v16H0V0z" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="email-wrapper">
+                            <h3 class="m-b-16">Get updates from MX</h3>
+                            <div class="input-wrapper input-group">
+                                <input type="text" placeholder="Your email">
+                                <button>Sign up</button>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script src="../../code-mirror/src/codemirror.js"></script>
+    <script src="../../code-mirror/mode/javascript/javascript.js"></script>
+
+    <script src="../../main.js"></script>
+    <script src="../../page.js"></script>
+
+    <script>
+        require([
+            "../../code-mirror/lib/codemirror", "../../code-mirror/mode/htmlmixed/htmlmixed"
+        ], function (CodeMirror) {
+            CodeMirror.fromTextArea(document.getElementById("code"), {
+                lineNumbers: true,
+                mode: "htmlmixed"
+            });
+        });
+        var myCodeMirror = CodeMirror(function (elt) {
+            codeEditor.parentNode.replaceChild(elt, codeEditor);
+        }, { value: codeEditor.value });
+    </script>
+</body>
+
+</html>

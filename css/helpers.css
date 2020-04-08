@@ -442,6 +442,14 @@
   display: flex;
 }
 
+.flex0{
+  flex: 0 !important;
+}
+
+.flex1{
+  flex: 1 !important;
+}
+
 .ai-center{
   align-items: center;
 }

@@ -162,6 +162,7 @@ body {
     padding: 24px 0 0 0;
     position: fixed;
     bottom: 0;
+    overflow: auto;
 
     .nav-item {
         display: flex;
@@ -193,6 +194,18 @@ body {
     }
 
     &.guide {
+        flex-direction: column;
+        justify-content: space-between;
+
+        .bottom{
+            a{
+                border-top: 1px solid $neutral-700;
+                padding: 16px 24px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
         .back {
             display: flex;
             align-items: center;
@@ -226,6 +239,8 @@ body {
             font-size: 14px;
         }
     }
+
+
 }
 
 .content-wrapper {
@@ -286,9 +301,89 @@ body {
 
         .content-inner {
             max-width: 682px;
-            // padding: 24px 32px 32px;
         }
     }
+    
+    &.api-page {
+        padding: 24px 32px 32px;
+
+        .content-inner {
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            > .row{
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                > .left{
+                    width: calc(50% - 16px);
+                    position: sticky;
+                    top: 48px;
+                }
+    
+                > .right{
+                    width: calc(50% - 16px);
+                    position: sticky;
+                    top: 48px;
+                }
+            }
+
+            > .left{
+                width: calc(50% - 16px);
+            }
+
+            > .right{
+                width: calc(50% - 16px);
+            }
+            
+
+            > .full{
+                width: 100%;
+            }
+
+            h1{
+                position: relative;
+
+                &:after{
+                    content: "";
+                    width: 10%;
+                    height: 4px;
+                    border-radius: 50px;
+                    background-color: $primary-200;
+                    position: absolute;
+                    left: 0;
+                    bottom: -4px;
+                }
+            }
+
+            hr.new-section{
+                border: none;
+                height: 4px;
+                margin: 80px 0;
+                background:linear-gradient(90deg, #6FA1EC 0%, rgba(111, 161, 236, 0) 100%); ;
+            }
+        }
+    }
+
+    .table .table-body .table-row{
+        
+        align-items: unset;
+
+        .cell{
+            align-items: flex-start;
+            height: unset;
+            
+            .cell-text{
+               text-overflow: unset;
+               white-space: unset;
+               overflow: unset;
+            }
+       }
+    } 
 
     footer {
         padding: 0 0 40px 0;

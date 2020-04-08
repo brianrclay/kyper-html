@@ -577,15 +577,6 @@ body.dark-mode .table .table-head .header {
   border-bottom: 1px solid #6A7381;
 }
 
-body.dark-mode .table .table-body .table-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
 body.dark-mode .table .table-body .table-row:hover .cell {
   background-color: #49505A;
 }

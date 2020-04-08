@@ -1063,6 +1063,18 @@ form {
         }
     }
 
+    &.no-headline{
+        .message-wrapper .message-text{
+            margin-top: 0;
+        }
+    }
+    
+    &.no-actions{
+        .message-wrapper .message-text{
+            margin-bottom: 0;
+        }
+    }
+
     .close {
         border: none;
         background-color: transparent;

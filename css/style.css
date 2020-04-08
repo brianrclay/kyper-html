@@ -1013,6 +1013,14 @@ form .input-wrapper:last-child {
   background-image: url("/assets/message-box-icons/Check-Circle-Filled.svg");
 }
 
+.message-box.no-headline .message-wrapper .message-text {
+  margin-top: 0;
+}
+
+.message-box.no-actions .message-wrapper .message-text {
+  margin-bottom: 0;
+}
+
 .message-box .close {
   border: none;
   background-color: transparent;
