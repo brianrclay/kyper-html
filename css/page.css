@@ -34,6 +34,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  background-color: #1F2329;
 }
 
 .top-bar .left {
