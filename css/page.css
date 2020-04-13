@@ -277,8 +277,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(#121417), color-stop(39.92%, #1F2329));
-  background: linear-gradient(180deg, #121417 0%, #1F2329 39.92%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#121417), color-stop(63.93%, #1F2329));
+  background: linear-gradient(180deg, #121417 0%, #1F2329 63.93%);
   margin-top: 625px;
 }
 
@@ -290,8 +290,6 @@ body {
 
 .content-wrapper.landing-page .content-inner {
   max-width: 990px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#121417), color-stop(39.92%, #1F2329));
-  background: linear-gradient(180deg, #121417 0%, #1F2329 39.92%);
   padding: 48px 32px 0;
 }
 

@@ -468,111 +468,207 @@
                 <div class="full">
                     <hr class="m-t-40 m-b-40">
                 </div>
-                <div class="left">
-                    <h2 class="m-b-16">Identify</h2>
-                    <p class="m-b-32">The identification workflow is similar to standard aggregation: Start the identification, poll the member, answer MFA if necessary by using the list member MFA challenges endpoint and the update member endpoint, poll the status again, then read the member's <span class="code">account_owners</span>.
-                        <br /><br />
-                        Before making a request to this endpoint, partners must make sure identification is enabled for the member's <span class="code">institution</span>. Specifically, the institution's <span class="code">supports_account_identification</span> field must be <span class="code">true</span>.
-                        <br /><br />
-                        If the <span class="code">institution</span> does not support identification, a <span class="code">400 Bad Request</span> error will be returned with the message, <span class="code">Member's institution does not support instant account identification</span>.
-                    </p>
-                    <div class="message-box no-headline no-actions">
-                        <div class="icon"></div>
-                        <div class="message-wrapper">
-                            <p class="message-text small">If a request to this endpoint fails with a status of <span class="code">403 Forbidden</span> but the member's <span class="code">institution</span> nevertheless shows that identification is enabled, please contact support.</p>
+                <div class="row">
+                    <div class="left">
+                        <h2 class="m-b-16">Identify</h2>
+                        <p class="m-b-32">The identification workflow is similar to standard aggregation: Start the identification, poll the member, answer MFA if necessary by using the list member MFA challenges endpoint and the update member endpoint, poll the status again, then read the member's <span class="code">account_owners</span>.
+                            <br /><br />
+                            Before making a request to this endpoint, partners must make sure identification is enabled for the member's <span class="code">institution</span>. Specifically, the institution's <span class="code">supports_account_identification</span> field must be <span class="code">true</span>.
+                            <br /><br />
+                            If the <span class="code">institution</span> does not support identification, a <span class="code">400 Bad Request</span> error will be returned with the message, <span class="code">Member's institution does not support instant account identification</span>.
+                        </p>
+                        <div class="message-box no-headline no-actions">
+                            <div class="icon"></div>
+                            <div class="message-wrapper">
+                                <p class="message-text small">If a request to this endpoint fails with a status of <span class="code">403 Forbidden</span> but the member's <span class="code">institution</span> nevertheless shows that identification is enabled, please contact support.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="right">
-                    <div class="code-editor" style="position: sticky; top: 48px;">
-                        <div class="code-header">
-                            <div class="file-name">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
-                                    viewBox="0 0 16 16">
-                                    <path fill="currentColor" fill-rule="evenodd"
-                                        d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Example request:</span>
-                            </div>
-                            <div class="right">
-                                <div class="action copy">
+                    <div class="right">
+                        <div class="code-editor m-b-32">
+                            <div class="code-header">
+                                <div class="file-name">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
                                         viewBox="0 0 16 16">
                                         <path fill="currentColor" fill-rule="evenodd"
-                                            d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                            d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
                                             clip-rule="evenodd" />
                                     </svg>
-                                    <span>Copy</span>
+                                    <span>Example request:</span>
+                                </div>
+                                <div class="right">
+                                    <div class="action copy">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <path fill="currentColor" fill-rule="evenodd"
+                                                d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Copy</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="code-body">
+                                <ol>
+                                    <li class="comment">
+                                        //Real time base URL: https://int-live.moneydesktop.com/:client_id
+                                    </li>
+                                    <li class="comment">
+                                        // Endpoint: POST /users
+                                    </li>
+                                    <li>
+                                        curl -i -X POST https://int-live.moneydesktop.com/:client_id/users.json <span
+                                            class="purple">\</span>
+                                    </li>
+                                    <li class="indent one">
+                                        -H <span class="yellow">"Content-Type:
+                                            application/vnd.moneydesktop.mdx.v5+json"</span> <span class="purple">\</span>
+                                    </li>
+                                    <li class="indent one">
+                                        -H <span class="yellow">"Accept: application/vnd.moneydesktop.mdx.v5+json"</span>
+                                        <span class="purple">\</span>
+                                    </li>
+                                    <li class="indent one">
+                                        -H <span class="yellow">"MD-API-KEY: :api_key"</span> <span class="purple">\</span>
+                                    </li>
+                                    <li class="indent one">
+                                        -d <span class="yellow">'{</span>
+                                    </li>
+                                    <li class="indent two yellow">
+                                        "user": {
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "birthdate": "1959-07-17",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "credit_score": "718",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "email": "walterwhite@example.com",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "first_name": "Walter",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "gender": "MALE",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "id": "U-39XBF7",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "last_name": "White",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "metadata": "Additional Information",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "phone": "5055551234",
+                                    </li>
+                                    <li class="indent three yellow">
+                                        "zip_code": "87101"
+                                    </li>
+                                    <li class="indent two yellow">
+                                        }
+                                    </li>
+                                    <li class="indent one yellow">
+                                        }'
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
-                        <div class="code-body">
-                            <ol>
-                                <li class="comment">
-                                    //Real time base URL: https://int-live.moneydesktop.com/:client_id
-                                </li>
-                                <li class="comment">
-                                    // Endpoint: POST /users
-                                </li>
-                                <li>
-                                    curl -i -X POST https://int-live.moneydesktop.com/:client_id/users.json <span
-                                        class="purple">\</span>
-                                </li>
-                                <li class="indent one">
-                                    -H <span class="yellow">"Content-Type:
-                                        application/vnd.moneydesktop.mdx.v5+json"</span> <span class="purple">\</span>
-                                </li>
-                                <li class="indent one">
-                                    -H <span class="yellow">"Accept: application/vnd.moneydesktop.mdx.v5+json"</span>
-                                    <span class="purple">\</span>
-                                </li>
-                                <li class="indent one">
-                                    -H <span class="yellow">"MD-API-KEY: :api_key"</span> <span class="purple">\</span>
-                                </li>
-                                <li class="indent one">
-                                    -d <span class="yellow">'{</span>
-                                </li>
-                                <li class="indent two yellow">
-                                    "user": {
-                                </li>
-                                <li class="indent three yellow">
-                                    "birthdate": "1959-07-17",
-                                </li>
-                                <li class="indent three yellow">
-                                    "credit_score": "718",
-                                </li>
-                                <li class="indent three yellow">
-                                    "email": "walterwhite@example.com",
-                                </li>
-                                <li class="indent three yellow">
-                                    "first_name": "Walter",
-                                </li>
-                                <li class="indent three yellow">
-                                    "gender": "MALE",
-                                </li>
-                                <li class="indent three yellow">
-                                    "id": "U-39XBF7",
-                                </li>
-                                <li class="indent three yellow">
-                                    "last_name": "White",
-                                </li>
-                                <li class="indent three yellow">
-                                    "metadata": "Additional Information",
-                                </li>
-                                <li class="indent three yellow">
-                                    "phone": "5055551234",
-                                </li>
-                                <li class="indent three yellow">
-                                    "zip_code": "87101"
-                                </li>
-                                <li class="indent two yellow">
+                        <div class="code-editor`">
+                            <div class="code-header">
+                                <div class="file-name">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                        viewBox="0 0 16 16">
+                                        <path fill="currentColor" fill-rule="evenodd"
+                                            d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Example response:</span>
+                                </div>
+                                <div class="right">
+                                    <div class="action copy">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <path fill="currentColor" fill-rule="evenodd"
+                                                d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Copy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="code-body">
+                                <ol>
+                                    <li>
+                                        {
+                                    </li>
+                                    <li class="indent one">
+                                        <span class="yellow">"Member"</span>: {
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "aggregated_at": "2015-04-13T12:01:23-06:00",
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "connection_status": "CONNECTED",
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "connection_status_id": 6,
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "connection_status_message": "Connected to Wells Fargo Bank",
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "external_guid": null,
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "guid": "MBR-7aa13bdb-2866-ba38-b326-d9fb32268f9b",
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "institution_guid": "INS-33a533a9-9ead-540c-d17d-bdc92c96be17",
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "is_being_aggregated": false,
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "is_managed_by_user": true,
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "is_manual": false,
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "is_user_created": true,
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "metadata": "Additional information",
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "most_recent_job_guid": "JOB-cc7ac3f1-351a-667f-be7c-93a484df6ebf",
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "name": "Wells Fargo Bank",
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "needs_updated_credentials": false,
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "revision": 42,
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "successfully_aggregated_at": "2015-04-13T12:01:23-06:00",
+                                    </li>
+                                    <li class="indent one yellow">
+                                        "user_guid": "USR-d2219ed6-7d5d-2fad-c332-17fb9bafcefa"
+                                    </li>
+                                    <li class="indent one">
                                     }
-                                </li>
-                                <li class="indent one yellow">
-                                    }'
-                                </li>
-                            </ol>
+                                    </li>
+                                    <li>
+                                    }
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
