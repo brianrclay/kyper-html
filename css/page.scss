@@ -268,11 +268,22 @@ body {
     }
 
     &.landing-page {
-        padding: 72px 32px 32px;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        .gradient-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(180deg, #121417 0%, #1F2329 39.92%);
+        }
 
         .content-inner {
             max-width: 990px;
-
+            background: linear-gradient(180deg, #121417 0%, #1F2329 39.92%);
+            padding: 48px 32px 0;
         }
 
         .card-wrapper {
@@ -428,6 +439,35 @@ body {
     }
 }
 
+.home-banner{
+    width: 100%;
+    position: relative;
+    background-image: url('../page-assets/banner/banner-image.svg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    width: calc(100vw - 232px);
+    position: relative;
+    left: 232px;
+    top: 48px;
+    height: 30vw;
+    padding: 8vw 0 0;
+
+    @media(min-width: 1800px){
+        height: 25vw;
+    }
+
+    .banner-content{
+        width: 990px;
+        padding: 0 64px;
+        margin: 0 auto;
+
+        h1, p {
+            width: 375px;
+        }
+    }
+}
+
 .code-editor {
     width: 100%;
     border-radius: 4px;
@@ -479,7 +519,7 @@ body {
 
     .code-body {
         padding: 16px 24px;
-        background-color: $neutral-900;
+        background-color: $neutral-800;
         ol {
             list-style: none; 
             counter-reset: li;
