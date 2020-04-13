@@ -35,6 +35,7 @@ body {
           align-items: center;
   position: fixed;
   background-color: #1F2329;
+  z-index: 1;
 }
 
 .top-bar .left {

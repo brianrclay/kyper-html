@@ -94,6 +94,7 @@ body {
     align-items: center;
     position: fixed;
     background-color: $neutral-800;
+    z-index: 1;
 
     .left {
         padding: 0 0 0 24px;
