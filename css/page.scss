@@ -280,6 +280,11 @@ body {
             display: flex;
             justify-content: center;
             background: linear-gradient(180deg, #121417 0%, #1F2329 39.92%);
+            margin-top: 625px; 
+
+            @media(max-width: 1800px){
+                margin-top: 425px;
+            }
         }
 
         .content-inner {
@@ -443,20 +448,19 @@ body {
 
 .home-banner{
     width: 100%;
-    position: relative;
+    position: fixed;
     background-image: url('../page-assets/banner/banner-image.svg') ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom right;
     width: calc(100vw - 232px);
-    position: relative;
     left: 232px;
     top: 48px;
-    height: 30vw;
+    height: 625px;
     padding: 8vw 0 0;
 
-    @media(min-width: 1800px){
-        height: 25vw;
+    @media(max-width: 1800px){
+        height: 425px;
     }
 
     .banner-content{
