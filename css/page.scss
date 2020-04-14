@@ -197,7 +197,7 @@ body {
 
     &.guide {
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
 
         .bottom{
             a{
