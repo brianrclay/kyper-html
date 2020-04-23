@@ -283,6 +283,27 @@ li:last-child {
   display: block;
 }
 
+.button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button-group > button, .button-group > .btn {
+  margin-right: 12px;
+}
+
+.button-group > button.transparent, .button-group > .btn.transparent {
+  margin-right: 8px;
+}
+
+.button-group > button:last-child, .button-group > .btn:last-child {
+  margin-right: 0;
+}
+
 .input-wrapper {
   position: relative;
 }

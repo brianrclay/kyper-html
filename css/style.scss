@@ -344,6 +344,25 @@ li {
     }
 }
 
+// Button Group
+
+.button-group{
+    display: flex;
+    align-items: center;
+    
+    > button, > .btn{
+        margin-right: 12px;
+
+        &.transparent{
+            margin-right: 8px;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
 // Inputs
 
 .input-wrapper {
