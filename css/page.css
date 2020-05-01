@@ -211,7 +211,6 @@ body {
           align-items: center;
   padding-left: 24px;
   margin: 32px 0 16px;
-  font-weight: 700;
 }
 
 .left-nav.guide .nav-header img {
@@ -245,14 +244,6 @@ body {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.content-wrapper .bread-crumbs {
-  margin-bottom: 32px;
-}
-
-.content-wrapper .bread-crumbs span {
-  margin: 0 12px;
 }
 
 .content-wrapper.landing-page {
@@ -302,7 +293,7 @@ body {
 }
 
 .content-wrapper.landing-page .card-wrapper .card {
-  background-color: #6A7381;
+  background-color: #49505A;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,7 +306,7 @@ body {
 }
 
 .content-wrapper.landing-page .card-wrapper .card:hover {
-  background-color: #49505A;
+  background-color: #6A7381;
 }
 
 .content-wrapper.guide-page {

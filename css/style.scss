@@ -96,6 +96,7 @@ body {
         div,
         p,
         a,
+        .link,
         input,
         textarea,
         label,
@@ -105,6 +106,7 @@ body {
             font-family: 'Inter', sans-serif;
             letter-spacing: .2px;
             font-weight: 400;
+            font-size: 15px;
         }
 
         button, .bold {
@@ -521,6 +523,20 @@ form {
 
     &.large {
         padding-top: 48px;
+    }
+}
+
+// Bread crumbs
+
+.bread-crumbs {
+    margin-bottom: 32px;
+
+    span {
+        margin: 0 12px;
+
+        &:last-of-type{
+            margin: 0;
+        }
     }
 }
 

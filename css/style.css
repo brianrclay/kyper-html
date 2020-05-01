@@ -33,6 +33,7 @@ body.overlayOpen {
 body.inter div,
 body.inter p,
 body.inter a,
+body.inter .link,
 body.inter input,
 body.inter textarea,
 body.inter label,
@@ -42,6 +43,7 @@ body.inter ul {
   font-family: 'Inter', sans-serif;
   letter-spacing: .2px;
   font-weight: 400;
+  font-size: 15px;
 }
 
 body.inter button, body.inter .bold {
@@ -494,6 +496,18 @@ form .input-wrapper:last-child {
 
 .spacer.large {
   padding-top: 48px;
+}
+
+.bread-crumbs {
+  margin-bottom: 32px;
+}
+
+.bread-crumbs span {
+  margin: 0 12px;
+}
+
+.bread-crumbs span:last-of-type {
+  margin: 0;
 }
 
 .checkbox {

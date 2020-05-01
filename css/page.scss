@@ -229,7 +229,6 @@ body {
             align-items: center;
             padding-left: 24px;
             margin: 32px 0 16px;
-            font-weight: 700;
 
             img {
                 margin-right: 12px;
@@ -261,14 +260,6 @@ body {
         box-sizing: border-box;
     }
 
-    .bread-crumbs {
-        margin-bottom: 32px;
-
-        span {
-            margin: 0 12px;
-        }
-    }
-
     &.landing-page {
         padding: 0;
         flex-direction: column;
@@ -298,7 +289,7 @@ body {
             grid-gap: 16px;
 
             .card {
-                background-color: $neutral-600;
+                background-color: $neutral-700;
                 display: flex;
                 padding: 16px;
                 border-radius: $border-radius-med;
@@ -307,7 +298,7 @@ body {
                 transition: $transition;
 
                 &:hover {
-                    background-color: $neutral-700;
+                    background-color: $neutral-600;
                 }
             }
         }
