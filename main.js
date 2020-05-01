@@ -162,3 +162,16 @@ $('.theme-toggle').click(function(){
         $('.theme-toggle').removeClass('open');
     }, 500)
 })
+
+// Toggle Inter
+var i = 0
+$('.inter-toggle').click(function(){
+    $('body').toggleClass('inter');
+    i++
+    if ( i % 2 == 0) {
+        $(this).text('Show Inter');
+    }else{
+        $(this).text('Show Proxima');
+    }
+    console.log(i)
+})

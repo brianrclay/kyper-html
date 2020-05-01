@@ -86,8 +86,32 @@ body {
     &.overlayOpen {
         overflow: hidden;
     }
+
     @media(max-width: 500px) {
-        padding: 24px;   
+        padding: 24px;
+    }
+
+    &.inter {
+
+        div,
+        p,
+        a,
+        input,
+        textarea,
+        label,
+        button,
+        ol,
+        ul {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: .5px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: .8px;
+        }
     }
 }
 
@@ -102,7 +126,9 @@ label,
 button,
 h1,
 h2,
-h3, ol, ul {
+h3,
+ol,
+ul {
     color: $neutral-900;
 }
 
@@ -230,7 +256,8 @@ li {
 
 //Buttons
 
-.btn, button {
+.btn,
+button {
     // background-color: $neutral-white;
     font-weight: 700;
     color: $primary-300;
@@ -274,7 +301,8 @@ li {
         display: flex;
         align-items: center;
 
-        svg, img {
+        svg,
+        img {
             margin-right: $spacing-8px;
         }
 
@@ -346,18 +374,19 @@ li {
 
 // Button Group
 
-.button-group{
+.button-group {
     display: flex;
     align-items: center;
-    
-    > button, > .btn{
+
+    >button,
+    >.btn {
         margin-right: 12px;
 
-        &.transparent{
+        &.transparent {
             margin-right: 8px;
         }
 
-        &:last-child{
+        &:last-child {
             margin-right: 0;
         }
     }
@@ -1082,14 +1111,14 @@ form {
         }
     }
 
-    &.no-headline{
-        .message-wrapper .message-text{
+    &.no-headline {
+        .message-wrapper .message-text {
             margin-top: 0;
         }
     }
-    
-    &.no-actions{
-        .message-wrapper .message-text{
+
+    &.no-actions {
+        .message-wrapper .message-text {
             margin-bottom: 0;
         }
     }
@@ -1363,18 +1392,18 @@ form {
         }
     }
 
-    &.drawer{
+    &.drawer {
         opacity: 1;
 
-        &.open{
+        &.open {
 
-            .modal-wrapper{
+            .modal-wrapper {
                 right: 0;
                 border-radius: 0;
             }
         }
 
-        .modal-wrapper{
+        .modal-wrapper {
             height: 100vh;
             right: -100%;
             left: unset;
@@ -1384,22 +1413,22 @@ form {
             display: flex;
             flex-direction: column;
 
-            .modal-body{
+            .modal-body {
                 flex: 1;
                 max-height: none;
             }
-            
-            .modal-header{
+
+            .modal-header {
                 padding: 24px;
             }
 
             .modal-footer {
                 padding: 0;
                 border-top: 1px solid $neutral-400;
-    
+
                 .action-wrapper {
                     justify-content: center;
-    
+
                     .action {
                         width: 50%;
                         border-radius: 0;
@@ -1410,21 +1439,21 @@ form {
         }
 
         @media(max-width: 500px) {
-            .modal-wrapper{
+            .modal-wrapper {
                 border-radius: 0;
                 width: 100%;
                 max-width: none;
 
-                .modal-header{
+                .modal-header {
                     flex-direction: row-reverse;
                     justify-content: flex-end;
                     align-items: flex-start;
                     position: relative;
 
-                    .header-left{
+                    .header-left {
                         margin-left: 16px;
 
-                        svg{
+                        svg {
                             position: absolute;
                             right: 24px;
                             margin: 0;
@@ -1442,11 +1471,11 @@ form {
     border-radius: $border-radius-med;
     border: 1px solid $neutral-400;
 
-    &.hide-overflow{
+    &.hide-overflow {
         overflow: hidden;
     }
-    
-    &.scroll-overflow{
+
+    &.scroll-overflow {
         overflow: auto;
     }
 
@@ -1486,7 +1515,7 @@ form {
             border-top-left-radius: $border-radius-med;
         }
 
-        @media(max-width: 500px){
+        @media(max-width: 500px) {
             flex: 1;
             padding: 12px;
         }
@@ -1546,20 +1575,11 @@ form {
     align-items: center;
     border-radius: 50%;
     font-weight: 700;
+    overflow: hidden;
 
-    &.female {
-        color: transparent;
-        background-image: url('/assets/avatars/female.png');
-    }
-
-    &.male {
-        color: transparent;
-        background-image: url('/assets/avatars/male.png');
-    }
-
-    &.bank {
-        color: transparent;
-        background-image: url('/assets/avatars/bank.png');
+    img {
+        width: 100%;
+        height: 100%;
     }
 
     &.small {
@@ -1595,16 +1615,17 @@ form {
 
 .table {
 
-    &.striped{
-        .table-row{
-            &:hover{
-                .cell{
+    &.striped {
+        .table-row {
+            &:hover {
+                .cell {
                     background-color: $neutral-200 !important;
                 }
             }
-            &:nth-child(even){
-    
-                .cell{
+
+            &:nth-child(even) {
+
+                .cell {
                     background-color: $neutral-100;
                 }
             }
@@ -1678,20 +1699,20 @@ form {
             display: flex;
             align-items: flex-start;
 
-            &:hover{
-                .cell{
+            &:hover {
+                .cell {
                     background-color: $neutral-100;
                 }
             }
 
-            &.selected{
-                .cell{
+            &.selected {
+                .cell {
                     background-color: $primary-100;
                 }
             }
 
-            &:last-child{
-                .cell{
+            &:last-child {
+                .cell {
                     border: none;
                 }
             }
@@ -1843,11 +1864,11 @@ form {
     border-right-color: $neutral-800;
 }
 
-hr{
+hr {
     border-color: $neutral-300;
 }
 
-.theme-toggle{
+.theme-toggle {
     position: fixed;
     right: 24px;
     top: 24px;
@@ -1859,16 +1880,26 @@ hr{
     height: 48px;
     width: 48px;
 
-    &.open{
+    &.open {
         animation: 500ms $easing forwards spin;
     }
-    
+
     @keyframes spin {
-        0%{
-            transform: rotate(0deg); 
+        0% {
+            transform: rotate(0deg);
         }
-        100%{
-            transform: rotate(360deg); 
+
+        100% {
+            transform: rotate(360deg);
         }
     }
+}
+
+.inter-toggle{
+    position: fixed;
+    top: 36px;
+    right: 124px;
+    cursor: pointer;
+    color: $primary-300;
+    z-index: 3;
 }

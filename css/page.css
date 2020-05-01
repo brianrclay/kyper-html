@@ -640,4 +640,10 @@ body {
 .code-editor .code-body ol .purple {
   color: #A97AA5;
 }
+
+.inter-toggle {
+  top: 14px;
+  right: unset;
+  left: 172px;
+}
 /*# sourceMappingURL=page.css.map */
