@@ -103,14 +103,20 @@ body {
         ol,
         ul {
             font-family: 'Inter', sans-serif;
-            letter-spacing: .5px;
+            letter-spacing: .2px;
+            font-weight: 400;
+        }
+
+        button {
+            font-weight: 600;
         }
 
         h1,
         h2,
         h3 {
             font-family: 'Inter', sans-serif;
-            letter-spacing: .8px;
+            // letter-spacing: .8px;
+            font-weight: 700;
         }
     }
 }

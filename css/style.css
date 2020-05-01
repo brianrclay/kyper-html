@@ -40,14 +40,19 @@ body.inter button,
 body.inter ol,
 body.inter ul {
   font-family: 'Inter', sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: .2px;
+  font-weight: 400;
+}
+
+body.inter button {
+  font-weight: 600;
 }
 
 body.inter h1,
 body.inter h2,
 body.inter h3 {
   font-family: 'Inter', sans-serif;
-  letter-spacing: .8px;
+  font-weight: 700;
 }
 
 div,
