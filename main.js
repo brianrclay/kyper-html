@@ -173,5 +173,16 @@ $('.inter-toggle').click(function(){
     }else{
         $(this).text('Show Proxima');
     }
-    console.log(i)
+})
+
+// Increase FS
+var k = 0
+$('.size-toggle').click(function(){
+    $('body').toggleClass('fs-increase');
+    k++
+    if ( k % 2 == 0) {
+        $(this).text('Increase FS');
+    }else{
+        $(this).text('Decrease FS');
+    }
 })

@@ -43,11 +43,12 @@ body.inter ul,
 body.inter li {
   font-family: 'Inter', sans-serif;
   letter-spacing: .2px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
 }
 
-body.inter button, body.inter .bold {
+body.inter button,
+body.inter .bold {
   font-weight: 600;
 }
 
@@ -58,39 +59,90 @@ body.inter h3 {
   font-weight: 700;
 }
 
-body.inter .input-wrapper input, body.inter .dropdown input {
+body.inter .small {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+body.inter .x-small {
+  font-size: 11px;
+  line-height: 16px;
+}
+
+body.inter .tiny {
+  font-size: 9px;
+  line-height: 12px;
+}
+
+body.inter .size-toggle {
+  display: block;
+}
+
+body.fs-increase div,
+body.fs-increase p,
+body.fs-increase a,
+body.fs-increase .link,
+body.fs-increase input,
+body.fs-increase textarea,
+body.fs-increase label,
+body.fs-increase button,
+body.fs-increase ol,
+body.fs-increase ul,
+body.fs-increase li {
   font-size: 16px;
 }
 
-body.inter .input-wrapper label, body.inter .dropdown label {
+body.fs-increase .small {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+body.fs-increase .x-small {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+body.fs-increase .tiny {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+body.fs-increase .input-wrapper input,
+body.fs-increase .dropdown input {
+  font-size: 16px;
+}
+
+body.fs-increase .input-wrapper label,
+body.fs-increase .dropdown label {
   font-size: 14px;
 }
 
-body.inter .switch.small {
+body.fs-increase .switch.small {
   font-size: 13px;
 }
 
-body.inter .chip span {
+body.fs-increase .chip span {
   font-size: 11px;
 }
 
-body.inter .message-text.small {
+body.fs-increase .message-text.small {
   font-size: 13px;
 }
 
-body.inter .message-box .message-wrapper .action-wrapper .action {
+body.fs-increase .message-box .message-wrapper .action-wrapper .action {
   font-size: 13px;
 }
 
-body.inter .tab-wrapper .tab, body.inter .table .header {
+body.fs-increase .tab-wrapper .tab,
+body.fs-increase .table .header {
   font-weight: 600;
 }
 
-body.inter .table .header span {
+body.fs-increase .table .header span {
   font-size: 13px;
 }
 
-body.inter .table .table-body .cell .cell-text {
+body.fs-increase .table .table-body .cell .cell-text {
   font-size: 13px;
 }
 
@@ -139,7 +191,7 @@ h3 {
 
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 32px;
   line-height: 48px;
 }
 
@@ -176,14 +228,29 @@ p.small {
   line-height: 16px;
 }
 
+.small.upper {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 .x-small {
   font-size: 12px;
   line-height: 16px;
 }
 
+.x-small.upper {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 .tiny {
   font-size: 10px;
   line-height: 12px;
+}
+
+.tiny.upper {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 div,
@@ -237,7 +304,7 @@ li:last-child {
 button {
   font-weight: 700;
   color: #2F73DA;
-  padding: 12px;
+  padding: 12px 16px;
   border: 1px solid #CDD3DD;
   border-radius: 4px;
   height: 44px;
@@ -2005,12 +2072,18 @@ hr {
   }
 }
 
-.inter-toggle {
+.inter-toggle,
+.size-toggle {
   position: fixed;
   top: 36px;
   right: 124px;
   cursor: pointer;
   color: #2F73DA;
   z-index: 3;
+}
+
+.size-toggle {
+  right: 256px;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -102,15 +102,16 @@ body {
         label,
         button,
         ol,
-        ul, 
+        ul,
         li {
             font-family: 'Inter', sans-serif;
             letter-spacing: .2px;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 15px;
         }
 
-        button, .bold {
+        button,
+        .bold {
             font-weight: 600;
         }
 
@@ -122,44 +123,99 @@ body {
             font-weight: 700;
         }
 
-        .input-wrapper, .dropdown{
-            input{
+        .small {
+            font-size: 13px;
+            line-height: 16px;
+        }
+        
+        .x-small {
+            font-size: 11px;
+            line-height: 16px;
+        }
+        
+        .tiny {
+            font-size: 9px;
+            line-height: 12px;
+        }
+
+        .size-toggle{
+            display: block;
+        }
+    }
+
+    &.fs-increase {
+
+        div,
+        p,
+        a,
+        .link,
+        input,
+        textarea,
+        label,
+        button,
+        ol,
+        ul,
+        li {
+            font-size: 16px;
+        }
+
+        .small {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        
+        .x-small {
+            font-size: 12px;
+            line-height: 16px;
+        }
+        
+        .tiny {
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        .input-wrapper,
+        .dropdown {
+            input {
                 font-size: 16px;
             }
-            label{
+
+            label {
                 font-size: 14px;
             }
         }
 
-        .switch.small{
+        .switch.small {
             font-size: 13px;
         }
 
-        .chip span{
+        .chip span {
             font-size: 11px;
         }
 
-        .message-text.small{
+        .message-text.small {
             font-size: 13px;
         }
 
-        .message-box .message-wrapper .action-wrapper .action{
+        .message-box .message-wrapper .action-wrapper .action {
             font-size: 13px;
         }
 
-        .tab-wrapper .tab, .table .header{
+        .tab-wrapper .tab,
+        .table .header {
             font-weight: 600;
         }
 
         .table {
-            .header{
-                span{
+            .header {
+                span {
                     font-size: 13px;
                 }
             }
-            .table-body{
-                .cell{
-                    .cell-text{
+
+            .table-body {
+                .cell {
+                    .cell-text {
                         font-size: 13px;
                     }
                 }
@@ -217,7 +273,7 @@ h3 {
 
 h1,
 .h1 {
-    font-size: 36px;
+    font-size: 32px;
     line-height: 48px;
 }
 
@@ -238,7 +294,7 @@ p {
     font-size: 16px;
     line-height: 24px;
 
-    &.small{
+    &.small {
         line-height: 20px;
     }
 }
@@ -251,16 +307,31 @@ p {
 .small {
     font-size: 14px;
     line-height: 16px;
+
+    &.upper{
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
 }
 
 .x-small {
     font-size: 12px;
     line-height: 16px;
+
+    &.upper{
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
 }
 
 .tiny {
     font-size: 10px;
     line-height: 12px;
+
+    &.upper{
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
 }
 
 div,
@@ -318,7 +389,7 @@ button {
     // background-color: $neutral-white;
     font-weight: 700;
     color: $primary-300;
-    padding: 12px;
+    padding: 12px 16px;
     border: 1px solid $neutral-400;
     border-radius: $border-radius-med;
     height: 44px;
@@ -579,7 +650,7 @@ form {
     span {
         margin: 0 12px;
 
-        &:last-of-type{
+        &:last-of-type {
             margin: 0;
         }
     }
@@ -1966,11 +2037,17 @@ hr {
     }
 }
 
-.inter-toggle{
+.inter-toggle,
+.size-toggle {
     position: fixed;
     top: 36px;
     right: 124px;
     cursor: pointer;
     color: $primary-300;
     z-index: 3;
+}
+
+.size-toggle {
+    right: 256px;
+    display: none;
 }
