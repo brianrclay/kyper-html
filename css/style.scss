@@ -106,8 +106,8 @@ body {
         li {
             font-family: 'Inter', sans-serif;
             letter-spacing: .2px;
-            font-weight: 400;
-            font-size: 16px;
+            font-weight: 300;
+            font-size: 15px;
         }
 
         button, .bold {
@@ -122,49 +122,49 @@ body {
             font-weight: 700;
         }
 
-        // .input-wrapper, .dropdown{
-        //     input{
-        //         font-size: 16px;
-        //     }
-        //     label{
-        //         font-size: 14px;
-        //     }
-        // }
+        .input-wrapper, .dropdown{
+            input{
+                font-size: 16px;
+            }
+            label{
+                font-size: 14px;
+            }
+        }
 
-        // .switch.small{
-        //     font-size: 13px;
-        // }
+        .switch.small{
+            font-size: 13px;
+        }
 
-        // .chip span{
-        //     font-size: 11px;
-        // }
+        .chip span{
+            font-size: 11px;
+        }
 
-        // .message-text.small{
-        //     font-size: 13px;
-        // }
+        .message-text.small{
+            font-size: 13px;
+        }
 
-        // .message-box .message-wrapper .action-wrapper .action{
-        //     font-size: 13px;
-        // }
+        .message-box .message-wrapper .action-wrapper .action{
+            font-size: 13px;
+        }
 
-        // .tab-wrapper .tab, .table .header{
-        //     font-weight: 600;
-        // }
+        .tab-wrapper .tab, .table .header{
+            font-weight: 600;
+        }
 
-        // .table {
-        //     .header{
-        //         span{
-        //             font-size: 13px;
-        //         }
-        //     }
-        //     .table-body{
-        //         .cell{
-        //             .cell-text{
-        //                 font-size: 13px;
-        //             }
-        //         }
-        //     }
-        // }
+        .table {
+            .header{
+                span{
+                    font-size: 13px;
+                }
+            }
+            .table-body{
+                .cell{
+                    .cell-text{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
     }
 }
 
