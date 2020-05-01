@@ -39,7 +39,8 @@ body.inter textarea,
 body.inter label,
 body.inter button,
 body.inter ol,
-body.inter ul {
+body.inter ul,
+body.inter li {
   font-family: 'Inter', sans-serif;
   letter-spacing: .2px;
   font-weight: 400;
@@ -55,6 +56,42 @@ body.inter h2,
 body.inter h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
+}
+
+body.inter .input-wrapper input, body.inter .dropdown input {
+  font-size: 16px;
+}
+
+body.inter .input-wrapper label, body.inter .dropdown label {
+  font-size: 14px;
+}
+
+body.inter .switch.small {
+  font-size: 13px;
+}
+
+body.inter .chip span {
+  font-size: 11px;
+}
+
+body.inter .message-text.small {
+  font-size: 13px;
+}
+
+body.inter .message-box .message-wrapper .action-wrapper .action {
+  font-size: 13px;
+}
+
+body.inter .tab-wrapper .tab, body.inter .table .header {
+  font-weight: 600;
+}
+
+body.inter .table .header span {
+  font-size: 13px;
+}
+
+body.inter .table .table-body .cell .cell-text {
+  font-size: 13px;
 }
 
 div,
