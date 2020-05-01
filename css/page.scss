@@ -584,8 +584,12 @@ body {
     }
 }
 
-.inter-toggle{
+.inter-toggle, .size-toggle{
     top: 14px;
     right: unset;
     left: 172px;
+}
+
+.size-toggle{
+    left: 324px;
 }
