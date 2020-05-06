@@ -476,17 +476,17 @@ body.dark-mode .modal .modal-header .header-left svg {
   color: #F45532;
 }
 
-body.dark-mode .modal .modal-header .modal-close {
+body.dark-mode .modal .modal-close {
   border: none;
   color: #ffffff;
   background-color: transparent;
 }
 
-body.dark-mode .modal .modal-header .modal-close:hover svg {
+body.dark-mode .modal .modal-close:hover svg {
   background-color: #6A7381;
 }
 
-body.dark-mode .modal .modal-header .modal-close svg {
+body.dark-mode .modal .modal-close svg {
   background-color: #49505A;
   color: #ffffff;
 }

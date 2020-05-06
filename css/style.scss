@@ -1397,31 +1397,31 @@ form {
                 color: $error-300;
             }
         }
+    }
 
-        .modal-close {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            width: 44px;
-            height: 44px;
-            margin: -10px;
-            padding: 0;
-            border: none;
-            color: $neutral-900;
+    .modal-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        margin: -10px;
+        padding: 0;
+        border: none;
+        color: $neutral-900;
 
-            &:hover {
-                svg {
-                    background-color: $neutral-300;
-                }
-            }
-
+        &:hover {
             svg {
-                padding: 4px;
-                background-color: $neutral-200;
-                transition: background-color 300ms $easing;
-                border-radius: $border-radius-med;
+                background-color: $neutral-300;
             }
+        }
+
+        svg {
+            padding: 4px;
+            background-color: $neutral-200;
+            transition: background-color 300ms $easing;
+            border-radius: $border-radius-med;
         }
     }
 

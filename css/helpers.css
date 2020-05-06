@@ -481,3 +481,23 @@
 .hide{
   display: none;
 }
+
+.ta-center{
+  text-align: center;
+}
+
+.ta-left{
+  text-align: left;
+}
+
+.ta-right{
+  text-align: right;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.display-block{
+  display: block;
+}

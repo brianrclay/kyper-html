@@ -501,9 +501,19 @@ body {
                 line-height: 16px;
                 transition: $transition;
                 cursor: pointer;
+                margin-right: 24px;
+
+                &:last-of-type{
+                    margin: 0;
+                }
 
                 &:hover{
                     color: $primary-200;
+                }
+
+                &.disabled{
+                    color: $neutral-500;
+                    pointer-events: none;
                 }
 
                 span{
@@ -516,6 +526,8 @@ body {
     .code-body {
         padding: 16px 24px;
         background-color: $neutral-800;
+        position: relative;
+
         ol {
             list-style: none; 
             counter-reset: li;
@@ -581,6 +593,20 @@ body {
                 color: #A97AA5;
             }
         }
+
+        .response{
+            display: none;
+
+            &.show{
+                display: block;
+            }
+        }
+
+        .request{
+            &.hide{
+                display: none;
+            }
+        }
     }
 }
 
@@ -592,4 +618,56 @@ body {
 
 .size-toggle{
     left: 324px;
+}
+
+#login{
+    .modal-body{
+        max-height: unset;
+    }
+
+    .modal-close{
+        position: absolute;
+        right: 28px;
+        top: 24px;
+    }
+}
+
+.running-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: $transition;
+
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    svg{
+        animation: spin forwards infinite 1000ms $easing;
+    }
+
+    @keyframes spin {
+        0%{
+            transform: rotate(0deg);
+        }
+        
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+    span{
+        margin-left: 8px;
+    }
 }

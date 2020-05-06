@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="../../css/reset.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
     <link rel="stylesheet" href="../../code-mirror/lib/codemirror.css" />
     <link href="../../css/style.css" rel="stylesheet">
@@ -154,10 +155,35 @@
                                 </svg>
                                 <span>Copy</span>
                             </div>
+                            <div class="action run" data-modal="login">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M8 0a8 8 0 110 16A8 8 0 018 0zm0 1.067a6.933 6.933 0 100 13.866A6.933 6.933 0 008 1.067zM6.21 4.569l5.076 3.063a.426.426 0 010 .738L6.21 11.433c-.307.185-.709-.024-.709-.37V4.938c0-.345.402-.554.71-.369zm.213 1.166v4.531l3.756-2.265-3.756-2.266z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Run</span>
+                            </div>
                         </div>
                     </div>
                     <div class="code-body">
-                        <ol>
+                        <div class="running-overlay">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <path
+                                        d="M6 15.746C6.64987 15.9138 7.32167 16 8 16L8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8L16 8C16 7.32167 15.9138 6.64987 15.746 6C15.5224 5.13403 15.1539 4.30702 14.6518 3.55544C13.7727 2.23985 12.5233 1.21447 11.0615 0.608967C9.59966 0.00346625 7.99113 -0.15496 6.43928 0.153721C4.88743 0.462403 3.46197 1.22433 2.34315 2.34315C1.22433 3.46197 0.462403 4.88743 0.153721 6.43928C-0.15496 7.99113 0.00346625 9.59966 0.608967 11.0615C1.21447 12.5233 2.23985 13.7727 3.55544 14.6518C4.30702 15.1539 5.13403 15.5224 6 15.746Z"
+                                        fill="#6FA1EC" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <path d="M0 0H16V16H0V0Z" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Running...</span>
+                        </div>
+                        <ol class="request">
                             <li class="comment">
                                 //Real time base URL: https://int-live.moneydesktop.com/:client_id
                             </li>
@@ -165,13 +191,16 @@
                                 // Endpoint: POST /users
                             </li>
                             <li>
-                                curl -i -X POST https://int-live.moneydesktop.com/:client_id/users.json <span class="purple">\</span>
+                                curl -i -X POST https://int-live.moneydesktop.com/:client_id/users.json <span
+                                    class="purple">\</span>
                             </li>
                             <li class="indent one">
-                                -H <span class="yellow">"Content-Type: application/vnd.moneydesktop.mdx.v5+json"</span> <span class="purple">\</span>
+                                -H <span class="yellow">"Content-Type: application/vnd.moneydesktop.mdx.v5+json"</span>
+                                <span class="purple">\</span>
                             </li>
                             <li class="indent one">
-                                -H <span class="yellow">"Accept: application/vnd.moneydesktop.mdx.v5+json"</span> <span class="purple">\</span>
+                                -H <span class="yellow">"Accept: application/vnd.moneydesktop.mdx.v5+json"</span> <span
+                                    class="purple">\</span>
                             </li>
                             <li class="indent one">
                                 -H <span class="yellow">"MD-API-KEY: :api_key"</span> <span class="purple">\</span>
@@ -219,38 +248,12 @@
                                 }'
                             </li>
                         </ol>
-                    </div>
-                </div>
-                <div class="code-editor m-b-32">
-                    <div class="code-header">
-                        <div class="file-name">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
-                                viewBox="0 0 16 16">
-                                <path fill="currentColor" fill-rule="evenodd"
-                                    d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>Example response:</span>
-                        </div>
-                        <div class="right">
-                            <div class="action copy">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
-                                    viewBox="0 0 16 16">
-                                    <path fill="currentColor" fill-rule="evenodd"
-                                        d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Copy</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="code-body">
-                        <ol>
+                        <ol class="response">
                             <li>
                                 {
                             </li>
                             <li class="indent one">
-                               <span class="yellow">"user"</span> {
+                                <span class="yellow">"user"</span> {
                             </li>
                             <li class="indent two yellow">
                                 "id": "U-39XBF7",
@@ -292,10 +295,114 @@
                                 "logged_in_at": <span class="light-blue">null</span>
                             </li>
                             <li class="indent one">
-                               }
+                                }
                             </li>
                             <li>
-                               }
+                                }
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="code-editor m-b-32">
+                    <div class="code-header">
+                        <div class="file-name">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                viewBox="0 0 16 16">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M13.688 0C14.412 0 15 .672 15 1.5v13c0 .828-.588 1.5-1.313 1.5H2.313C1.587 16 1 15.328 1 14.5v-13C1 .672 1.588 0 2.313 0h11.374zm0 1H2.312c-.24 0-.437.224-.437.5v13c0 .276.196.5.438.5h11.374c.242 0 .438-.224.438-.5v-13c0-.276-.196-.5-.438-.5zM9.625 11c.207 0 .375.224.375.5s-.168.5-.375.5h-5.25C4.168 12 4 11.776 4 11.5s.168-.5.375-.5h5.25zM11.5 7.5a.5.5 0 010 1h-7a.5.5 0 010-1h7zm0-3.5a.5.5 0 010 1h-7a.5.5 0 010-1h7z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Example response:</span>
+                        </div>
+                        <div class="right">
+                            <div class="action copy">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M11.5 3a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-12a.5.5 0 01.5-.5h10zM11 4H2v11h9V4zm3.5-4a.5.5 0 01.5.5v13a.5.5 0 01-1 0V1H3.5a.5.5 0 010-1h11zm-6 12a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4zm0-3a.5.5 0 010 1h-4a.5.5 0 010-1h4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Copy</span>
+                            </div>
+                            <div class="action run">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M8 0a8 8 0 110 16A8 8 0 018 0zm0 1.067a6.933 6.933 0 100 13.866A6.933 6.933 0 008 1.067zM6.21 4.569l5.076 3.063a.426.426 0 010 .738L6.21 11.433c-.307.185-.709-.024-.709-.37V4.938c0-.345.402-.554.71-.369zm.213 1.166v4.531l3.756-2.265-3.756-2.266z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Run</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-body">
+                        <div class="running-overlay">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <path
+                                        d="M6 15.746C6.64987 15.9138 7.32167 16 8 16L8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8L16 8C16 7.32167 15.9138 6.64987 15.746 6C15.5224 5.13403 15.1539 4.30702 14.6518 3.55544C13.7727 2.23985 12.5233 1.21447 11.0615 0.608967C9.59966 0.00346625 7.99113 -0.15496 6.43928 0.153721C4.88743 0.462403 3.46197 1.22433 2.34315 2.34315C1.22433 3.46197 0.462403 4.88743 0.153721 6.43928C-0.15496 7.99113 0.00346625 9.59966 0.608967 11.0615C1.21447 12.5233 2.23985 13.7727 3.55544 14.6518C4.30702 15.1539 5.13403 15.5224 6 15.746Z"
+                                        fill="#6FA1EC" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <path d="M0 0H16V16H0V0Z" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Running...</span>
+                        </div>
+                        <ol>
+                            <li>
+                                {
+                            </li>
+                            <li class="indent one">
+                                <span class="yellow">"user"</span> {
+                            </li>
+                            <li class="indent two yellow">
+                                "id": "U-39XBF7",
+                            </li>
+                            <li class="indent two yellow">
+                                "birthdate": "1959-07-17",
+                            </li>
+                            <li class="indent two yellow">
+                                "gender": "MALE",
+                            </li>
+                            <li class="indent two yellow">
+                                "first_name": "Walter",
+                            </li>
+                            <li class="indent two yellow">
+                                "guid": "USR-c4321d57a-9ae4-1fe3-6c4e-96a84fb92b50",
+                            </li>
+                            <li class="indent two yellow">
+                                "last_name": "White",
+                            </li>
+                            <li class="indent two yellow">
+                                "metadata": "Additional Information",
+                            </li>
+                            <li class="indent two yellow">
+                                "credit_score": <span class="purple">718</span>,
+                            </li>
+                            <li class="indent two yellow">
+                                "email": "walterwhite@example.com",
+                            </li>
+                            <li class="indent two yellow">
+                                "phone": "(505) 555-1234",
+                            </li>
+                            <li class="indent two yellow">
+                                "zip_code": "87101",
+                            </li>
+                            <li class="indent two yellow">
+                                "is_disabled": <span class="light-blue">false</span>,
+                            </li>
+                            <li class="indent two yellow">
+                                "logged_in_at": <span class="light-blue">null</span>
+                            </li>
+                            <li class="indent one">
+                                }
+                            </li>
+                            <li>
+                                }
                             </li>
                         </ol>
                     </div>
@@ -303,11 +410,14 @@
                 <hr class="m-b-40 m-t-40">
                 <h2 class="m-b-16">2. Get an API token</h2>
                 <p class="m-b-32">
-                    Next, you'll use the SSO API to the an api_token. This token will be used to open a Nexus session in step 3.
+                    Next, you'll use the SSO API to the an api_token. This token will be used to open a Nexus session in
+                    step 3.
                     <br /><br />
-                    Remember that the user_id passed in this request must match the id specified when creating a the user in the previous step.
+                    Remember that the user_id passed in this request must match the id specified when creating a the
+                    user in the previous step.
                     <br /><br />
-                    Each api_token is one-time use and expires in ten minutes. A fresh api_token must be requested each time a Nexus session is opened.
+                    Each api_token is one-time use and expires in ten minutes. A fresh api_token must be requested each
+                    time a Nexus session is opened.
                     <br /><br />
                     <a href="#">Further details.</a>
                 </p>
@@ -332,9 +442,34 @@
                                 </svg>
                                 <span>Copy</span>
                             </div>
+                            <div class="action run">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M8 0a8 8 0 110 16A8 8 0 018 0zm0 1.067a6.933 6.933 0 100 13.866A6.933 6.933 0 008 1.067zM6.21 4.569l5.076 3.063a.426.426 0 010 .738L6.21 11.433c-.307.185-.709-.024-.709-.37V4.938c0-.345.402-.554.71-.369zm.213 1.166v4.531l3.756-2.265-3.756-2.266z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Run</span>
+                            </div>
                         </div>
                     </div>
                     <div class="code-body">
+                        <div class="running-overlay">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <path
+                                        d="M6 15.746C6.64987 15.9138 7.32167 16 8 16L8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8L16 8C16 7.32167 15.9138 6.64987 15.746 6C15.5224 5.13403 15.1539 4.30702 14.6518 3.55544C13.7727 2.23985 12.5233 1.21447 11.0615 0.608967C9.59966 0.00346625 7.99113 -0.15496 6.43928 0.153721C4.88743 0.462403 3.46197 1.22433 2.34315 2.34315C1.22433 3.46197 0.462403 4.88743 0.153721 6.43928C-0.15496 7.99113 0.00346625 9.59966 0.608967 11.0615C1.21447 12.5233 2.23985 13.7727 3.55544 14.6518C4.30702 15.1539 5.13403 15.5224 6 15.746Z"
+                                        fill="#6FA1EC" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <path d="M0 0H16V16H0V0Z" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Running...</span>
+                        </div>
                         <ol>
                             <li class="comment">
                                 SSO base URL: https://int-sso.moneydesktop.com/:client_id
@@ -343,7 +478,8 @@
                                 Endpoint: GET /users/:id/api_token
                             </li>
                             <li>
-                                curl -i https://int-sso.moneydesktop.com/:client_id/users/:user_id/api_token.xml <span class="purple">\</span>
+                                curl -i https://int-sso.moneydesktop.com/:client_id/users/:user_id/api_token.xml <span
+                                    class="purple">\</span>
                             </li>
                             <li class="indent one yellow">
                                 -H "Accept: application/vnd.moneydesktop.sso.v3+xml" <span class="purple">\</span>
@@ -375,9 +511,34 @@
                                 </svg>
                                 <span>Copy</span>
                             </div>
+                            <div class="action run">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M8 0a8 8 0 110 16A8 8 0 018 0zm0 1.067a6.933 6.933 0 100 13.866A6.933 6.933 0 008 1.067zM6.21 4.569l5.076 3.063a.426.426 0 010 .738L6.21 11.433c-.307.185-.709-.024-.709-.37V4.938c0-.345.402-.554.71-.369zm.213 1.166v4.531l3.756-2.265-3.756-2.266z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Run</span>
+                            </div>
                         </div>
                     </div>
                     <div class="code-body">
+                        <div class="running-overlay">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <path
+                                        d="M6 15.746C6.64987 15.9138 7.32167 16 8 16L8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8L16 8C16 7.32167 15.9138 6.64987 15.746 6C15.5224 5.13403 15.1539 4.30702 14.6518 3.55544C13.7727 2.23985 12.5233 1.21447 11.0615 0.608967C9.59966 0.00346625 7.99113 -0.15496 6.43928 0.153721C4.88743 0.462403 3.46197 1.22433 2.34315 2.34315C1.22433 3.46197 0.462403 4.88743 0.153721 6.43928C-0.15496 7.99113 0.00346625 9.59966 0.608967 11.0615C1.21447 12.5233 2.23985 13.7727 3.55544 14.6518C4.30702 15.1539 5.13403 15.5224 6 15.746Z"
+                                        fill="#6FA1EC" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <path d="M0 0H16V16H0V0Z" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Running...</span>
+                        </div>
                         <ol>
                             <li>
                                 {
@@ -451,6 +612,51 @@
 
     <div class="inter-toggle">Show Inter</div>
     <div class="size-toggle">Increase FS</div>
+
+
+
+    <div class="modal" id="login">
+        <div class="modal-scrim"></div>
+        <div class="modal-wrapper">
+            <div class="modal-body">
+                <button class="modal-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M11.86 4.14a.48.48 0 010 .68L8.678 8l3.18 3.18a.48.48 0 11-.678.68L8 8.678l-3.18 3.18a.48.48 0 11-.68-.678L7.322 8l-3.18-3.18a.48.48 0 01.678-.68L8 7.322l3.18-3.18a.48.48 0 01.68 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="flex ai-center jc-center m-t-32 m-b-48">
+                    <svg width="62" height="27" viewBox="0 0 62 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M55.675 0H61.8913C61.9855 0 62.0347 0.108952 61.9732 0.169481L51.4571 13.4213C51.4244 13.4536 51.4244 13.5182 51.4571 13.5464L61.9732 26.7982C62.0347 26.8749 61.9732 26.9718 61.8913 26.9718H55.675C55.6464 26.9718 55.6136 26.9556 55.5972 26.9233L48.2548 17.4687C48.222 17.4243 48.1442 17.4243 48.0951 17.4687L40.7526 26.9233C40.7362 26.9556 40.7076 26.9718 40.6748 26.9718H34.4585C34.3766 26.9718 34.3357 26.8588 34.3766 26.7982L44.8927 13.5464C44.9214 13.5182 44.9214 13.4536 44.8927 13.4213L34.3766 0.169481C34.3193 0.0928112 34.3766 0 34.4585 0H40.6748C40.7076 0 40.7362 0.0161411 40.7526 0.0484233L48.0951 9.49903C48.1278 9.54745 48.2056 9.54745 48.2548 9.49903L55.5972 0.0484233C55.6136 0.0161411 55.6464 0 55.675 0ZM31.9396 26.3788L36.0306 21.4074C36.0592 21.3751 36.0756 21.3307 36.0756 21.2984L32.9388 0.157614C32.9224 0.0809436 32.8569 0.0163792 32.7791 0.0163792H28.639C28.5734 0.0163792 28.512 0.0486614 28.4956 0.10919L18.6634 19.8618C18.602 19.9869 18.4259 19.9869 18.3808 19.8618L8.4503 0.10919C8.41754 0.0486614 8.3725 0.0163792 8.31107 0.0163792H4.12592C4.04402 0.0163792 3.97849 0.0809436 3.96211 0.157614L0.00218768 26.7985C-0.0141926 26.8913 0.0636136 26.9841 0.161895 26.9841H4.99407C5.07597 26.9841 5.15787 26.9236 5.15787 26.8469L7.54529 9.53155C7.56168 9.37417 7.7869 9.34593 7.85243 9.48716L16.6159 26.9074C16.6486 26.972 16.6978 27.0002 16.7592 27.0002H20.1868C20.2482 27.0002 20.3137 26.972 20.3301 26.9074L28.9871 9.57997C29.0485 9.43874 29.2737 9.47102 29.2901 9.62436L31.6488 26.2981C31.6652 26.4393 31.8577 26.4837 31.9396 26.3788Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <form class="m-t-32">
+                    <div class="input-wrapper">
+                        <label>Username</label>
+                        <input type="text" />
+                        <div class="help-text">
+                            <span>Help text</span>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Password</label>
+                        <input type="password" />
+                        <div class="help-text">
+                            <span>Help text</span>
+                        </div>
+                    </div>
+                    <div class="btn ta-center primary w-100 m-b-24 login-submit">Log in</div>
+                    <a class="ta-center display-block m-b-24" href="#">Forgot your password?</a>
+                    <hr class="m-b-24" />
+                    <p class="ta-center m-b-8">Don't have an account?</p>
+                    <a class="ta-center display-block m-b-" href="#">Sign up</a>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>

@@ -95,7 +95,7 @@ $('.dropdown').click(function (event) {
 
 // Modals
 
-$('body').on('click', '.modal-trigger', function(){
+$('body').on('click', '[data-modal]', function(){
     var showModal = $(this).attr('data-modal');
     $('#'+ showModal).addClass('open');
     $('body').addClass('overlayOpen');

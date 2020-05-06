@@ -1373,7 +1373,7 @@ form .input-wrapper:last-child {
   color: #DF320C;
 }
 
-.modal .modal-header .modal-close {
+.modal .modal-close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1392,11 +1392,11 @@ form .input-wrapper:last-child {
   color: #121417;
 }
 
-.modal .modal-header .modal-close:hover svg {
+.modal .modal-close:hover svg {
   background-color: #E4E8EE;
 }
 
-.modal .modal-header .modal-close svg {
+.modal .modal-close svg {
   padding: 4px;
   background-color: #EEF1F6;
   -webkit-transition: background-color 300ms cubic-bezier(0.475, 0.425, 0, 0.995);

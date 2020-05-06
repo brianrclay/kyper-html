@@ -589,22 +589,22 @@ body {
                         color: $error-200;
                     }
                 }
+            }
+            
+            .modal-close {
+                border: none;
+                color: $neutral-white;
+                background-color: transparent;
 
-                .modal-close {
-                    border: none;
-                    color: $neutral-white;
-                    background-color: transparent;
-
-                    &:hover {
-                        svg {
-                            background-color: $neutral-600;
-                        }
-                    }
-
+                &:hover {
                     svg {
-                        background-color: $neutral-700;
-                        color: $neutral-white;
+                        background-color: $neutral-600;
                     }
+                }
+
+                svg {
+                    background-color: $neutral-700;
+                    color: $neutral-white;
                 }
             }
 
