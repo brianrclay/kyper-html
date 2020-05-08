@@ -44,3 +44,8 @@ $('body').on('click', '.action.run.logged-in', function () {
     request.addClass('hide');
   },2000)
 })
+
+
+$('.with-children').click(function(){
+  $(this).toggleClass('open');
+})

@@ -173,6 +173,11 @@ body {
         color: $neutral-white;
         text-decoration: none;
         position: relative;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $neutral-700;
+        }
 
         &.active {
             color: $primary-200;
@@ -192,6 +197,55 @@ body {
 
         img {
             margin-right: 12px;
+        }
+
+        &.with-children{
+            display: block;
+
+            &:hover{
+                background-color: $neutral-700;
+            }
+
+            &.open{
+                &:hover{
+                    background-color: $neutral-800;
+                }
+                .children{
+                    height: auto;
+                    opacity: 1;
+                    pointer-events: auto;
+                    margin-top: 8px;
+                }
+            }
+
+            .label{
+                display: flex;
+                align-items: center;
+                // padding: 16px 24px;
+                color: $neutral-white;
+                text-decoration: none;
+                position: relative;
+            }
+
+            .children{
+                margin-top: 0;
+                transition: $transition;
+                height: 0;
+                opacity: 0;
+                pointer-events: none;
+
+                a{
+                    display: block;
+                    padding: 12px 12px 12px 28px;
+                    color: $neutral-400;
+                    transition: $transition;
+
+                    &:hover{
+                        color: $primary-200;
+                        text-decoration: none;
+                    }
+                }
+            }
         }
     }
 
