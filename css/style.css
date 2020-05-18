@@ -268,6 +268,12 @@ button {
   height: 16px;
 }
 
+.tabular {
+  font-variant-numeric: tabular-nums;
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
+}
+
 a,
 .link {
   color: #2F73DA;
