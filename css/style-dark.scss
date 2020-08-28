@@ -49,6 +49,7 @@ $shadow-low: 0px 1px 3px rgba(87, 102, 117, 0.2);
 $shadow-med: 0px 3px 8px rgba(87, 102, 117, 0.15);
 $shadow-high: 0px 10px 20px rgba(87, 102, 117, 0.16);
 $focus-ring: 0px 0px 0px 2px $primary-200;
+$focus-ring-error: 0px 0px 0px 2px $error-200;
 
 //Spacing
 $spacing-4px: 4px;
@@ -113,6 +114,26 @@ body {
             &:hover {
                 color: $neutral-white;
                 background-color: $neutral-700;
+            }
+
+            &:focus{
+                outline: none;
+                box-shadow: $focus-ring;
+            }
+
+            &.destructive {
+                color: $error-200;
+        
+                &:hover {
+                    color: $neutral-white;
+                    background-color: $neutral-700;
+                    text-decoration: underline;
+                }
+
+                &:focus{
+                    outline: none;
+                    box-shadow: $focus-ring-error;
+                }
             }
         }
 
@@ -186,6 +207,10 @@ body {
                 color: $neutral-white;
                 border: none;
 
+                &:focus {
+                    box-shadow: $focus-ring-error;
+                }
+                
                 &:hover {
                     background-color: $error-400;
                     border: none;

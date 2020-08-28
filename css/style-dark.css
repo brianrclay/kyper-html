@@ -48,6 +48,32 @@ body.dark-mode .link:hover {
   background-color: #49505A;
 }
 
+body.dark-mode a:focus,
+body.dark-mode .link:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 0px 2px #6FA1EC;
+          box-shadow: 0px 0px 0px 2px #6FA1EC;
+}
+
+body.dark-mode a.destructive,
+body.dark-mode .link.destructive {
+  color: #F45532;
+}
+
+body.dark-mode a.destructive:hover,
+body.dark-mode .link.destructive:hover {
+  color: #ffffff;
+  background-color: #49505A;
+  text-decoration: underline;
+}
+
+body.dark-mode a.destructive:focus,
+body.dark-mode .link.destructive:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 0px 2px #F45532;
+          box-shadow: 0px 0px 0px 2px #F45532;
+}
+
 body.dark-mode button {
   color: #ffffff;
   border: 1px solid #A8B1BD;
@@ -117,6 +143,11 @@ body.dark-mode button.destructive {
   background-color: #DF320C;
   color: #ffffff;
   border: none;
+}
+
+body.dark-mode button.destructive:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #F45532;
+          box-shadow: 0px 0px 0px 2px #F45532;
 }
 
 body.dark-mode button.destructive:hover {
