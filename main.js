@@ -186,3 +186,8 @@ $('.size-toggle').click(function(){
         $(this).text('Decrease FS');
     }
 })
+
+// Message box
+$('.message-box.overlay .close').click(function(){
+    $('.message-box.overlay').addClass('close-box');
+})

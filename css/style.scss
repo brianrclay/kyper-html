@@ -414,12 +414,13 @@ li {
 
 .btn,
 button {
-    // background-color: $neutral-white;
+    background-color: $neutral-white;
     font-weight: 700;
     color: $primary-300;
     padding: 12px 16px;
     border: 1px solid $neutral-400;
     border-radius: $border-radius-med;
+    background: transparent;
     height: 44px;
     box-sizing: border-box;
     transition: color $easing 300ms, border-color $easing 300ms, box-shadow $easing 300ms, background-color $easing 300ms;
@@ -1298,6 +1299,29 @@ form {
         }
     }
 
+    &.overlay{
+        position: fixed;
+        bottom: 24px;
+        right: 100%;
+        width: 327px;
+        transition: $transition;
+        animation: slideIn 800ms $easing forwards;
+    }
+
+    @keyframes slideIn {
+        0%{
+            right: -100%;
+        }
+
+        100%{
+            right: 24px;
+        }
+    }
+
+    &.close-box{
+        transform: translateX(120%);
+    }
+
     .close {
         border: none;
         background-color: transparent;
@@ -1309,6 +1333,11 @@ form {
         justify-content: center;
         color: $neutral-900;
         transform: translate(8px, -8px);
+
+        &:focus{
+            box-shadow: none;
+            outline: none;
+        }
     }
 
     .icon {
@@ -1430,31 +1459,31 @@ form {
                 color: $error-300;
             }
         }
-    }
-
-    .modal-close {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        width: 44px;
-        height: 44px;
-        margin: -10px;
-        padding: 0;
-        border: none;
-        color: $neutral-900;
-
-        &:hover {
-            svg {
-                background-color: $neutral-300;
+    
+        .modal-close {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            margin: -10px;
+            padding: 0;
+            border: none;
+            color: $neutral-900;
+    
+            &:hover {
+                svg {
+                    background-color: $neutral-300;
+                }
             }
-        }
-
-        svg {
-            padding: 4px;
-            background-color: $neutral-200;
-            transition: background-color 300ms $easing;
-            border-radius: $border-radius-med;
+    
+            svg {
+                padding: 4px;
+                background-color: $neutral-200;
+                transition: background-color 300ms $easing;
+                border-radius: $border-radius-med;
+            }
         }
     }
 
